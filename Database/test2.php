@@ -10,7 +10,7 @@ if( $conn === false )
      echo "Could not connect.\n";  
      die( print_r( sqlsrv_errors(), true));  
 }  
-  
+
 /* Set up and execute the query. */  
 $tsql = "SELECT *  
          FROM orderitem";
