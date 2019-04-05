@@ -62,7 +62,7 @@ for($j=0; $j<$count; $j++)
 }
 
 
-
+$s = 1;
 
 
 echo "</tr>"; 
