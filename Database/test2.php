@@ -102,5 +102,3 @@ sqlsrv_free_stmt( $stmt);
 sqlsrv_close( $conn);  
 ?>  
 
-git config --global user.email "you@example.com"
-git config --global user.name "Your Name"
