@@ -34,19 +34,12 @@ while( $obj = sqlsrv_fetch_object( $stmt))
 //print_r($rs);
 //echo '<pre>';
 
-$j = 0;
-$k = 0;
 
 //create html table
 echo '<table border="1">';
-
-
 $count = count(get_object_vars(($rs[0])));
 
 echo "<tr>"; 
-
-
-
 foreach(($rs[0]) as $key => $value) 
 {
    
@@ -54,17 +47,6 @@ foreach(($rs[0]) as $key => $value)
     print " $key\n";
     echo "</th>"; 
 }
-
-
-for($j=0; $j<$count; $j++)
-{
-    
-}
-
-
-$s = 1;
-
-
 echo "</tr>"; 
 
 for($i = 0; $i < count($rs); $i++)
@@ -72,7 +54,7 @@ for($i = 0; $i < count($rs); $i++)
     echo "<tr>";  
 
     
-    echo $count;
+    //echo $count;
         
         foreach(($rs[$i]) as $key => $value) 
         {
@@ -82,19 +64,7 @@ for($i = 0; $i < count($rs); $i++)
             echo "</td>"; 
         }
 
-        echo "</tr>";
-/*
-        echo "<td>";
-        echo $rs[$i]->FirstName;
-        echo "</td>";  
-        
-        echo "<td>";  
-        echo $rs[$i]->LastName;
-        echo "</td>";      */       
-   
-
-
-   
+        echo "</tr>";   
 }
 
 /* Free statement and connection resources. */  
