@@ -15,8 +15,8 @@ echo phpinfo();
     }
 
 
+superman 
 
-dfgdfgdfgd
-batman
-flash
+
+
 ?>
