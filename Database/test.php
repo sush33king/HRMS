@@ -18,5 +18,5 @@ echo phpinfo();
 
 dfgdfgdfgd
 batman
-
+flash
 ?>
