@@ -15,20 +15,10 @@ echo phpinfo();
     }
 
 
-superman
-batman
-i like balls
-fish cake
-choc cake
-durian cake
+
 
 ?>
 
-white mamba
 
-black mamba
-
-hello world
-bye world
 
 ?>
