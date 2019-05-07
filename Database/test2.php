@@ -30,9 +30,9 @@ while( $obj = sqlsrv_fetch_object( $stmt))
       /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
 }
 
-//echo '<pre>';
-//print_r($rs);
-//echo '<pre>';
+echo '<pre>';
+print_r($rs);
+echo '<pre>';
 
 
 //create html table
