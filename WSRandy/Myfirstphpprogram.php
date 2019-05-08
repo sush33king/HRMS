@@ -1,10 +1,17 @@
 <?php
+print "<table>";
 
+print "<tr>";
 print "Hello this is from Randy Apache server. <br>
        This is from print function <br>" ;
+print "</tr>";
 
+print "<tr>";
 echo "Hello this is from Randy Apache server.  <br>
        This is from echo function <br>" ;
+print "</tr>";
+
+print "</table";
 ?>
 
 
