@@ -1,7 +1,7 @@
 <?php
 
 $hello = 'Hello World!';
-echo $hello;
+echo $hello + "my name is wai jie ";
 
 
 ?>
