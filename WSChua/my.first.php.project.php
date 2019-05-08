@@ -10,6 +10,6 @@ echo $i * $j;
 /*string*/
 $s1 = "hello <br>";
 $s2 = "friend <br>";
-echo $s1 . $s2
+echo $s1 . $s2;
 ?>
 
