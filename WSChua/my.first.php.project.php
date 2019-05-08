@@ -1,6 +1,5 @@
 <?php
-$diceroll = rand(655454464654135898989879879874659897985846543616849
-);
+$diceroll = rand(43);
 echo $diceroll ;
 ?>
 
