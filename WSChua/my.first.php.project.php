@@ -5,8 +5,8 @@ echo '<table border="1">';
 echo "<tr>";
 echo "<td>";
 
-echo "Hello this is from Randy Apache server. <br>
-       This is from print function <br>" ;
+echo "hi my name is wai jie . <br>
+       this is my work <br>" ;
 
 echo "</td>";
 echo "</tr>";
@@ -14,8 +14,8 @@ echo "</tr>";
 echo "<tr>";
 echo "<td>";
 
-echo "Hello this is from Randy Apache server.  <br>
-       This is from echo function asdasd<br>" ;
+echo "hi my name is wai jie.  <br>
+       this is my work <br>" ;
 
        echo "</tr>";
 echo "</td>";
