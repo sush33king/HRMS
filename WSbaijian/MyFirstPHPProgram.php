@@ -22,5 +22,5 @@ $another_int = -12345 + 12345;**/
 <?php
 
 $hello = 'Hello World!';
-echo $hello;  90837
+echo $hello;
 ?>
