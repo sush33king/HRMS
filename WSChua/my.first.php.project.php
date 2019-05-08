@@ -1,10 +1,13 @@
 <?php
+$hello = 'Hello World';
+$name = 'My name is ......';
+$age = 'Iam 29 years old';
 
-$hello = 'Hello World!';
 
 
-$hello = "123 " ;
-echo $hello . " my name is wai jie ";
+
+
+
 
 
 
