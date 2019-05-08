@@ -1,10 +1,10 @@
 <?php
 
-print"hello this is from baijian apache server. <br>
+/**print"hello this is from baijian apache server. <br>
 this is from print function <br>";
 
 echo"hello this is from baijian apache server. <br>
-this is from print function <br>";
+this is from print function <br>";**/
 
 /**1.PHP - Variable Types **/ 
 /**integers**/
@@ -22,5 +22,5 @@ $another_int = -12345 + 12345;**/
 <?php
 
 $hello = 'Hello World!';
-echo $hello;
+echo $hello;  90837
 ?>
