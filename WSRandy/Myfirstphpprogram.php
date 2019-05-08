@@ -12,7 +12,9 @@ echo "Hello this is from Randy Apache server.  <br>
 print "</tr>";
 
 print "</table";
+?>
 
+<?php
 
 $hello = 'Hello World!';
 echo $hello;
