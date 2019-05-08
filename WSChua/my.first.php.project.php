@@ -1,12 +1,6 @@
 <?php
-
-
-$hello = 'Hello World';
-$name = 'My name is ......';
-$age = 'Iam 29 years old';
-
-
-
-
+$diceroll = rand(655454464654135898989879879874659897985846543616849
+);
+echo $diceroll ;
 ?>
 
