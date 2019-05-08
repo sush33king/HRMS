@@ -12,6 +12,10 @@ echo "Hello this is from Randy Apache server.  <br>
 print "</tr>";
 
 print "</table";
+
+
+$hello = 'Hello World!';
+echo $hello;
 ?>
 
 
