@@ -1,5 +1,10 @@
 <?php
-$diceroll = rand(43);
-echo $diceroll ;
+
+
+
+$i = 1 ;
+$i = $i + 3
+echo $i;
+
 ?>
 
