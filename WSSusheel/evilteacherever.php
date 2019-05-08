@@ -15,7 +15,7 @@ echo "<tr>";
 echo "<td>";
 
 echo "Hello this is from Randy Apache server.  <br>
-       This is gay from echo function asdasd<br>" ;
+       This is from echo function asdasd<br>" ;
 
        echo "</tr>";
 echo "</td>";
