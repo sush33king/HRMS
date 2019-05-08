@@ -14,12 +14,6 @@ print "</tr>";
 print "</table";
 ?>
 
-<?php
-
-$hello = 'Hello World!';
-echo $hello;
-?>
-
 
 
 
