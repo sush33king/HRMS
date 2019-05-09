@@ -1,4 +1,4 @@
 <?php
 $Brands = array("Asus", "Evga", "Zotac");
-echo "I like " . $Brands[0] . ", " . $Brands[1] . " and " . $Brands[2] . ".";
+echo "I would prefer " . $Brands[0] . ", " . $Brands[1] . " and " . $Brands[2] . ".";
 ?>
