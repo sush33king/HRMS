@@ -13,7 +13,6 @@ echo $i * $j;
 $s1 = 'Hello';
 $s2 = 'Friend';
 $s3 = $s1 . $s2;
-
 Echo $s3;
 
 ?>
