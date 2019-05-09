@@ -1,7 +1,7 @@
 <?php
-$cars = array("MYVI", "BMW", "Toyota");
-echo "I like " . $cars[MYVI] . ", " . $cars[BMW] . " and " . $cars[TOYOTA] . ".";
+$game = array("cso", "gta_5", "lol");
+echo "I like " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
 
-$cars = array("Volvo", "BMW", "Toyota");
-echo count($cars);
+$game = array("cso", "gta_5", "lol");
+echo count($game);
 ?>
