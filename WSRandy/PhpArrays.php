@@ -7,7 +7,7 @@ $Brands = array("Asus", "Evga", "Zotac");
 //echo count($Brands);
 
 $Brands = array("Asus", "Evga", "Zotac");
-$TotalNoofBrands = count($Brands);
+ /*$TotalNoofBrands = count($Brands);
 
 for($x = 0; $x < $TotalNoofBrands; $x++) {
     echo "<br>_______________________________________________<br>";
@@ -30,8 +30,10 @@ for($x = 0; $x < $TotalNoofBrands; $x++) {
         }
     }
 }
-echo "yaaay out of loop";
+echo "yaaay out of loop";*/
 
-
+$ShoppingCart = array("Asus", "Evga", "Zotac", "Nvidia", "Galax");
+echo count($ShoppingCart);
+echo "<br>";
 
 ?>
