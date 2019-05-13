@@ -1,10 +1,14 @@
-<?php 
 
-print "hello this is from style apache server. <br>
-        this is from print function <br>";
+<?PHP
+/*STRING */
+$s1 = "HELLO";
+$s2 = " FRIEND ";
+echo $s1.$s2;
 
- echo "hello this is from style apache server. <br>
-        this is from print function <br>" ;
-        
-        
+/*INTEGERS AND OPERATORS*/
+$I =1;
+$I =$I + 3;
+$J =5;
+
+ECHO $I * $J;
 ?>
