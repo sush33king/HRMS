@@ -39,23 +39,21 @@ $Products = array(
     array("Nvidia",1800,7),
     array("Galax",1500,6)
     );
+$Total = 0;
 
-for($z = 0; $z > $Products; $z++) {
-    echo '$z = ' . $z;
-    echo "<br>";
-    echo $Brands[$z];
-    echo "<br>";
+for($z = 0; $z < count($Products) ; $z++) {
+    $Total = $Total + $Products[$z][1] * $Products[$z][2];
 }
+echo "<br>";
 
-
-$TotalCost = 0;
+$TotalCost = $Total;
 $ShoppingCart[0] = $TotalCost;
 $ShoppingCart[1] = $Products;
 
 echo var_dump($ShoppingCart);
 
-//echo $ShoppingCart[0][0].": In stock: ".$Price[0][1].", sold: ".$Quantity[0][2].".<br>";
-//echo $ShoppingCart[1][0].": In stock: ".$Price[1][1].", sold: ".$Quantity[1][2].".<br>";
+echo $ShoppingCart[0][0].": In stock: ".$ShoppingCart[0][1].", sold: ".$ShoppingCart[0][2].".<br>";
+echo $ShoppingCart[1][0].": In stock: ".$ShoppingCart[1][1].", sold: ".$ShoppingCart[1][2].".<br>";
 
 /*echo $Brands[2][0].": In stock: ".$Price[2][1].", sold: ".$Quantity[2][2].".<br>";
 echo $Brands[3][0].": In stock: ".$Price[3][1].", sold: ".$Quantity[3][2].".<br>";
