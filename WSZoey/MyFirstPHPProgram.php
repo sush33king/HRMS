@@ -20,7 +20,7 @@ $txt = "Good Evening!<br>";
 $number = "14 <br>";
  
 // Displaying variables value
-echo "Variable Command Test: <br>";
+echo "<br>Variable Command Test: <br>";
 echo $txt;  // Output: Good Evening!
 echo $number; // Output: 14
 ?>
@@ -31,7 +31,7 @@ echo $number; // Output: 14
 define("SITE_URL", "www.facebook.com");
  
 // Using constant
-echo 'Constant Command Test<br>';
+echo '<br>Constant Command Test<br>';
 echo 'Thank you for visiting - ' . SITE_URL;
 echo '<br>';
 ?>
