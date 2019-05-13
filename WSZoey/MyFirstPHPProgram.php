@@ -64,11 +64,21 @@ echo $num;
 echo "<br>";
 echo $txt2;
 echo "<br>";
-echo $colors[0];
+echo $colors[1];
 ?>
 
 <?php
 //Using If, ElseIF, Else Commands
+// Example:
+/* 
+if(condition1){
+    // Code to be executed if condition1 is true
+} elseif(condition2){
+    // Code to be executed if the condition1 is false and condition2 is true
+} else{
+    // Code to be executed if both condition1 and condition2 are false
+}
+*/
 echo "<br> <br>";
 echo "If ElseIf Else Commands:";
 echo "<br>";
@@ -83,3 +93,4 @@ if($d == "Fri"){
     echo "Have a nice day!";
 }
 ?>
+
