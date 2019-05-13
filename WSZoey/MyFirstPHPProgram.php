@@ -17,7 +17,7 @@ echo "Good Afternoon!<br>";
 // Declaring variables
 //$var_name = value
 $txt = "Good Evening!<br>";
-$number = 14 <br>;
+$number = "14 <br>";
  
 // Displaying variables value
 echo $txt;  // Output: Good Evening!
