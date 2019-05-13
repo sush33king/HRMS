@@ -52,7 +52,7 @@ echo "<h4 style='color: red;'>This text is red.</h4>";
 // Defining variables
 $txt = "Phone Number:";
 $txt2 = "Favourite Color:";
-$num = 0125110628;
+$num = 0125110628 ;
 $colors = array("Red", "Green", "Blue");
  
 // Displaying variables
