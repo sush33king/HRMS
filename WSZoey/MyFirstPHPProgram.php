@@ -42,6 +42,7 @@ echo "Echo Command Test: <br>";
 echo "Hello People!<br>";
 
 // Displaying HTML code
+echo "HTML Input Test: <br>";
 echo "<h4>This text is black.</h4>";
 echo "<h4 style='color: red;'>This text is red.</h4>";
 ?>
