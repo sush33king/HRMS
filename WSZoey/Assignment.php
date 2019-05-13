@@ -11,9 +11,6 @@ echo "Product:" . $products[1][0] . ", Price:" . $products[1][1] . ", Quantity:"
 echo "Product:" . $products[2][0] . ", Price:" . $products[2][1] . ", Quantity:" . $products[2][2]  . "<br> <br>";
 echo "Product:" . $products[3][0] . ", Price:" . $products[3][1] . ", Quantity:" . $products[3][2]  . "<br> <br>";
 
-echo var_dump ($products[0]);
-
-
 $total=0;
 
 for($x = 0; $x < count($products); $x=$x+1) {
@@ -25,4 +22,6 @@ $shoppingcart[1] = $products;
 
 echo "<br>";
 echo $total;
+
+echo var_dump($shoppingcart)
 ?>
