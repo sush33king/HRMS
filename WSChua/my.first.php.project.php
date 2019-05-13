@@ -1,9 +1,15 @@
 <?php
 
-print "CHUA Compeleted. <br> 
-       this is from print function <br>" ; 
 
-echo "CHUA Compeleted. <br>
-      this is echo function <br>";
+/*intergers and operators*/
+$i = 1 ;
+$i = $i + 3;
+$j =999999999999999999999999E+99;
+echo $i * $j;
 
+/*string*/
+$s1 = "hello <br>";
+$s2 = "friend <br>";
+echo $s1 . $s2;
 ?>
+
