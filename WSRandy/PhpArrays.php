@@ -52,8 +52,8 @@ $ShoppingCart[1] = $Products;
 
 echo var_dump($ShoppingCart);
 
-echo $ShoppingCart[0][0].": In stock: ".$ShoppingCart[0][1].", sold: ".$ShoppingCart[0][2].".<br>";
-echo $ShoppingCart[1][0].": In stock: ".$ShoppingCart[1][1].", sold: ".$ShoppingCart[1][2].".<br>";
+//echo $ShoppingCart[0][0].": In stock: ".$ShoppingCart[0][1].", sold: ".$ShoppingCart[0][2].".<br>";
+//echo $ShoppingCart[1][0].": In stock: ".$ShoppingCart[1][1].", sold: ".$ShoppingCart[1][2].".<br>";
 
 /*echo $Brands[2][0].": In stock: ".$Price[2][1].", sold: ".$Quantity[2][2].".<br>";
 echo $Brands[3][0].": In stock: ".$Price[3][1].", sold: ".$Quantity[3][2].".<br>";
@@ -62,5 +62,8 @@ echo $Brands[4][0].": In stock: ".$Price[4][1].", sold: ".$Quantity[4][2].".<br>
 //echo var_dump ($Brands(0));
 //$Total
 
+echo ' <textarea rows="4" cols="50">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+</textarea>';
 
 ?>
