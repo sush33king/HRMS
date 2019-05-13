@@ -1,6 +1,7 @@
 <?php
 // Display greeting message
-echo "Good Morning!";
+echo "Greeting Message: <br>";
+echo "Good Morning! <br>";
 ?>
 
 <?php
