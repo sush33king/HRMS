@@ -32,8 +32,8 @@ $game = array
   array("lol",500,2),
   );
 
-echo $game[0][0].": price: ".$game[0][1].", quantity: ".$game[0][2].".<br>";
-echo $game[1][0].": price: ".$game[1][1].", quantity: ".$game[1][2].".<br>";
-echo $game[2][0].": price: ".$game[2][1].", quantity: ".$game[2][2].".<br>";
+echo $game[0][0] . ": price:" . $game[0][1] . ", quantity: " . $game[0][2] . "<br>";
+echo $game[1][0] . ": price: " . $game[1][1] . ", quantity: " . $game[1][2] . ".<br>";
+echo $game[2][0] . ": price: " . $game[2][1] . ", quantity: " . $game[2][2] . ".<br>";
 
 ?>
