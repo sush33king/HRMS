@@ -33,5 +33,25 @@ foreach($age as $x => $x_value) {
 
 $product= array("price", "qty", "name");
 echo count($product);
+
+echo '<br>__________________________________________';
+
+$product = array(
+
+array("banana",1.5,5);
+array("carrot",3,10);
+array("timun",5,13);
+;
+)
+
+echo $product[0][0];
+echo $product[0][1];
+echo $product[0][2];
+
+
+
+
 ?>
+
+
  
