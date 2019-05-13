@@ -37,27 +37,17 @@ echo $game[1][0] . ": price: " . $game[1][1] . ", quantity: " . $game[1][2] . ".
 echo $game[2][0] . ": price: " . $game[2][1] . ", quantity: " . $game[2][2] . ".<br>";
 
 echo var_dump ($game[0]);
+
 $total=0;
+
     for($x = 0; $x < count($game); $x++) {
         $total = $total + $game[$x][1];
     }
+
+    $game[0] = $total;
+    $game[1] = $game;
+
     echo "<br>";
     echo $total;
 
-    echo var_dump ($game[1]);
-$total=1;
-    for($x = 1; $x < count($game); $x++) {
-        $total = $total + $game[$x][2];
-    }
-    echo "<br>";
-    echo $total;
-
-    echo var_dump ($game[2]);
-    $total=2;
-        for($x = 2; $x < count($game); $x++) {
-            $total = $total + $game[$x][2];
-        }
-        echo "<br>";
-        echo $total;
-        
 ?>
