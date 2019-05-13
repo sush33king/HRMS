@@ -42,7 +42,7 @@ $emailaddress = array(
     )
 );
 // Access nested value
-echo "Zoey's Email-id is: " . $contacts[0]["email"];
+echo "Zoey's Email-id is: " . $emailaddress[0]["email"];
 ?>
 
 <?php
@@ -59,7 +59,7 @@ for($x = 0; $x < $arrlength; $x++) {
 <?php
 /* Loop Through an Associative Array*/
 $price = array("Mercedes"=>"260000","BMW"=>"250000", "Toyota"=>"120000");
-foreach($Price as $x => $x_value) {
+foreach($price as $x => $x_value) {
     echo "Key=" . $x . ", Value=" . $x_value;
     echo "<br>";
 }
