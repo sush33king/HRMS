@@ -17,12 +17,13 @@ echo "Good Afternoon!<br>";
 // Declaring variables
 //$var_name = value
 $txt = "Good Evening!<br>";
-$number = "14 <br>";
+$number = 14;
  
 // Displaying variables value
 echo "<br>Variable Command Test: <br>";
 echo $txt;  // Output: Good Evening!
 echo $number; // Output: 14
+echo "<br>";
 ?>
 
 <?php
@@ -51,7 +52,7 @@ echo "<h4 style='color: red;'>This text is red.</h4>";
 // Defining variables
 $txt = "Phone Number:";
 $txt2 = "Favourite Color:";
-$num = "0125110628";
+$num = 0125110628;
 $colors = array("Red", "Green", "Blue");
  
 // Displaying variables
@@ -64,4 +65,17 @@ echo "<br>";
 echo $txt2;
 echo "<br>";
 echo $colors[0];
+?>
+
+<?php
+echo "If ElseIf Else Commands:";
+echo "<br>";
+$d = date("D");
+if($d == "Fri"){
+    echo "Have a nice weekend!";
+} elseif($d == "Sun"){
+    echo "Have a nice Sunday!";
+} else{
+    echo "Have a nice day!";
+}
 ?>
