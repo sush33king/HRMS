@@ -68,6 +68,7 @@ echo $colors[0];
 ?>
 
 <?php
+echo "<br> <br>";
 echo "If ElseIf Else Commands:";
 echo "<br>";
 $d = date("D");
