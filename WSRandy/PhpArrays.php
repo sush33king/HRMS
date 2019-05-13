@@ -32,8 +32,21 @@ for($x = 0; $x < $TotalNoofBrands; $x++) {
 }
 echo "yaaay out of loop";*/
 
-$ShoppingCart = array("Asus", "Evga", "Zotac", "Nvidia", "Galax");
-echo count($ShoppingCart);
-echo "<br>";
+$ShoppingCart = array(
+    array("Asus",1800,5),
+    array("Evga",1900,4),
+    array("Zotac",1500,7),
+    array("Nvidia",1800,7),
+    array("Galax",1500,6)
+    );
+
+echo $Brands[0][0].": In stock: ".$Price[0][1].", sold: ".$Quantity[0][2].".<br>";
+echo $Brands[1][0].": In stock: ".$Price[1][1].", sold: ".$Quantity[1][2].".<br>";
+echo $Brands[2][0].": In stock: ".$Price[2][1].", sold: ".$Quantity[2][2].".<br>";
+echo $Brands[3][0].": In stock: ".$Price[3][1].", sold: ".$Quantity[3][2].".<br>";
+echo $Brands[4][0].": In stock: ".$Price[4][1].", sold: ".$Quantity[4][2].".<br>";
+
+echo var_dump (%$Brands)[0];
+
 
 ?>
