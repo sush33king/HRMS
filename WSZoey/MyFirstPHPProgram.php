@@ -28,10 +28,10 @@ echo $number; // Output: 14
 <?php
 // Defining constant
 // define() function accepts two arguments: the name of the constant, and its value
-define("SITE_URL", "www.facebook.com");
+define("SITE_URL", "<h4 style='color: blue;'> www.facebook.com</h4>");
  
 // Using constant
-echo '<br>Constant Command Test<br>';
+echo '<br>Constant Command Test:<br>';
 echo 'Thank you for visiting - ' . SITE_URL;
 echo '<br>';
 ?>
