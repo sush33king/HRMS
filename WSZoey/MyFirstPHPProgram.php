@@ -38,10 +38,28 @@ echo '<br>';
 
 <?php
 // Displaying string of text
-echo "<br> Echo Command Test: <br>";
+echo "Echo Command Test: <br>";
 echo "Hello People!<br>";
 
 // Displaying HTML code
 echo "<h4>This text is black.</h4>";
 echo "<h4 style='color: red;'>This text is red.</h4>";
+?>
+
+<?php
+// Defining variables
+$txt = "Phone Number:";
+$txt2 = "Favourite Color:"
+$num = 0125110628;
+$colors = array("Red", "Green", "Blue");
+ 
+// Displaying variables
+echo "Displaying Variables using Echo:";
+echo $txt;
+echo "<br>";
+echo $num;
+echo "<br>";
+echo $txt2;
+echo "<br>";
+echo $colors[0];
 ?>
