@@ -59,4 +59,5 @@ $total=1;
         }
         echo "<br>";
         echo $total;
+        
 ?>
