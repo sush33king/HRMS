@@ -1,31 +1,33 @@
 <?php
 
-/*integers and operators*/
+/*1. integers and operators*/
 $i = 1;
 $i = $i + 3;
 $j = 5;
 echo $i * $j;
 
-echo "<br>";
+echo "<b>";
 
-/*Assigning string variables with data*/
+/*2. Assigning string variables with data*/
 $s1 = "hello ";
-$s2 = "Friend<br>";
+$s2 = "Friend";
 
-/*String concatenationa and Passing of string data by value */
+/*3. String concatenation and Passing of string data BY VALUE, i.e CLONING */
 $s3 = $s1 . $s2;
 
 $s1 = "";
 $s2 = "";
 
-/*What will browser display? */
+/*4. What will browser display? */
 echo $s3;
 
-/*passing of data by reference*/
-$s4 = &$s3;
+/*5. passing of data BY REFERENCE*/
 $s3 = "<br><br>xxx";
+$s4 = &$s3;
 
-/*What will the browser display? */
+
+/*6. What will the browser display? */
+$s3 = "THIS IS THE NEW ME";
 echo $s4;
 
 ?>
