@@ -55,6 +55,7 @@ $colors = array("Red", "Green", "Blue");
  
 // Displaying variables
 echo "Displaying Variables using Echo:";
+echo "<br>";
 echo $txt;
 echo "<br>";
 echo $num;
