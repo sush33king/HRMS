@@ -32,7 +32,7 @@ define("SITE_URL", "<h4 style='color: blue;'> www.facebook.com</h4>");
  
 // Using constant
 echo '<br>Constant Command Test:<br>';
-echo 'Thank you for visiting - ' . SITE_URL;
+echo 'Thank you for visiting - ' SITE_URL;
 echo '<br>';
 ?>
 
