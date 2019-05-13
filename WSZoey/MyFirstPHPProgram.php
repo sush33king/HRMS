@@ -32,7 +32,8 @@ define("SITE_URL", "www.facebook.com");
  
 // Using constant
 echo 'Constant Command Test<br>';
-echo 'Thank you for visiting - ' . SITE_URL'<br>';
+echo 'Thank you for visiting - ' . SITE_URL;
+echo '<br>';
 ?>
 
 <?php
