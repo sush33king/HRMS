@@ -38,7 +38,7 @@ echo '<br>';
 
 <?php
 // Displaying string of text
-echo "Echo Command Test: <br>";
+echo "<br> Echo Command Test: <br>";
 echo "Hello People!<br>";
 
 // Displaying HTML code
