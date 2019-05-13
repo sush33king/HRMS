@@ -10,14 +10,14 @@ echo "Good Morning! <br>";
 # This is also a single line comment
 /*This is a multi
 line comment */
-echo "Good Afternoon!";
+echo "Good Afternoon!<br>";
 ?>
 
 <?php
 // Declaring variables
 //$var_name = value
-$txt = "Good Evening!";
-$number = 14;
+$txt = "Good Evening!<br>";
+$number = 14 <break>;
  
 // Displaying variables value
 echo $txt;  // Output: Good Evening!
