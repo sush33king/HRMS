@@ -68,12 +68,15 @@ echo $colors[0];
 ?>
 
 <?php
+//Using If, ElseIF, Else Commands
 echo "<br> <br>";
 echo "If ElseIf Else Commands:";
 echo "<br>";
 $d = date("D");
 if($d == "Fri"){
     echo "Have a nice weekend!";
+} elseif($d == "Sat"){
+    echo "Have a nice Saturday!";
 } elseif($d == "Sun"){
     echo "Have a nice Sunday!";
 } else{
