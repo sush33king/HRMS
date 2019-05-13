@@ -1,6 +1,6 @@
 <?php
 // Display greeting message
-echo "Greeting Message: <br>";
+echo "Greeting Messages: <br>";
 echo "Good Morning! <br>";
 ?>
 
@@ -20,6 +20,7 @@ $txt = "Good Evening!<br>";
 $number = "14 <br>";
  
 // Displaying variables value
+echo "Variable Command Test: <br>"
 echo $txt;  // Output: Good Evening!
 echo $number; // Output: 14
 ?>
@@ -30,12 +31,14 @@ echo $number; // Output: 14
 define("SITE_URL", "www.facebook.com");
  
 // Using constant
-echo 'Thank you for visiting - ' . SITE_URL;
+echo 'Constant Command Test<br>'
+echo 'Thank you for visiting - ' . SITE_URL'<br>';
 ?>
 
 <?php
 // Displaying string of text
-echo "Hello People!";
+echo "Echo Command Test: <br>"
+echo "Hello People!<br>";
 
 // Displaying HTML code
 echo "<h4>This text is black.</h4>";
