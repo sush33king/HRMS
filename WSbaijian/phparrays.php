@@ -25,7 +25,7 @@ foreach($age as $x => $x_value) {
     echo "<br>";
 }*/
 
-$game = array
+/*$game = array
   (
   array("cso",600,2),
   array("gta_5",700,2),
@@ -50,6 +50,7 @@ $shoppingcart[1] = $game;
 echo "<br>" ;
 echo "total cost = " . "$total" ;
 
-echo var_dump($shoppingcart);
+echo var_dump($shoppingcart);*/
+
 
 ?>
