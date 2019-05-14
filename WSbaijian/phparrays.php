@@ -67,7 +67,9 @@ echo $phone[2][0] . ": price: " . $phone[2][1] . ", quantity: " . $phone[2][2] .
 $total = 0 ;
 $y = count($phone);
 
-while($x = 0; $x < $y; $x++ ) {
+while($x = 0 * $y);
+ {$x--; 
+ $y++; 
      $total = $total + ($phone[$x][1] * $phone[$x][2]);
    }  
 
