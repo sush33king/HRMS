@@ -11,8 +11,6 @@ echo "Product:" . $products[1][0] . ", Price:" . $products[1][1] . ", Quantity:"
 echo "Product:" . $products[2][0] . ", Price:" . $products[2][1] . ", Quantity:" . $products[2][2]  . "<br> <br>";
 echo "Product:" . $products[3][0] . ", Price:" . $products[3][1] . ", Quantity:" . $products[3][2]  . "<br> <br>";
 
-echo var_dump ($products);
-
 $total=0;
 
 for($x = 0; $x < count($products); $x=$x+1) {
@@ -26,15 +24,5 @@ echo "<br>";
 
 echo $total;
 
-echo "<br>";
-
-echo "ShoppingCart";
-
-echo "<br>";
-
-echo var_dump($shoppingcart);
-
-echo '<textarea rows="4" cols="50">
-At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies. 
-</textarea>';
+echo var_dump($shoppingcart)
 ?>
