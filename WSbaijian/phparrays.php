@@ -1,17 +1,17 @@
 <?php
-//$game = array("cso", "gta_5", "lol");
-//echo "I like " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
+//$phone = array("iphone", "oppo", "asus");
+//echo "I like " . $phone[iphone] . ", " . $phone[oppo] . " and " . $phone[asus] . ".";
 
-//$game = array("cso", "gta_5", "lol");
-//echo count($game);
+//$phone = array("iphone", "oppo", "asus");
+//echo count($phone);
 
-//$game = array("cso", "gta_5", "lol");
+//$phone = array("iphone", "oppo", "asus");
 
-//$arrlength = count($game);
+//$arrlength = count($phone);
 
 /*for($x = 0; $x < $arrlength; $x++) {
     echo '$x = ' . $x . "<br>";
-    echo $game[$x];
+    echo $phone[$x];
     echo "<br>";
 }*/
 
@@ -25,32 +25,58 @@ foreach($age as $x => $x_value) {
     echo "<br>";
 }*/
 
-/*$game = array
+/*$phone = array
   (
-  array("cso",600,2),
-  array("gta_5",700,2),
-  array("lol",500,2),
+  array("iphone",600,2),
+  array("oppo",700,2),
+  array("asus",500,2),
   );
 
-echo $game[0][0] . ": price: " . $game[0][1] . ", quantity: " . $game[0][2] . "<br>";
-echo $game[1][0] . ": price: " . $game[1][1] . ", quantity: " . $game[1][2] . ".<br>";
-echo $game[2][0] . ": price: " . $game[2][1] . ", quantity: " . $game[2][2] . ".<br>";
+echo $phone[0][0] . ": price: " . $phone[0][1] . ", quantity: " . $phone[0][2] . "<br>";
+echo $phone[1][0] . ": price: " . $phone[1][1] . ", quantity: " . $phone[1][2] . ".<br>";
+echo $phone[2][0] . ": price: " . $phone[2][1] . ", quantity: " . $phone[2][2] . ".<br>";
 
-//echo var_dump ($game)[0] ;
+//echo var_dump ($phone)[0] ;
 $total = 0 ;
-$y = count($game);
+$y = count($phone);
 
    for ($x = 0; $x < $y; $x++ ) {
-     $total = $total + ($game[$x][1] * $game[$x][2]);
+     $total = $total + ($phone[$x][1] * $phone[$x][2]);
    }  
 
 $shoppingcart[0] = $total;
-$shoppingcart[1] = $game;
+$shoppingcart[1] = $phone;
 
 echo "<br>" ;
 echo "total cost = " . "$total" ;
 
 echo var_dump($shoppingcart);*/
 
+$phone = array
+  (
+  array("iphone",1600,2),
+  array("oppo",1700,2),
+  array("asus",1500,2),
+  );
+
+echo $phone[0][0] . ": price: " . $phone[0][1] . ", quantity: " . $phone[0][2] . "<br>";
+echo $phone[1][0] . ": price: " . $phone[1][1] . ", quantity: " . $phone[1][2] . ".<br>";
+echo $phone[2][0] . ": price: " . $phone[2][1] . ", quantity: " . $phone[2][2] . ".<br>";
+
+//echo var_dump ($phone)[0] ;
+$total = 0 ;
+$y = count($phone);
+
+   for ($x = 0; $x < $y; $x++ ) {
+     $total = $total + ($phone[$x][1] * $phone[$x][2]);
+   }  
+
+$shoppingcart[0] = $total;
+$shoppingcart[1] = $phone;
+
+echo "<br>" ;
+echo "total cost = " . "$total" ;
+
+echo var_dump($shoppingcart);
 
 ?>
