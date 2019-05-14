@@ -93,4 +93,3 @@ if($d == "Fri"){
     echo "Have a nice day!";
 }
 ?>
-
