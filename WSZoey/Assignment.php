@@ -12,8 +12,8 @@ echo "Product:" . $products[2][0] . ", Price:" . $products[2][1] . ", Quantity:"
 echo "Product:" . $products[3][0] . ", Price:" . $products[3][1] . ", Quantity:" . $products[3][2]  . "<br> <br>";
 
 $total=0;
-
-for($x = 0; $x < count($products); $x=$x+1) {
+$z = count($products);
+for($x = 0; $x <$z ; $x=$x+1) {
     $total = $total + ($products[$x][1] * $products[$x][2]);
 }
 
