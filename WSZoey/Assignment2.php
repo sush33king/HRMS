@@ -20,22 +20,17 @@ for($x = 0; $x <$z ; $x=$x+1) {
 $shoppingcart[0] = $total;
 $shoppingcart[1] = $products;
 
-$productname = 0;
-$productprice = 0;
-$productquantity = 0;
+$shoppingcartcontent = 0;
 $int = count($shoppingcart[1]);
 $whileint = 0;
 
 while($whileint < $int) {
-    $productname = $shoppingcart[1][$whileint][0];
-    $productprice = $shoppingcart[1][$whileint][1];
-    $productquantity = $shoppingcart[1][$whileint][2];
-    echo $productname;
-    echo " " .$productprice;
-    echo " " .$productquantity. "<br> <br>";
+    $shoppingcartcontent = "<strong>" .$shoppingcart[1][$whileint][0]."</strong>". 
+    " RM" .$shoppingcart[1][$whileint][1]. " x" . $shoppingcart[1][$whileint][2]. "<br> <br>";
+    echo $shoppingcartcontent;
     $whileint++;
 }
-
+echo "<strong> Total: </strong>".$shoppingcart[0]. "<br> <br>";
 
 //$tempshoppingcart = array ($shoppingcart[0], $shoppingcart[1]);
 //$shoppingcart[0] =9999989889789;
