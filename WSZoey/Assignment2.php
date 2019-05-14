@@ -25,12 +25,12 @@ $int = count($shoppingcart[1]);
 $whileint = 0;
 
 while($whileint < $int) {
-    $shoppingcartcontent = "<strong>" .$shoppingcart[1][$whileint][0]."</strong>". 
-    " RM" .$shoppingcart[1][$whileint][1]. " x" . $shoppingcart[1][$whileint][2]. "<br> <br>";
+    $shoppingcartcontent = "<strong>" .$shoppingcart[1][$whileint][0]."</strong> <br>". 
+    " RM" .$shoppingcart[1][$whileint][1]. "<br>" . $shoppingcart[1][$whileint][2]. " Available Units <br> <br>";
     echo $shoppingcartcontent;
     $whileint++;
 }
-echo "<strong> Total: </strong>".$shoppingcart[0]. "<br> <br>";
+echo "<strong> Total: </strong> RM".$shoppingcart[0]. "<br> <br>";
 
 //$tempshoppingcart = array ($shoppingcart[0], $shoppingcart[1]);
 //$shoppingcart[0] =9999989889789;
