@@ -36,18 +36,15 @@ echo $game[0][0] . ": price: " . $game[0][1] . ", quantity: " . $game[0][2] . "<
 echo $game[1][0] . ": price: " . $game[1][1] . ", quantity: " . $game[1][2] . ".<br>";
 echo $game[2][0] . ": price: " . $game[2][1] . ", quantity: " . $game[2][2] . ".<br>";
 
+$ShoppingCart[0] = $TotalCost;
+$ShoppingCart[1] = $Products;
+
 echo var_dump ($game[0]);
-
 $total=0;
-
     for($x = 0; $x < count($game); $x++) {
-        $total = $total + $game[$x][1];
+        $total = $total + $game[$x][1] * 0 $game[$x][2];
     }
-
-    $game[0] = $total;
-    $game[1] = $game;
-
     echo "<br>";
     echo $total;
-
+    $TotalCost = 0;
 ?>
