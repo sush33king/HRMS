@@ -1,5 +1,5 @@
 <?php
-
+//1. creating products array
 $Products = array(
     array("Asus",1800,5),
     array("Evga",1900,4),
@@ -24,16 +24,15 @@ $TotalCost = $Total;
 $ShoppingCart[0] = $TotalCost;
 $ShoppingCart[1] = $Products;
 
-echo var_dump($ShoppingCart);
+echo $ShoppingCart[0];
+$z = 0;
+while( $z <  $p) {
+    echo $Products[$z][0];
+    echo $Products[$z][1];
+    echo $Products[$z][2];
+    $z++;
+    echo "<br>";
+}
 
-echo $Products[0][0].": Price: ".$Products[0][1].", Quantity: ".$Products[0][2].".<br>";
-echo $Products[1][0].": Price: ".$Products[1][1].", Quantity: ".$Products[1][2].".<br>";
-echo $Products[2][0].": Price: ".$Products[2][1].", Quantity: ".$Products[2][2].".<br>";
-echo $Products[3][0].": Price: ".$Products[3][1].", Quantity: ".$Products[3][2].".<br>";
-echo $Products[4][0].": Price: ".$Products[4][1].", Quantity: ".$Products[4][2].".<br>";
-
-echo ' <textarea rows="4" cols="50">
-At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
-</textarea>';
 
 ?>
