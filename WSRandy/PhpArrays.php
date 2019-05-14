@@ -43,7 +43,9 @@ $Products = array(
 //2. loop through products array and calculate total overall cost for products
     $Total = 0;
 
-for($z = 0; $z < count($Products) ; $z++) {
+    $p = count($Products);
+
+for($z = 0; $z < $p ; $z++) {
     $Total = $Total + $Products[$z][1] * $Products[$z][2];
 }
 echo "<br>";

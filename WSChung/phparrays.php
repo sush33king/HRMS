@@ -55,4 +55,8 @@ echo "<br>" ;
 echo "total cost = " . "$total" ;
 
 echo var_dump($shoppingcart);
+
+echo ' <textarea rows="4" cols="50">
+At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+</textarea>';
 ?>
