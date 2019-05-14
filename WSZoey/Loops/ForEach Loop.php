@@ -8,6 +8,8 @@
          foreach( $colors as $value ) {
             echo "Value is $value <br />";
          }
+         echo "<br>";
+         echo "<br>";
       ?>
       
    </body>
