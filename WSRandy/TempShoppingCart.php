@@ -25,11 +25,19 @@ $ShoppingCart[0] = $TotalCost;
 $ShoppingCart[1] = $Products;
 
 echo $ShoppingCart[0];
+echo "<br>";
+
+//$Products[$z][0];
+
 $z = 0;
+
 while( $z <  $p) {
-    echo $Products[$z][0];
+    echo "<b>" . $Products[$z][0] . "</b>";
+    echo "<br>";
     echo $Products[$z][1];
+    echo "<br>";
     echo $Products[$z][2];
+    echo "<br>";
     $z++;
     echo "<br>";
 }
