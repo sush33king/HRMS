@@ -1,5 +1,5 @@
 <?php
-//1.write a program that has 3 integer bravirables. your code must echo out the min and max values.
+//1.write a program that has 3 integer variables. your code must echo out the min and max values.
 $a = 132;
 $b = 321;
 $c = 213;
