@@ -52,7 +52,7 @@ echo "total cost = " . "$total" ;
 
 echo var_dump($shoppingcart);*/
 
-$game = array
+/*$game = array
   (
   array("cso",600,2),
   array("gta_5",700,2),
@@ -78,6 +78,8 @@ echo "<br>";
 echo  "quantity" ."<b>" . $game[$x][2] . "</b>" ;
 
 $x++ ; 
-}
+}*/
+
+
 
 ?>
