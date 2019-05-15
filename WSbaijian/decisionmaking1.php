@@ -3,7 +3,7 @@
    
       <?php
          $d = date('D');
-         //$d = "Superman";
+         $d = "Superman";
          if ($d == "fri"){
             echo "Have a nice weekend!";
          }
