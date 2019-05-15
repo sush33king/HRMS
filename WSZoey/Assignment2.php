@@ -26,7 +26,7 @@ $whileint = 0;
 
 while($whileint < $int) {
     $shoppingcartcontent = "<strong>" .$shoppingcart[1][$whileint][0]."</strong> <br>". 
-    " RM" .$shoppingcart[1][$whileint][1]. "<br>" . $shoppingcart[1][$whileint][2]. " Available Units <br> <br>";
+    " RM" .$shoppingcart[1][$whileint][1]. "<br>" . $shoppingcart[1][$whileint][2]. " Units <br> <br>";
     echo $shoppingcartcontent;
     $whileint++;
 }
