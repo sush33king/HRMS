@@ -3,7 +3,8 @@ $products = array (
     array("AMD Ryzen 5 2600",650,10),
     array("Intel Core i5-8400",800,10),
     array("Intel Core i7-8700K",1700,10),
-    array("AMD Ryzen 7 2700X",1300,10)
+    array("AMD Ryzen 7 2700X",1300,10),
+    array("AMD Ryzen 7 2700X second edition",1300,10)
     );
 
 //echo "Product:" . $products[0][0] . ", Price:" . $products[0][1] . ", Quantity:" . $products [0][2] . "<br> <br>";
