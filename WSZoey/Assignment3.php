@@ -1,7 +1,7 @@
 <?php
 $x = 20;
 $y = 8;
-$z = 10;
+$z = 30;
 
 //Min Value
 if ($x < $y And $x < $z) {
