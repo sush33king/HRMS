@@ -28,9 +28,10 @@ $shoppingcart[1] = $product;
 
 $numberofproduct= 3 ;
 
-while( $x < $numberofproduct ) {
-
-$x++;
+$y=0;
+while( $y < $numberofproduct ) {
+echo $y;
+$y++;
 }
 
 ?>
