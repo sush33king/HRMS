@@ -2,9 +2,9 @@
    <body>
       
       <?php
-         $d = date("D");
-         
-         switch ($d){
+         $d = "LALALA";
+
+      switch ($d){
             case "Mon":
                echo "Monday";
                break;
@@ -40,3 +40,8 @@
       
    </body>
 </html>
+       
+       
+     
+       
+        
