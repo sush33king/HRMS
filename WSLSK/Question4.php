@@ -1,16 +1,12 @@
 <?php
+ 
+ for ($size = 1; $size <= 20; $size++){
 
-for ($size = 1; $size <= 20; $size++){
-
-for ($j = 1; $j <= 5 -$size; $j++){
-echo "";
-}
-
-for ($j = 1; $j <= 2*$size - 1; $j++){
-echo("*");
-}
-
-echo "<br>";
-}
-
+    for ($odd = 1; $j <= 5 -$size; $odd++){
+        echo "#";
+        }
+        
+        for ($odd = 1; $j <= 2*$size - 1; $odd++){
+        echo("*");
+        }
 ?>
