@@ -6,7 +6,7 @@ $i = $i + 3;
 $j = 5;
 echo $i * $j;
 
-echo "<b>";
+echo "<br>";
 
 /*2. Assigning string variables with data*/
 $s1 = "hello ";
@@ -21,8 +21,15 @@ $s2 = "";
 /*4. What will browser display? */
 echo $s3;
 
+//go to next line
+echo "<br>";
+
+
+
+//go to next line twice
+$s3 = "<br><br>";
+
 /*5. passing of data BY REFERENCE*/
-$s3 = "<br><br>xxx";
 $s4 = &$s3;
 
 
