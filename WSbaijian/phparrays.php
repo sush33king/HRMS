@@ -80,6 +80,7 @@ echo  "quantity" ."<b>" . $game[$x][2] . "</b>" ;
 $x++ ; 
 }*/
 
+/*MinMax.php*/
 /*$x = 15;
 $y = 8;
 $z = 25;
@@ -109,17 +110,22 @@ else {
     echo "Variable Z contains the largest value";
 }*/
 
-for ($size = 1; $size <= 60; $size++){
+for ($size = 1; $size <= 100; $size++)
+   {
+     for ($j = 1; $j <= 1 $size; $j++)
+    {
+        if($size % 2 = 0)
+       {
+          echo "*";            
+         }
+       else
+       {
+         echo "!";
+        }
+     }
+    
 
-    for ($j = 1; $j <= 5 -$size; $j++){
-    echo "";
-    }
-    
-    for ($j = 1; $j <= 2*$size - 1; $j++){
-    echo("*");
-    }
-    
-    echo "<br>";
+     echo "<br>";
     }
     
 
