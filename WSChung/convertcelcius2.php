@@ -5,23 +5,24 @@
 //If browser supplies input through the $_GET variablle, then this is technically termed as a GET REQUEST.
 //Check if any input variable provided through the GET variable 'x'. 
 
-if(isset($_GET['x']) )
+//1. Step 1, check if input exists
+if(isset($_GET['x']))
 {
-    //1. You can directly access the contents of the input variables
-    //echo "Total: " . ($_GET['x'] + $_GET['y']);
-    //echo "<br>";
 
-    //2. Display in browser the number of inputs provided
-    echo "There are " . count($_GET) . " input variables initialized";
-    echo "<br>";
+    //Step 2, Assign input to a variable
+    $celcius = $_GET['x'];
+    
+    //Step3, Convert celcius to fahrenheit
+    $fahrenheit = ($celcius*9/8)+32 . "°F";
 
-    //3. Loop through the 
-    echo "The Fahrenheit is : ";
-    echo "<br>";
- 
-    foreach ($_GET as &$value) {
-    echo ($value*9/8)+32 . "°F";
-    echo "<br>" ;
-    }
+
+    //Step 4, Echo out conversion results to browser
+    echo "The Fehrenheit is : ";
+    echo  $fahrenheit;
+
+    
 }
+else
+    echo 'Input variable not provided';
+
 ?>
