@@ -18,7 +18,7 @@ echo "";
 }
     
 for ($odd = 1; $odd <= 2 * $size - 1; $odd++){
-echo("!");
+echo("#");
 }
 
 echo "<br>";
