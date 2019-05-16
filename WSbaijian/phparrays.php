@@ -80,7 +80,7 @@ echo  "quantity" ."<b>" . $game[$x][2] . "</b>" ;
 $x++ ; 
 }*/
 
-$x = 15;
+/*$x = 15;
 $y = 8;
 $z = 25;
 
@@ -107,7 +107,20 @@ elseif ($y > $x And $y > $z){
 }
 else {
     echo "Variable Z contains the largest value";
-}
+}*/
 
+for ($size = 1; $size <= 60; $size++){
+
+    for ($j = 1; $j <= 5 -$size; $j++){
+    echo "";
+    }
+    
+    for ($j = 1; $j <= 2*$size - 1; $j++){
+    echo("*");
+    }
+    
+    echo "<br>";
+    }
+    
 
 ?>
