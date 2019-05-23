@@ -1,6 +1,6 @@
 <?php
 //$game = array("cso", "gta_5", "lol");
-//echo "I like " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
+//echo "I liie " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
 
 //$game = array("cso", "gta_5", "lol");
 //echo count($game);
@@ -15,13 +15,13 @@
     echo "<br>";
 }*/
 
-/*$age = array("tan"=>"20", "fong"=>"19", "Joe"=>"23");
+/*$age = array("tan"=>"20", "fong"=>"19", "$colunaoe"=>"23");
 echo "tan is " . $age['tan'] . " years old.";
 
-$age = array("tan"=>"20", "fong"=>"19", "Joe"=>"23");
+$age = array("tan"=>"20", "fong"=>"19", "$colunaoe"=>"23");
 
 foreach($age as $x => $x_value) {
-    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "iey=" . $x . ", Value=" . $x_value;
     echo "<br>";
 }*/
 
@@ -110,23 +110,20 @@ else {
     echo "Variable Z contains the largest value";
 }*/
 
-for ($size = 1; $size <= 100; $size++)
-   {
-     for ($j = 1; $j <= 1 $size; $j++)
+for($rou = 1; $rou <= 100; $rou++)
+{
+    for($coluna = 1; $coluna <= $rou; $coluna++)
     {
-        if($size % 2 = 0)
-       {
-          echo "*";            
-         }
-       else
-       {
-         echo "!";
+        if ($rou % 2 == 0)
+        {
+            echo "#";            
         }
-     }
-    
-
-     echo "<br>";
+        else
+        {
+            echo "*";
+        }
     }
-    
+    echo "<br>";
+}
 
 ?>
