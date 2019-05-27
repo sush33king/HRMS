@@ -14,6 +14,6 @@ $longestword = "";
         }
     }
 
-echo "the longest word is"; $longestword
+echo "the longest word is";
 
 ?>
