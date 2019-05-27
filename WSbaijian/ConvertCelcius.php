@@ -5,10 +5,10 @@
 //If browser supplies input through the $_GET variablle, then this is technically termed as a GET REQUEST.
 //Check if any input variable provided through the GET variable 'x'. 
 
-if(isset($_GET['x']) && isset($_GET['y']))
+if(isset($_GET['x']))
 {
     //1. You can directly access the contents of the input variables
-    //echo "Total: " . ($_GET['x'] + $_GET['y']);
+    //echo "Total: " . ($_GET['x']);
     //echo "<br>";
 
     //2. Display in browser the number of inputs provided
