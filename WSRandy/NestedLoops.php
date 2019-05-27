@@ -2,11 +2,11 @@
 $x = "*";
 for ($size = 1; $size <= 51; $size++){
 
-    for ($j = 1; $j <= 5 -$size; $j++){
+    for ($even = 1; $even <= 5 -$size; $even++){
     echo " ";
     }
     
-    for ($j = 1; $j <= 2*$size - 1; $j++){
+    for ($even = 1; $even <= 2*$size - 1; $even++){
     echo("*");
     }
     
@@ -15,11 +15,11 @@ for ($size = 1; $size <= 51; $size++){
     $z = "!";
     for ($size = 1; $size <= 51; $size++){
 
-        for ($j = 1; $j <= 5 -$size; $j++){
+        for ($odd = 1; $odd <= 5 -$size; $odd++){
         echo " ";
         }
         
-        for ($j = 1; $j <= 3*$size - 1; $j++){
+        for ($odd = 1; $odd <= 3*$size - 1; $odd++){
         echo("!");
         }
         
@@ -31,10 +31,12 @@ for ($size = 1; $size <= 51; $size++){
           if ($size % 2 == 0)
           {
             echo "$x";
+            echo "<br>";
           }
           else
           {
             echo "$z";
+            echo "<br>";
           }
         }
 
