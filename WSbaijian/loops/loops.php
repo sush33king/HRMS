@@ -5,7 +5,7 @@
          $i = 0;
          $num = 50;
          
-         while( $i < 1000) {
+         while( $i < 1000) {//while = sementara
             //$num--;
             $num = $num - 1;
             //$i++;

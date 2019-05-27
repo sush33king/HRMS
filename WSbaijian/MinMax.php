@@ -1,9 +1,9 @@
-<?php
-$x = 20;
+/*MinMax.php*/
+$x = 15;
 $y = 8;
-$z = 30;
+$z = 25;
 
-//Min Value
+<?php
 if ($x < $y And $x < $z) {
     echo "Variable X contains the smallest value";
 }
@@ -26,6 +26,5 @@ elseif ($y > $x And $y > $z){
 }
 else {
     echo "Variable Z contains the largest value";
-}
-
+}*/
 ?>
