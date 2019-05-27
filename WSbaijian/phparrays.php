@@ -1,6 +1,6 @@
 <?php
 //$game = array("cso", "gta_5", "lol");
-//echo "I like " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
+//echo "I liie " . $game[cso] . ", " . $game[gta_5] . " and " . $game[lol] . ".";
 
 //$game = array("cso", "gta_5", "lol");
 //echo count($game);
@@ -15,13 +15,13 @@
     echo "<br>";
 }*/
 
-/*$age = array("tan"=>"20", "fong"=>"19", "Joe"=>"23");
+/*$age = array("tan"=>"20", "fong"=>"19", "$colunaoe"=>"23");
 echo "tan is " . $age['tan'] . " years old.";
 
-$age = array("tan"=>"20", "fong"=>"19", "Joe"=>"23");
+$age = array("tan"=>"20", "fong"=>"19", "$colunaoe"=>"23");
 
 foreach($age as $x => $x_value) {
-    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "iey=" . $x . ", Value=" . $x_value;
     echo "<br>";
 }*/
 
@@ -79,48 +79,5 @@ echo  "quantity" ."<b>" . $game[$x][2] . "</b>" ;
 
 $x++ ; 
 }*/
-
-/*$x = 15;
-$y = 8;
-$z = 25;
-
-//Min Value
-if ($x < $y And $x < $z) {
-    echo "Variable X contains the smallest value";
-}
-elseif ($y < $x And $y < $z) {
-    echo "Variable Y contains the smallest value";
-}
-
-else {
-    echo "Variable Z contains the smallest value";
-}
-
-echo "<br> <br>";
-
-//Max Value
-if ($x > $y And $x > $z){
-    echo "Variable X contains the largest value";
-}
-elseif ($y > $x And $y > $z){
-    echo "Variable Y contains the largest value";
-}
-else {
-    echo "Variable Z contains the largest value";
-}*/
-
-for ($size = 1; $size <= 60; $size++){
-
-    for ($j = 1; $j <= 5 -$size; $j++){
-    echo "";
-    }
-    
-    for ($j = 1; $j <= 2*$size - 1; $j++){
-    echo("*");
-    }
-    
-    echo "<br>";
-    }
-    
 
 ?>
