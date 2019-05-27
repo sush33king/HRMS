@@ -1,4 +1,4 @@
 <?php  
-$string = "Lsk";  
+$string = "randy";  
 echo "Reverse string of $string is " .strrev ( $string );  
 ?>  
