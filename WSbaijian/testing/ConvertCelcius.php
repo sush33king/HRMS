@@ -19,11 +19,9 @@ if(isset($_GET['x']))
     echo "The inputs are : ";
     echo "<br>";
 
-    foreach ($_GET as &$value) 
-    {
-        echo $value;
-        echo "<br>";
-    }
+    echo "Variable x is " . $_GET['x'];
+    echo "<br>";
+    echo "Variable y is " . $_GET['y'];
 }
 else
     echo 'Input variable not provided';
