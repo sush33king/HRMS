@@ -6,7 +6,7 @@ $longestword = "";
 
  for($i = 0; $i < count($game) ; $i++)
     {
-     if(count ($game[$i]) > $max)
+     if(strlen ($game[$i]) > $max)
         {
          $max = strlen ($game[$i]);
          $longestword = $game[$i];
@@ -14,6 +14,6 @@ $longestword = "";
         }
     }
 
-echo "the longest word is";
+echo "the longest word is ". $longestword;
 
 ?>
