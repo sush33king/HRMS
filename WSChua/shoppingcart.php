@@ -1,36 +1,36 @@
 
 <?php
-$phone = array ('iphone', 'sumsung', 'LG', 'Nokia', 'Huawei') ;
-echo '<b> I like </b>' . $phone[0] . ', '. $phone[1] . ', ' .$phone[2] .','. $phone[3]. ',' .$phone[4]. '.';
-echo count($phone) ;
-?>
+//initializing array//
+$product = array ('iphone', 'sumsung', 'LG', 'Nokia', 'Huawei') ;
+echo '<b> I like </b>' . $product[0] . ', '. $product[1] . ', ' .$product[2] .','. $product[3]. ',' .$product[4]. '.';
+echo count($product) ;
 
-<?php
-$phone = array ('iphone', 'sumsung', 'LG', 'Nokia', 'Huawei') ;
-$arrlength = count($phone);
+
+//assign no of products in array to a variable//
+$product = array ('iphone', 'sumsung', 'LG', 'Nokia', 'Huawei') ;
+$arrlength = count($product);
 
 for($x = 0; $x < $arrlength; $x++) {
-echo $phone[$x];
+echo $product[$x];
 echo "<br>"; 
 }
-?>
 
-<?php
+
 $price = array("iphone"=>"5800", "sumsung"=>"4500", "LG"=>"3000", "Nokia"=>"2000", "huawei"=>"3500");
 echo "iphone is " . $price['iphone'] . " ringgit malaysia.";
-?>
 
-<?php
-$phone = array("iphone"=>"5800", "sumsung"=>"4500", "LG"=>"3000", "Nokia"=>"2000", "huawei"=>"3500");
+
+
+$product = array("iphone"=>"5800", "sumsung"=>"4500", "LG"=>"3000", "Nokia"=>"2000", "huawei"=>"3500");
 
 foreach($price as $x => $x_value) {
     echo "Key=" . $x . ", Value=" . $x_value;
     echo "<br>";
 }
-?>
 
-<?php
-$phone = array
+
+
+$product = array
   (
   array("iphone",5800,10),
   array("sumsung",4500,2),
@@ -39,11 +39,11 @@ $phone = array
   array("Huawei",3500,2),
   );
 
-echo $phone[0][0].": price: ".$phone[0][1].", quantity: ".$phone[0][2].".<br>";
-echo $phone[1][0].": price: ".$phone[1][1].", quantity: ".$phone[1][2].".<br>";
-echo $phone[2][0].": price: ".$phone[2][1].", quantity: ".$phone[2][2].".<br>";
-echo $phone[3][0].": price: ".$phone[3][1].", quantity: ".$phone[3][2].".<br>";
-echo $phone[4][0].": price: ".$phone[4][1].", quantity: ".$phone[4][2].".<br>";
+echo $product[0][0].": price: ".$product[0][1].", quantity: ".$product[0][2].".<br>";
+echo $product[1][0].": price: ".$product[1][1].", quantity: ".$product[1][2].".<br>";
+echo $product[2][0].": price: ".$product[2][1].", quantity: ".$product[2][2].".<br>";
+echo $product[3][0].": price: ".$product[3][1].", quantity: ".$product[3][2].".<br>";
+echo $product[4][0].": price: ".$product[4][1].", quantity: ".$product[4][2].".<br>";
 
 
 ?>

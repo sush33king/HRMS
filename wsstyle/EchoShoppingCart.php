@@ -26,10 +26,11 @@ $shoppingcart[0] = $totalcost;
 //assigning products to shoppingcart element 1
 $shoppingcart[1] = $product;
 
-$numberofproducts_in_shoppingcart= count($shoppingcart[1]) ;
+
 
 //echo out products in shopping cart. 
 //Products is an array, therefore we must use a loop to print it out
+$numberofproducts_in_shoppingcart= count($shoppingcart[1]) ;
 $y=0;
 while( $y < $numberofproducts_in_shoppingcart ) {
     echo $shoppingcart[1][$y][0];
