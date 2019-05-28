@@ -6,7 +6,7 @@ $i = 0 ;
 
     foreach ($fruits as $k => $v ) {
 
-        $arr[$v] = $k + 0 ;
+        $arr[$v] = $k + 100 ;
     }
 
     print_r($arr);
