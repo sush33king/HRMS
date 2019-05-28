@@ -11,9 +11,8 @@ for ($size = 1; $size <= 51; $size++){
     }
     
     echo "<br>";
-    }
+    
     $z = "!";
-    for ($size = 1; $size <= 51; $size++){
 
         for ($odd = 1; $odd <= 5 -$size; $odd++){
         echo " ";
@@ -26,19 +25,6 @@ for ($size = 1; $size <= 51; $size++){
         echo "<br>";
         }
 
-        for ($size = 1; $size <= 51; $size++)
-        {
-          if ($size % 2 == 0)
-          {
-            echo "$x";
-            echo "<br>";
-          }
-          else
-          {
-            echo "$z";
-            echo "<br>";
-          }
-        }
-
+      
 
 ?>
