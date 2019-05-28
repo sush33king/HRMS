@@ -24,6 +24,6 @@ if(isset($_GET['x']))
     echo "Variable y is " . $_GET['y'];
 }
 else
-    echo 'Input variable not provided';
+    echo 'Input variable not providevghghvd';
 
 ?>
