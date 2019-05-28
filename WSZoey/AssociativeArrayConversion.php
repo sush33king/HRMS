@@ -1,14 +1,11 @@
 <?php
-$Associative = array("Student", "Teacher", "Parent","Principal");
+$Associative = array("Student" => "35", "Teacher" => "12", "Parent" => "70","Principal" => "1");
+
+echo var_dump($Associative);
 
 $Indexed = array_values($Associative);
 
-
-
-for ($x = 0; $x < count($Indexed); $x++) {
-    echo $Indexed[$x]. " " .$x. "<br>";
-
-}
+echo var_dump($Indexed);
 
 
 
