@@ -1,10 +1,10 @@
 <?php
 
-    for($i = 1; $i <= 100; $i++)
+    for($row = 1; $row <= 100; $row++)
     {
-        for($j = 1; $j <= $i; $j++)
+        for($column = 1; $column <= $row; $column++)
         {
-            if ($i % 2 == 0)
+            if ($row % 2 == 0)
             {
                 echo "*";            
             }
