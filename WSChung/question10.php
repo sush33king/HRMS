@@ -6,7 +6,7 @@
 //Check if an input variable provided through the GET variable 'x'. 
 //1. Step 1, check if input exists
 
-if(isset($_GET['x']) && isset($_GET['']))
+if(isset($_GET['x']) AND isset($_GET['']))
 {
     //Step 2, Assign input to a variable
     $Width = $_GET['x'];
