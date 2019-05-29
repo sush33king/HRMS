@@ -1,16 +1,17 @@
 <?php
-for($H = 1; $H <= 100; $H++)
+for($K = 1; $K <= 100; $K++)
 {
-    for($coluna = 1; $coluna <= $H; $coluna++)
+    for($coluna = 1; $coluna <= $K; $coluna++)
     {
-        if ($H % 2 == 0)
+        /*if ($K % 2 == 0)
         {
             echo "#";            
         }
         else
         {
             echo "*";
-        }
+        }*/
+        echo '*';
     }
     echo "<br>";
 }
