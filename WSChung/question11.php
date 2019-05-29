@@ -1,24 +1,45 @@
 <?php
-
-if(isset($_GET['x']) AND isset($_GET['']))
+if(isset($_GET["w"]) And isset($_GET['h']))
 {
-    $Width = $_GET['x'];
-    $Height = $_GET['y'];
-
-    for($x = 0; $x < $Width; $x++)
+    $width = $_GET['w'];
+    $height = $_GET['h'];
+    
+    for($row = 1; $row <= $height; $row++)
     {
-        for($y = 0; $y < $Height; $y++)
+        //first row and last row fill up line with ******
+        if($row==1 Or $row == $height)
         {
-            echo('*');
-        }
-    }
-        
-       
-    
-    echo("</br>");
-}
-    
-else
-    echo 'Input variable not provided';
+            for($column = 1; $column <= $width; $column++)
+            {
+                echo "*";
+            }
 
+        }
+
+        //print out the inner triangle shape
+        if($row > 1 And $row < $height)
+        {
+            for($column = 1; $column <= $width; $column++)
+            {
+                if($column <= $row)//inner triangle using "*" character
+                {
+                    echo "*";
+                }
+                elseif($column <= $width -1) //fill up remainder of square with "+" instead of " " to make it clearer to see
+                {
+                    echo "+";
+                }
+                elseif($column==$width) // when reach last position in column, print "*"
+                {
+                    echo "*";        
+                }
+            }
+        }
+
+        
+        echo "<br>";
+    }
+
+
+}
 ?>
