@@ -1,24 +1,17 @@
 <?php
 
-if(isset($_GET['w']) && isset($_GET['h']))
+if(isset($_GET['c']) && isset($_GET['r']))
 {
     //Step 2, Assign input to a variable
-    $width = $_GET['w'];
-    $height = $_GET['h'];
+    $width = $_GET['c'];
+    $height = $_GET['r'];
 
     echo "width is " . $width;    
     echo "<br>";
     echo "height is " . $height;  
-    /*foreach ($i = 0 < $width("a") & $height("b"))
-    {
-        echo "*" ;$i 
-    }*/
-}
-else
-{
-    echo "Parameters not supplied in GET REQUEST";
-}
+    echo "<br>";
 
+    
 //print out rectangle or square based on values stored in $width and $height
 
 for($r = 0; $r <= $height; $r++ )
@@ -35,6 +28,12 @@ for($r = 0; $r <= $height; $r++ )
         }
     }
     echo "<br>";
+}
+
+}
+else
+{
+    echo "Parameters not supplied in GET REQUEST";
 }
 
 ?>
