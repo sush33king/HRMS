@@ -1,9 +1,9 @@
 <?php
-$x = 20;
-$y = 8;
-$z = 30;
 
-//Min Value
+$x = 90;
+$y = 69;
+$z = 55;
+
 if ($x < $y And $x < $z) {
     echo "Variable X contains the smallest value";
 }
@@ -17,7 +17,6 @@ else {
 
 echo "<br> <br>";
 
-//Max Value
 if ($x > $y And $x > $z){
     echo "Variable X contains the largest value";
 }
@@ -27,5 +26,5 @@ elseif ($y > $x And $y > $z){
 else {
     echo "Variable Z contains the largest value";
 }
-
 ?>
+

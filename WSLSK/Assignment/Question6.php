@@ -5,7 +5,7 @@ $max = 0;
 $Lword = "";
  for($i = 0; $i < Count($name); $i++)
  {
-    if (strlen($name[$i]) > $max);
+    if (strlen($name[$i]) > $max)
     {
         $max = strlen($name[$i]);
         $Lword = $name[$i];

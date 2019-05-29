@@ -1,9 +1,9 @@
 <?php
-for($rou = 1; $rou <= 100; $rou++)
+for($H = 1; $H <= 100; $H++)
 {
-    for($coluna = 1; $coluna <= $rou; $coluna++)
+    for($coluna = 1; $coluna <= $H; $coluna++)
     {
-        if ($rou % 2 == 0)
+        if ($H % 2 == 0)
         {
             echo "#";            
         }
