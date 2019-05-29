@@ -21,7 +21,6 @@ else
 
 //print out rectangle or square based on values stored in $width and $height
 
-echo "<br>";
 for($r = 0; $r <= $height; $r++ )
 {
     for($c = 1; $c <= $width ; $c++)
