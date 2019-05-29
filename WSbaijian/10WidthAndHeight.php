@@ -21,6 +21,20 @@ else
 
 //print out rectangle or square based on values stored in $width and $height
 
-if(print = )
+for($width = 0; $width <= 5; $width++ )
+{
+    for($coluna = 1; $coluna <= $width ; $coluna++)
+    {
+        if ($width % 1 == 0 ;)
+        {
+            echo "#";            
+        }
+        else
+        {
+            echo "*";
+        }
+    }
+    echo "<br>";
+}
 
 ?>
