@@ -1,10 +1,14 @@
 <?php
 
 $fruits = array("Banana", "orange","apple","durian","mangosteen");
+$copyoffruits = array();
 $i = 0;
 
-foreach($fruits as $x => $z){
-        $fruits_copy[$i++] = $z;
-}
+for ($i = 0; $i < count($fruits); $i++){
 
-?>        
+        $copyoffruits[$i]=$fruits[$i];
+} 
+
+echo var_dump($copyoffruits);
+
+?>       
