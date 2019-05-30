@@ -1,5 +1,5 @@
 <?php
-$fruits = array("banana", "orange","apple","durian","mangosteen");
+$fruits = array("mango", "orange","apple","durian","mangosteen");
 
 $fruitscopy = array($fruits);
 
