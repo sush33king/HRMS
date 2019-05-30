@@ -9,10 +9,10 @@ if(isset($_GET['w']) && isset($_GET['h']))
     echo "width is " . $width;    
     echo "<br>";
     echo "height is " . $height;  
-    /*foreach ($i = 0 < $width("a") & $height("b"))
+    foreach ($i = 0 < $width("a") & $height("b"))
     {
         echo "*" ;$i 
-    }*/
+    }
 }
 else
 {

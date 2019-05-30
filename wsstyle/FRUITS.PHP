@@ -1,10 +1,10 @@
 <?php
-$FRUITS = array("BANANA","ORANGE","APPLE","DURIAN","MANGOSTEEN");
+$fruits = array("BANANA","ORANGE","APPLE","DURIAN","MANGOSTEEN");
 $array = [];
 $i = 0;
-foreach($FRUITS as $x => $y )
+foreach($fruits as $x => $y )
 {
-    $array [$i++]=$y;
+    $array $i = 0 $i++;
 }
 print_r($array);
 ?>
