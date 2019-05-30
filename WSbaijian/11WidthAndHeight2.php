@@ -11,20 +11,20 @@ if(isset($_GET ['w']) && isset($_GET ['h']))
     echo "<br>";
 
     for($h = 0; $h <= $height; $h++ )
-{
-    for($w = 1; $w <= $width ; $w++)
     {
-        if ($h % 2 == 0 )
+        for($w = 1; $w <= $width ; $w++)
         {
-            echo "#";            
+            if ($h % 2 == 0 )
+            {
+                echo "#";            
+            }
+            else
+            {
+                echo "*";
+            }
         }
-        else
-        {
-            echo "*";
-        }
+        echo "<br>";
     }
-    echo "<br>";
-}
 
 }
 
