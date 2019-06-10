@@ -5,10 +5,7 @@ if(isset($_GET ['w']) && isset($_GET ['h']))
     $width = $_GET['w'];
     $height = $_GET['h'];
     
-    echo "width is " . $width;    
-    echo "<br>";
-    echo "height is " . $height;  
-    echo "<br>";
+    
 
     for($h = 0; $h <= $height; $h++ )
     {
