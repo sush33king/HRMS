@@ -1,13 +1,21 @@
 <?php
 
-$Age = array("Jack"=>25, "Viola"=>19, "Lionel"=>30);
-$arr = [];
+$age = array("Jack"=>25, "Viola"=>19, "Lionel"=>30); //associative array
+$temparr = [];//indexed array
 $i = 0;
     
-foreach ($Age as $k => $v ) {
+foreach ($age as $key => $value ) {
 
-        $arr[$i++]=$v;
+        //$temparr[$i++]=$v;
+        echo "key: " . $key;
+        echo "<br>";
+        echo "val: " . $value;
+        echo "<br>";
+
+        $temparr[$i][0] = $key;
+        $temparr[$i][1] = $value;
+        $i++; //$i=$i+1
     }
     
-    print_r($arr);
+    var_dump($temparr);
 ?>
