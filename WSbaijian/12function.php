@@ -1,5 +1,6 @@
 <?php
 // Defining function
+
 function getSum($num1, $num2)
 {
   $sum = $num1 + $num2;
