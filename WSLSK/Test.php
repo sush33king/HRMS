@@ -5,11 +5,7 @@ $alpha_flip = $_GET['x'];
  function toNum($data) 
             {
             $alphabet = array( 'a', 'b', 'c', 'd', 'e',
-                            'f', 'g', 'h', 'i', 'j',
-                            'k', 'l', 'm', 'n', 'o',
-                            'p', 'q', 'r', 's', 't',
-                            'u', 'v', 'w', 'x', 'y',
-                            'z'
+                            'f', 'g', 'h', 'i'
                             );
 
             $return_value = -1;
