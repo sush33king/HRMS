@@ -7,27 +7,42 @@ if(isset($_GET ['w']) && isset($_GET ['h']))
     
     
 
-    for($h = 0; $h <= $height; $h++ )
+    for($row = 1; $row <= $height; $row++)
     {
-        for($w = 1; $w <= $width ; $w++)
+        //first row and last row fill up line with ******
+        if($row==1 Or $row == $height)
         {
-            if ($h % 2 == 0 )
-            {
-                echo "#";            
-            }
-            else
+            for($column = 1; $column <= $width; $column++)
             {
                 echo "*";
             }
+
         }
+
+        //print out the inner triangle shape
+        if($row > 1 And $row < $height)
+        {
+            for($column = 1; $column <= $width; $column++)
+            {
+                if($column <= $row)//inner triangle using "*" character
+                {
+                    echo "*";
+                }
+                elseif($column <= $width -1) //fill up remainder of square with "+" instead of " " to make it clearer to see
+                {
+                    echo "<span style='color:#fff;'>*</span>";;
+                }
+                elseif($column==$width) // when reach last position in column, print "*"
+                {
+                    echo "*";        
+                }
+            }
+        }
+
+        
         echo "<br>";
     }
 
-}
-
-else 
-{
-    echo "the";
 }
 
 ?>
