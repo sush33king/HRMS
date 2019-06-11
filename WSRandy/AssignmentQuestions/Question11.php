@@ -6,15 +6,37 @@ if(isset($_GET['w']) & isset($_GET['h'])){
     $height = $_GET['h'];
 
   for($row = 0;$row < $height;$row++){
+      
+    if($row==1 Or $row == $height){
 
       for($column = 0;$column < $width;$column++){
       echo ("*");
       }
-      echo "<br>";
+      
     }
 
+if($row > 1 And $row < $height)
+        {
+            for($column = 1; $column <= $width; $column++)
+            {
+                if($column <= $row)
+                {
+                    echo "*";
+                }
+                elseif($column <= $width -1) 
+                {
+                    
+                    echo "<span style='color:#fff;'>*</span>";
+                }
+                elseif($column==$width) 
+                {
+                    echo "*";        
+                }
+            }
+        }
+        echo "<br>";
+    }
 }
-
 else{
 echo 'Input variable not provided';
 }
