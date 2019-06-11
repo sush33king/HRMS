@@ -27,8 +27,7 @@ if(isset($_GET["w"]) And isset($_GET['h']))
                 }
                 elseif($column <= $width -1) //fill up remainder of square with "+" instead of " " to make it clearer to see
                 {
-                    
-                    echo "<span style='color:#fff;'>*</span>";
+                    echo "<span style='color:#fff;'>*</span>";;
                 }
                 elseif($column==$width) // when reach last position in column, print "*"
                 {
@@ -36,9 +35,41 @@ if(isset($_GET["w"]) And isset($_GET['h']))
                 }
             }
         }
+
         
         echo "<br>";
     }
 
+
 }
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
