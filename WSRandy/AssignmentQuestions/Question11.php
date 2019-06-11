@@ -1,9 +1,9 @@
 <?php
 
-if(isset($_GET['width']) & isset($_GET['height'])){
+if(isset($_GET['w']) & isset($_GET['h'])){
 
-    $width = $_GET['width'];
-    $height = $_GET['height'];
+    $width = $_GET['w'];
+    $height = $_GET['h'];
 
   for($row = 0;$row < $height;$row++){
 
