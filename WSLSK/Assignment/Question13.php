@@ -21,19 +21,17 @@ if(isset($_GET['x']))
 {
     //echo "condition" . is_int($str[$i]);
     //echo '<br>';
-    if($str[$i] < 0 && $str[$i] > 9)
+    if(is_numeric($str[$i]) && $str[$i] <= 9 && $str[$i]>=1)
     //if(true)
     {
         $encoded[] = $alphabet[$str[$i]];
-        echo implode($encoded)
     }
     else
     {
         echo 'Problem with parameter';
     }
-
-                  
+             
 }}
 
-//echo implode($encoded);
+echo implode($encoded);
 ?>
