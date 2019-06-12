@@ -3,7 +3,7 @@ $i = 10;
 $i = ++$i;
 
 echo $i;
-print("Compeleted"); 
+print("Completed"); 
 
 phpinfo();
 ?>

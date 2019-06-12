@@ -34,9 +34,7 @@ if(isset($_GET["w"]) And isset($_GET['h']))
                     echo "*";        
                 }
             }
-        }
-
-        
+        }        
         echo "<br>";
     }
 
