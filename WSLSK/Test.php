@@ -1,21 +1,28 @@
 <?php
 if(isset($_GET['x']))
 {
-$alpha_flip = $_GET['x'];
- function toNum($data) 
-            {
-            $alphabet = array( 'a', 'b', 'c', 'd', 'e',
-                            'f', 'g', 'h', 'i'
-                            );
+    $word = $_GET['x'];
+     $alphabet = array( 
+         '1'=> 'a',
+         '2'=> 'b',
+         '3'=> 'c',
+         '4'=> 'd',
+         '5'=> 'e',
+         '6'=> 'f',
+         '7'=> 'g',
+         '8'=> 'h',
+         '9'=> 'i',
+        );
+// convert string to array
+ $str = str_split($word);
 
-            $return_value = -1;
-            $length = strlen($data);
-            }
-            for ($i = 0; $i < $length; $i++)   
-    {
-        $return_value +=
-            ([$data[$i]] + 1) * pow(26, ($length - $i - 1));
-    }
-    return $return_value;
+ $encoded = array();
+ for($i= 0; $i < count($str);$i++)
+ {
+ $encoded[] = $alphabet[$str[$i]];
+ }
+ echo implode($encoded);                 
 }
+else
+    echo 'Input variable not provided';
 ?>
