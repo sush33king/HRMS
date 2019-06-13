@@ -1,45 +1,61 @@
 <?php
 
-$letter = array(
-'1' => 'A',
-'2' => 'B',
-'3' => 'C',
-'4' => 'D',
-'5' => 'E',
-'6' => 'F',
-'7' => 'G',
-'8' => 'H',
-'9' => 'I',
-'10' => 'J',
-'11' => 'K',
-'12' => 'L',
-'13' => 'M',
-'14' => 'N',
-'15' => 'O',
-'16' => 'P',
-'17' => 'Q',
-'18' => 'R',
-'19' => 'S',
-'20' => 'T',
-'21' => 'U',
-'22' => 'V',
-'23' => 'W',
-'24' => 'X',
-'25' => 'Y',
-'26' => 'Z');
+if (isset($_GET['x']))
+{
+    
+    $letter = str_split($_GET['x']);
 
-if(isset($_GET['No'])){
-    $number = $_GET['No'];
-
-    for($letter = 0;$letter < $number;$letter++)
-      
-        if($letter==1 Or $letter == $number)        
-
-echo $letter;
+    for ($i=0; $i < count($letter); $i++)
+    {
+        switch ($letter[$i])
+        {
+            case 1:
+            {
+                echo "a";
+                break;
+            }
+            case 2:
+            {
+                 echo "B";
+                 break;
+            }
+            case 3:
+            {
+                echo "n";
+                break;
+            }
+            case 4:
+            {
+                echo "D";
+                break;
+            }
+            case 5:
+            {
+                echo "E";
+                break;
+            }
+            case 6:
+            {
+                echo "F";
+                break;
+            }
+            case 7:
+            {
+                echo "o";
+                break;
+            }
+            case 8:
+            {
+                echo "K";
+                break;
+            }
+            case 9:
+            {
+                echo "i";
+                break;
+            }
+        }   
+    }
 }
-
-
-
-
 
 ?>
