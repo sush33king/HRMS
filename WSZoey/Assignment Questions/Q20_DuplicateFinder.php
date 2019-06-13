@@ -12,7 +12,7 @@ $values = array_count_values($IntArray);
 $IndexedValues = array_values($values);
 
 //Displaying the uniques and duplicates
-echo 'Number of Unique Items in Array:' . count($values) . '<br><br>';
+echo 'Number of Unique Items in Array: ' . count($values) . '<br><br>';
 
 echo 'Array Items Count: <br><br>';
 
