@@ -9,7 +9,7 @@ echo $j;
 
 if(is_numeric($i) && $i <= 9 && $i>=1)
 {
-    if all ok
+    
 }
 else
 {
