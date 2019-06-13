@@ -1,12 +1,9 @@
 <?php
-
-if(isset($_GET ['w']) && isset($_GET ['h']))
+if(isset($_GET["w"]) And isset($_GET['h']))
 {
     $width = $_GET['w'];
     $height = $_GET['h'];
     
-    
-
     for($row = 1; $row <= $height; $row++)
     {
         //first row and last row fill up line with ******
@@ -43,6 +40,36 @@ if(isset($_GET ['w']) && isset($_GET ['h']))
         echo "<br>";
     }
 
-}
 
+}
 ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
