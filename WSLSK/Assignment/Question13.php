@@ -18,11 +18,20 @@ if(isset($_GET['x']))
 
  $encoded = array();
  for($i= 0; $i < count($str);$i++)
- {
- $encoded[] = $alphabet[$str[$i]];
- }
- echo implode($encoded);                 
-}
-else
-    echo 'Input variable not provided';
+{
+    //echo "condition" . is_int($str[$i]);
+    //echo '<br>';
+    if(is_numeric($str[$i]) && $str[$i] <= 9 && $str[$i]>=1)
+    //if(true)
+    {
+        $encoded[] = $alphabet[$str[$i]];
+    }
+    else
+    {
+        echo 'Problem with parameter';
+    }
+             
+}}
+
+echo implode($encoded);
 ?>
