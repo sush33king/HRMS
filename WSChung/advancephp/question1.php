@@ -26,14 +26,16 @@ class Calculator {
 
 class mod extends calculator { 
 
+    protected $_val1 , $_val2;
+
     public function __construct($val1, $val2){
     parent::__construct($val1, $val2);  
     }
 
-    public function modulus ()
-    {
-        return  parent->this_val1 % parent->this_val2;
+    public function modulus () {
+        return $this->_val1 % $this->_val2;
     }
+
 }
 
 
