@@ -76,9 +76,9 @@ echo "position of zoey is ". $position['zoey']. "<br>";
 echo "position of dickson is ". $position['dickson']. "<br>";
 */
 
-$position[0] = "high";
-$position[1] = "medium";
-$position[2] ="low";
+//$position[0] = "high";
+//$position[1] = "medium";
+//$position[2] ="low";
 
 //echo "position of chuah is ". $position ['chuah']. "<br>";
 //echo "position of zoey is ". $position['zoey']. "<br>";
@@ -89,12 +89,32 @@ $position[2] ="low";
 //</textarea> <br><br>';
 
 //for loop
-for($x=0; $x < count($position); $x++)
+//for($x=0; $x < count($position); $x++)
+//{
+
+  //  echo $position[$x] . '<br>';
+//}
+
+
+
+class enlitenIT
+{ $classid;
+    $class_year;
+
+function abc ($x,$y)
 {
-
-    echo $position[$x] . '<br>';
+    $ans = ($x + $y) 
+    return $ans;
+    
 }
+}
+$y=1
+$x= 2
+abc ($x,$y);
+echo $ans
 
+$cls_enliten = new enlitenIT();
+$no_of_student = $cls_enlitengot>getnumberofstudent();
 ?>
 
 
