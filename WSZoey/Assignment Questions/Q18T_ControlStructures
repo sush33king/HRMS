@@ -1,0 +1,81 @@
+Code execution can be grouped into categories as shown below:
+
+Sequential – this one involves executing all the codes in the order in 
+which they have been written.
+
+Decision – this one involves making a choice given a number of options. 
+The code executed depends on the value of the condition.
+
+A control structure is a block of code that decides the execution path 
+of a program depending on the value of the set condition.
+
+Here are some examples of the control structures that exist in php:
+
+
+PHP IF Else:
+
+If… then... else is the simplest control structure. It evaluates 
+the conditions using Boolean logic and should only be used if:
+
+A) You have a block of code that should be executed only if a 
+certain condition is true.
+
+B) You have two options, and you have to select one.
+
+C) If… then… else if… is used when you have to select 
+more than two options and you have to select one or more.
+
+Below is the syntax for the If...Elseif...Else control structure.
+
+If (Condition1)
+{
+    (Block of code to execute)
+}
+
+Elseif (Condition2)
+{
+    (Block of code to execute)
+}
+
+Else
+{
+    (Block of code to execute)
+}
+
+
+PHP Switch Case:
+
+Switch… case is similar to the if then… else control structure.
+It only executes a single block of code depending on the value of the
+condition.
+
+If no condition has been met then the default block of code is 
+executed.
+
+It has the following basic syntax:
+
+
+switch(condition){
+
+case value:
+
+//block of code to be executed
+
+break;
+
+case value2:
+
+//block of code to be executed
+
+break;
+
+default:
+
+//default block code
+
+break;
+
+}
+
+
+
