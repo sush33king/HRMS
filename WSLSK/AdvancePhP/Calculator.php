@@ -5,7 +5,7 @@ class calculator
     var $a;
     var $b;
 
-    function checkopration($oprator)
+    public function checkopration($oprator)
     {
         switch($oprator)
         {
@@ -29,7 +29,7 @@ class calculator
             return "Sorry No command found";
         }   
     }
-    function getresult($a, $b, $c)
+    public function getresult($a, $b, $c)
     {
         $this->a = $a;
         $this->b = $b;
@@ -37,10 +37,34 @@ class calculator
     }
 }
 
-$cal = new calculator();
-if(isset($_GET['op']))
-{   
-    $result = $cal->getresult($_GET['n1'],$_GET['n2'],$_GET['op']);
-    echo $result;
+class calmod extends calculator
+{
+    public function get_mod($x,$y)
+    {
+     echo $x % $y;
+    }
+}
+
+
+
+if(isset($_GET['op']) && isset($_GET['x']) && isset($_GET['y']))
+{ 
+        $cal  = new calmod;
+
+        if ($_GET['op'] == '%')
+        {
+            
+            $cal->get_mod(2,5);
+            echo "<br>";
+            //echo $cal->getresult(10,10,"+");
+        }
+        else 
+        {
+            echo $cal->getresult($_GET['x'],$_GET['y'],$_GET['op']);
+        }
+}
+else
+{
+    echo "Wrong Perimeter Supply";
 }
 ?>
