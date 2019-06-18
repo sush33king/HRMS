@@ -1,6 +1,6 @@
 <?php
 class Calculator {
-    private $_val1 , $_val2;
+    protected $_val1 , $_val2;
 
     public function __construct($val1, $val2){
         $this->_val1 = $val1;
@@ -24,6 +24,21 @@ class Calculator {
     }
 }
 
+class mod extends calculator { 
+
+    protected $_val1 , $_val2;
+
+    public function __construct($val1, $val2){
+    parent::__construct($val1, $val2);  
+    }
+
+    public function modulus () {
+        return $this->_val1 % $this->_val2;
+    }
+
+}
+
+
 $calc = new Calculator(3,4);
 echo "<p>3 + 4 = ".$calc->add(). "</p>";
 
@@ -35,5 +50,10 @@ echo "<p> 3 * 4 = ".$calc->multiply(). "</p>";
 
 $calc = new Calculator (20,2);
 echo "<p> 20 / 2 = ".$calc ->divide(). "</p>";
+
+$calc = new mod (20,3);
+echo "<p> 20 % 3 = ".$calc ->modulus(). "</p>";
+
+
 
 ?>
