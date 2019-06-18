@@ -1,0 +1,14 @@
+A query string is a set of characters input to a computer or 
+Web browser and sent to a query program to recover specific 
+information from a database.
+
+Referring back to Question 15 about the $_POST and $_GET variables,
+it was mentioned that the $_GET variable displays the data it is
+collecting after the URL of the HTML form it is collecting form like
+so:
+
+(www.pageurl.com?value=10)
+
+The data being collected, which in this case is '?value=10' is known
+as a query string as is being passed onto a query program in a
+different location to be processed.
