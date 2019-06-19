@@ -32,17 +32,32 @@ class Calculator {
     }
 }
 
-//$calc = new Calculator(3,4);
-//echo "<p>3 + 4 = ".$calc->add(). "</p>";
+class mod extends calculator { 
+
+    protected $_val1 , $_val2;
+
+    public function __construct($val1, $val2){
+    parent::__construct($val1, $val2);  
+    }
+
+    public function modulus () {
+        return $this->_val1 % $this->_val2;
+    }
+
+}
+
+
+$calc = new Calculator(3,4);
+echo "<p>3 + 4 = ".$calc->add(). "</p>";
 
 $calc = new Calculator (15,12);
-//echo "<p>15 - 12 = ".$calc->subtract(). "</p>";
+echo "<p>15 - 12 = ".$calc->subtract(). "</p>";
 $calc->subtract();
 
-//$calc = new Calculator (20,2);
-//echo "<p> 20 * 2 = ".$calc->multiply(). "</p>";
+$calc = new Calculator (20,2);
+echo "<p> 20 * 2 = ".$calc->multiply(). "</p>";
 
-//$calc = new Calculator (20,2);
-//echo "<p> 20 / 2 = ".$calc ->divide(). "</p>";
+$calc = new Calculator (20,2);
+echo "<p> 20 / 2 = ".$calc ->divide(). "</p>";
 
 ?>
