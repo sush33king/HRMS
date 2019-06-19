@@ -1,5 +1,6 @@
+
 <?php
-   function keep_track() {
+   /*function keep_track() {
       STATIC $count = 0;
       $count++;
       print $count;
@@ -8,5 +9,9 @@
    
    keep_track();
    keep_track();
-   keep_track();
+   keep_track();*/
+
+   include_once('diceroll.php');
+   $d = new diceroll;
+   $d->diceroll();
 ?>
