@@ -2,9 +2,12 @@
 
 Class DiceRoll{
 
-    public function Draw()
-    echo '
-    '
+    function draw6()
+    {
+        $content = file_get_contents('../Libraries/Pictures/source.GIF');
+        header('Content-Type: image/gif');
+        echo $content;
+    }
 }
 
 
