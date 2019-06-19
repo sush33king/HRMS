@@ -1,32 +1,7 @@
 <?php
-class diceroll
-{
-    function draw1()
-    echo _____________
-        |             |
-        |             |
-        |      *      |
-        |             |
-        |_____________|
-}
-{
-    function draw2()
+include_once("../advnced/rolldice.php");
 
-}
-{
-    function draw3()
+$dice = new rolldice;
+$dice->draw6();
 
-}
-{
-    function draw4()
-
-}
-{
-    function draw5()
-
-}
-{
-    function draw6()
-
-}
 ?>
