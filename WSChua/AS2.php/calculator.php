@@ -69,8 +69,6 @@ class MCalculator extends Calculator{
 }
 
 
-
-
 $calc = new MCalculator;
 echo $calc->mod(5,3);
 echo "<br>";

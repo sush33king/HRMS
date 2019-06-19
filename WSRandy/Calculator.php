@@ -1,38 +1,37 @@
 <?php
 class MyCalculator {
-public $_fval, $_sval;
-public function __construct( $fval, $sval ) {
-$this->_fval = $fval;
-$this->_sval = $sval;
+public $FV, $SV;
+public function __construct( $fvalue, $svalue ) {
+$this->FV = $fvalue;
+$this->SV = $svalue;
 }
 public function add() {
-return $this->_fval + $this->_sval;
+    echo $this->FV + $this->SV;
 }
 public function subtract() {
-return $this->_fval - $this->_sval;
+    echo $this->FV - $this->SV;
 }
 public function multiply() {
-return $this->_fval * $this->_sval;
+    echo $this->FV * $this->SV;
 }
 public function divide() {
-return $this->_fval / $this->_sval;
+    echo $this->FV / $this->SV;
 }
 }
 
 class Remainder extends MyCalculator
 {
     public function modulus() {
-    return $this->_fval % $this->_sval;
+    echo $this->FV % $this->SV;
     }
 }
 
 $mycalc = new MyCalculator(12, 6); 
-echo $mycalc-> add()."\n"; // Displays 18 
-echo $mycalc-> multiply()."\n"; // Displays 72
-echo $mycalc-> subtract()."\n"; // Displays 6
-echo $mycalc-> divide()."\n"; // Displays 2
+$mycalc-> add()."\n"; // Displays 18 
+$mycalc-> multiply()."\n"; // Displays 72
+$mycalc-> divide()."\n"; // Displays 2
 
 $mycal = new Remainder (15, 7); 
-echo $mycal-> modulus()."\n";
+$mycal-> modulus()."\n";
 
 ?>
