@@ -3,12 +3,14 @@
 $input= array('1','15','7','1','2','5','7','8','9','66','33','8','8','8');
 $arrcount = array(array());
 
+
+//initialize temp storage to record number of occurance
 for($i=0; $i<count($input) ; $i++)
 {
     
     
-        $arrcount[$i][0] = $input[$i];
-        $arrcount[$i][1] = 1;
+        $arrcount[$i][0] = $input[$i]; //value
+        $arrcount[$i][1] = 1; //number of occurance
     
 }
 

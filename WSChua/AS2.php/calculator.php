@@ -3,29 +3,25 @@
 //create a calculator that can perform the addition multiplication subtraction and division and 2 number.
 
 class Calculator {
-    private $_val1 , $_val2;
-    public $publicname;
-    private $secretname;
+    protected $p_val1 , $p_val2;
+    
 
-    public function __construct($val1, $val2){
-        $this->_val1 = $val1;       
-        $this->_val2 = $val2;
+    
+
+    public function add($x, $y){
+        return $x + $y;
     }
 
-    public function add(){
-        return $this->_val1 + $this->_val2;
+    public function subtract($x, $y){
+        return $x - $y;
     }
 
-    public function subtract(){
-        return $this->_val1 - $this->_val2;
+    public function multiply ($x, $y){
+        return $x * $y;
     }
 
-    public function multiply (){
-        return $this->_val1 * $this->_val2;
-    }
-
-    public function divide () {
-        return $this->_val1 / $this->_val2;
+    public function divide ($x, $y) {
+        return $x / $y;
     }
 
     /*public function whatsmyname($name)
@@ -38,7 +34,7 @@ class Calculator {
     }*/
 }
 
-$calc = new Calculator(3,4);
+/*$calc = new Calculator(3,4);
 echo $calc->add();
 echo "<br>";
 
@@ -59,5 +55,28 @@ echo $calc->$publicname;
 echo "<br>";
 echo $calc->$secretname;
 */
+
+
+
+
+//create child class from calculator class
+class MCalculator extends Calculator{
+
+    function mod ($x,$y)
+    {
+        return $x % $y;
+    }
+}
+
+
+$calc = new MCalculator;
+echo $calc->mod(5,3);
+echo "<br>";
+echo $calc->add(5,3);
+
+
+
+
+
 
 ?>
