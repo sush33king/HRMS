@@ -1,8 +1,7 @@
 <?php
 
-include_once("../MyClassLibraries/Calculator.php");
+include_once("../MyClassLibraries/RollDice.php");
 
-$calc = new Calculator();
-echo $calc->add();
-
+$dice = new RollDice;
+$dice->draw6();
 ?>
