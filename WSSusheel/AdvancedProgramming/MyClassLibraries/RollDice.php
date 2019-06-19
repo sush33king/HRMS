@@ -10,6 +10,7 @@ Class RollDice
         $content = file_get_contents('../Images/Dice' . $randomnumber . '.GIF');
         header('Content-Type: image/gif');
         echo $content;
+        
     }
 
 }
