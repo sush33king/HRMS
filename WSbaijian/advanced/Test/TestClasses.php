@@ -1,7 +1,7 @@
 <?php
 
-include_once("../ClassFiles/RollDice.php");
+include_once("../testing/RollDice1.php");
 
-$dr = new RollDice;
+$dr = new RollDice1;
 $dr->RolltheDice();
 ?>
