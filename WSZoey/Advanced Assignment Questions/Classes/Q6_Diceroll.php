@@ -2,34 +2,47 @@
 
 Class Diceroll
 {
+    function RockAndRoll()
+    {       
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice' . rand(1,6) . '.GIF');            
+    }
+
+
     function Draw1()
     {
-        echo "*";
+        header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\Dice1.gif');
     }
 
     function Draw2()
     {
-        echo "**";
+        header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\Dice2.gif');
     }
 
     function Draw3()
     {
-        echo "***";
+        header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\Dice3.gif');
     }
 
     function Draw4()
     {
-        echo "****";
+        header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\Dice4.gif');
     }
 
     function Draw5()
     {
-        echo "*****";
+        echo header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\Dice5.gif');
     }
 
     function Draw6()
     {
-        echo "******";
+        header('Content-Type: image/gif');
+        echo file_get_contents('C:\xampp\htdocs\Git Repo\HRMS\WSZoey\Advanced Assignment Questions\Images\DICE6.gif');
     }
 
 
@@ -70,7 +83,7 @@ Class Diceroll
 }
 
 $RollDice = new Diceroll;
-echo $RollDice-> RollDice();
+$RollDice-> RollDice();
 
 
 
