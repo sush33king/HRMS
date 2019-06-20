@@ -1,28 +1,21 @@
 <?php
-if(isset($_GET['x']))
-{
-    $word = $_GET['x'];
-     $alphabet = array( 
-         '1'=> 'a',
-         '2'=> 'b',
-         '3'=> 'c',
-         '4'=> 'd',
-         '5'=> 'e',
-         '6'=> 'f',
-         '7'=> 'g',
-         '8'=> 'h',
-         '9'=> 'i',
-        );
-// convert string to array
- $str = str_split($word);
+/// Script start
 
- $encoded = array();
- for($i= 0; $i < count($str);$i++)
- {
- $encoded[] = $alphabet[$str[$i]];
- }
- echo implode($encoded);                 
+/// Creates variable $dice and sets the content to a random number between the 1 and 6
+$dice = rand(1,6);
+
+/// Display $dice 
+echo $dice;
+
+/// If $dice is a 6 then display echo message
+if($dice == 6) {
+echo "Good Job! you threw a 6.";
 }
-else
-    echo 'Input variable not provided';
+
+/// If $dice is lower then 3 display echo message
+if($dice < 3) {
+echo "Don't give up try again!";
+}
+
+/// Script end
 ?>

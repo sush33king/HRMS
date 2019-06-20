@@ -2,7 +2,7 @@
 
 
 //$_GET is an array that the server will keep in memory to store browser/user input.
-//If browser supplies input through the $_GET variablle, then this is technically termed as a GET REQUEST.
+//If browser supplies input through the $_GET variablle, then this is technically termed as a GET REQUEST or URL QUERY STRING.
 //Check if any input variable provided through the GET variable 'x'. 
 
 if(isset($_GET['x']) && isset($_GET['y']))
