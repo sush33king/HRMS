@@ -17,6 +17,7 @@ for ($digit = 0; $digit < count($nums); $digit++)
     }
 }
 
+//Echo out
 for ($x = 0; $x < count($nums); $x++)
 {
     echo $nums[$x] . "<br>";

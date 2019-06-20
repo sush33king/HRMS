@@ -11,7 +11,7 @@
    keep_track();
    keep_track();*/
 
-   include_once('diceroll.php');
-   $d = new DiceRoll;
+   include_once('classes/diceroll.php');
+   $d = new diceroll;
    $d->rolldice();
 ?>

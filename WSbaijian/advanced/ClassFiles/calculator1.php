@@ -24,7 +24,7 @@ class Calculator {
         return $this->_val1 / $this->_val2;
     }
 }
-
+/*
 if(isset($_GET["x"]) and isset($_GET['y']) and isset($_GET['z']))
 {
 
@@ -33,7 +33,7 @@ if(isset($_GET["x"]) and isset($_GET['y']) and isset($_GET['z']))
     $z = $_GET['z'];
     $calc = new Calculator ($x,$y,$z);
     $calc->subtract();
-}
+}*/
 
 
 ?>
