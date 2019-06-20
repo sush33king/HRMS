@@ -18,7 +18,7 @@ class DiceRoll
           |       |
           |  * *  |
           |       |
-          ........."
+          .........";
     }
 
     function draw3()
@@ -27,7 +27,7 @@ class DiceRoll
           |   *   |
           |       |
           |  * *  |
-          ........."
+          .........";
     }
 
     function draw4()
@@ -36,7 +36,7 @@ class DiceRoll
           |  * *  |
           |       |
           |  * *  |
-          ........."
+          .........";
     }
 
     function draw5()
@@ -45,7 +45,7 @@ class DiceRoll
           |  * *  |
           |   *   |
           |  * *  |
-          ........."
+          .........";
     }
 
 
@@ -55,7 +55,7 @@ class DiceRoll
           |  * *  |
           |  * *  |
           |  * *  |
-          ........."
+          .........";
     }
    
     function rolldice()
@@ -63,26 +63,26 @@ class DiceRoll
         $x=rand(1,6);
       
         if ($x==1){
-            draw1();
+            this->draw1();
         }
 
         if ($x==2){
-            draw2();
+            this->draw2();
         }
         if ($x==3){
-            draw3(); 
+            this->draw3(); 
         }
         
         if ($x==4){
-            draw4();
+            this->draw4();
         }
         
         if ($x==5){
-            draw5();
+            this->draw5();
         }
         
         if ($x==6){
-            draw6();
+            this->draw6();
         }
         
 
