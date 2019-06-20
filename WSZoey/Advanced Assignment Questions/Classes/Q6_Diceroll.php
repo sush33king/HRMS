@@ -4,32 +4,38 @@ Class Diceroll
 {
     function Draw1()
     {
-        echo "*";
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice1.GIF');         
     }
 
     function Draw2()
     {
-        echo "**";
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice2.GIF');
     }
 
     function Draw3()
     {
-        echo "***";
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice3.GIF');
     }
 
     function Draw4()
     {
-        echo "****";
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice4.GIF');
     }
 
     function Draw5()
     {
-        echo "*****";
+        echo header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice5.GIF');
     }
 
     function Draw6()
     {
-        echo "******";
+        header('Content-Type: image/gif');
+        echo file_get_contents('../Images/Dice6.GIF');
     }
 
 
@@ -69,8 +75,7 @@ Class Diceroll
     }
 }
 
-$RollDice = new Diceroll;
-echo $RollDice-> RollDice();
+
 
 
 
