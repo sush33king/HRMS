@@ -7,7 +7,7 @@ Class RollDice
     {
         $randomnumber = rand(1,6);
 
-        $content = file_get_contents('../Downloads/Dice' . $randomnumber . '.GIF');
+        $content = file_get_contents('../Dice' . $randomnumber . '.GIF');
         header('Content-Type: Downloads/gif');
         echo $content;
         

@@ -3,14 +3,10 @@
 Class RollDice
 {
     
-    function draw6()
-    {
-        $randomnumber = rand(1,6);
-
-        $content = file_get_contents('../Images/Dice' . $randomnumber . '.GIF');
+    function RockAndRoll()
+    {       
         header('Content-Type: image/gif');
-        echo $content;
-        
+        echo file_get_contents('../Images/Dice' . rand(1,6) . '.GIF');            
     }
 
 }
