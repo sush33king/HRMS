@@ -4,9 +4,9 @@ class DiceRoll
 {
 
 public function Draw1() {   
-$content = file_get_contents('../Downloads/dice1' . $randomnumber . '.png');
-header('Content-Type: image/png');
-echo $content; }
+      header('Content-Type: image/png');
+      echo file_get_contents('../Downloads/dice/dice1' . rand(1,6)  . '.png');      
+}
 
 public function Draw2() {
 "<br>" ;

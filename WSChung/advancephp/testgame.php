@@ -1,8 +1,8 @@
 <?php
 
-include_once("../advancephp/dicegame.php");
-
-$dice = new DiceRoll;
-$dice->rollthedice();
+include_once("../advancephp/dicegame2.php");
+$dice = new RollDice; 
+//$dice->RollDice;
+$dice->RockAndRoll();
 
 ?>
