@@ -14,19 +14,19 @@ Class RollDice
 
       public function Draw3() 
       {
-      echo "3" ;
+            echo "3" ;
       }
       public function Draw4()
       { 
-      echo "4 " ;
+            echo "4 " ;
       }
       public function Draw5()
       { 
-      echo "5 " ;
+            echo "5 " ;
       }
             public function Draw6() 
       {
-      echo "6 " ;
+            echo "6 " ;
             
       }
 
