@@ -1,6 +1,9 @@
 <?php
 
-
+Class RollDice
+{
+    function 
+}
 
 
 
