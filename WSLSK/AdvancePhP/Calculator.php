@@ -58,7 +58,7 @@ if(isset($_GET['op']) && isset($_GET['x']) && isset($_GET['y']))
             echo "<br>";
             //echo $cal->getresult(10,10,"+");
         }
-        else 
+       else 
         {
             echo $cal->getresult($_GET['x'],$_GET['y'],$_GET['op']);
         }
