@@ -1,46 +1,21 @@
-<?php 
-$result = "";
-class calculator
-{
-    var $a;
-    var $b;
+<?php
+/// Script start
 
-    function checkopration($oprator)
-    {
-        switch($oprator)
-        {
-            case '+':
-            return $this->a + $this->b;
-            break;
+/// Creates variable $dice and sets the content to a random number between the 1 and 6
+$dice = rand(1,6);
 
-            case '-':
-            return $this->a - $this->b;
-            break;
+/// Display $dice 
+echo $dice;
 
-            case '*':
-            return $this->a * $this->b;
-            break;
-
-            case '/':
-            return $this->a / $this->b;
-            break;
-
-            default:
-            return "Sorry No command found";
-        }   
-    }
-    function getresult($a, $b, $c)
-    {
-        $this->a = $a;
-        $this->b = $b;
-        return $this->checkopration($c);
-    }
+/// If $dice is a 6 then display echo message
+if($dice == 6) {
+echo "Good Job! you threw a 6.";
 }
 
-$cal = new calculator();
-if(isset($_GET['op']))
-{   
-    $result = $cal->getresult($_GET['n1'],$_GET['n2'],$_GET['op']);
-    echo $result;
+/// If $dice is lower then 3 display echo message
+if($dice < 3) {
+echo "Don't give up try again!";
 }
+
+/// Script end
 ?>
