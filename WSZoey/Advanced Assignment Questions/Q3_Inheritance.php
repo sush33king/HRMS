@@ -20,6 +20,7 @@ return $this->_fval * $this->_sval;
 public function divide() {
 return $this->_fval / $this->_sval;
 }
+}
 
 class Remainder extends MyCalculator
 {

@@ -1,4 +1,5 @@
 <?php
+
 class MyCalculator {
 public $FV, $SV;
 public function __construct( $fvalue, $svalue ) {
