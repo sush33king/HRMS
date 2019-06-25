@@ -10,12 +10,12 @@ interface Age
     public function myage();
 }
 
-interface Appearance extends Name,Age
+interface Appearance
 {
     public function mylooks();
 }
 
-class Richard implements Appearance
+class Richard implements Appearance, Name, Age
 {
     public function myname()
     {
@@ -33,7 +33,7 @@ class Richard implements Appearance
     }
 }
 
-class Eugene implements Appearance
+class Eugene implements Appearance, Name, Age
 {
     public function myname()
     {
