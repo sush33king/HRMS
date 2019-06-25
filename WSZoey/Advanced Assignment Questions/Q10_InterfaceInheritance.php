@@ -38,7 +38,7 @@ class Richard implements Appearance, Name, Age
     }
 }
 
-class Eugene implements Appearance, Name, Age
+class Eugene implements Appearance, Name, Age, Weight
 {
     public function myname()
     {
@@ -52,9 +52,15 @@ class Eugene implements Appearance, Name, Age
 
     public function mylooks()
     {
-        echo "Eugene is ugly.<br><br>";
+        echo "Eugene is ugly.<br>";
+    }
+
+    public function myweight()
+    {
+        echo "Eugene is 60kg.<br><br>";
     }
 }
+
 $richard1 = new Richard;
 $richard1->myname();
 $richard1->myage();
@@ -64,6 +70,7 @@ $eugene1 = new Eugene;
 $eugene1->myname();
 $eugene1->myage();
 $eugene1->mylooks();
+$eugene1->myweight();
 
 
 ?>
