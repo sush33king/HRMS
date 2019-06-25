@@ -5,54 +5,32 @@ class DiceRoll
 
 public function Draw1() {   
       header('Content-Type: image/png');
-      echo file_get_contents('../Downloads/dice/dice1' . rand(1,6)  . '.png');      
+      echo file_get_contents('images/dice/dice1' . '.png');      
 }
 
 public function Draw2() {
-"<br>" ;
-echo " _______
-      |       |
-      |  **   |
-      |_______| " ;
-"</br>" ;     
+      header('Content-Type: image/png');
+      echo file_get_contents('images/dice/dice2' . '.png');      
 }
 
 public function Draw3() {
-"<br>" ;
-echo " _______
-      |       |
-      |  ***  |
-      |_______| " ;
-"</br>" ;
+      header('Content-Type: image/png');
+      echo file_get_contents('images/dice/dice3' . '.png');      
 }
 
 public function Draw4() {
-"<br>" ;
-echo " _______
-      |  *  * |
-      |  *  * |
-      |_______| " ;
-"</br>" ;
+      header('Content-Type: image/png');
+      echo file_get_contents('images/dice/dice4' . '.png');      
 }
 
 public function Draw5() {
-"<br>" ;
-echo " _________
-      |   *  *  |
-      |    *    |
-      |   *  *  |
-      |_________|  " ;
-"</br>" ;
+      header('Content-Type: image/png');
+      echo file_get_contents('images/dice/dice5' . '.png');      
 }
 
 public function Draw6() {
-"<br>" ;
-echo " _________
-      |   *  *  |
-      |   *  *  |
-      |   *  *  |
-      |_________|  " ;
-"</br>"; 
+      header('Content-Type: image/png');
+      echo file_get_contents('images/dice/dice6' . '.png');      
 }          
 
 
