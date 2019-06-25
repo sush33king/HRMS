@@ -15,6 +15,11 @@ interface Appearance
     public function mylooks();
 }
 
+interface Weight
+{
+    public function myweight();
+}
+
 class Richard implements Appearance, Name, Age
 {
     public function myname()
