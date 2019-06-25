@@ -1,4 +1,5 @@
 <?php
+
 class MyCalculator {
 public $FV, $SV;
 public function __construct( $fvalue, $svalue ) {
@@ -19,17 +20,18 @@ public function divide() {
 }
 }
 
+$mycalc = new MyCalculator(12, 6); 
+$mycalc-> add()."\n";
+$mycalc-> subtract()."\n"; 
+$mycalc-> multiply()."\n"; 
+$mycalc-> divide()."\n"; 
+
 class Remainder extends MyCalculator
 {
     public function modulus() {
     echo $this->FV % $this->SV;
     }
 }
-
-$mycalc = new MyCalculator(12, 6); 
-$mycalc-> add()."\n"; // Displays 18 
-$mycalc-> multiply()."\n"; // Displays 72
-$mycalc-> divide()."\n"; // Displays 2
 
 $mycal = new Remainder (15, 7); 
 $mycal-> modulus()."\n";
