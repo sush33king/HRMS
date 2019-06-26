@@ -15,6 +15,11 @@ interface Appearance
     public function mylooks();
 }
 
+interface Weight
+{
+    public function myweight();
+}
+
 class Richard implements Appearance, Name, Age
 {
     public function myname()
@@ -33,7 +38,7 @@ class Richard implements Appearance, Name, Age
     }
 }
 
-class Eugene implements Appearance, Name, Age
+class Eugene implements Appearance, Name, Age, Weight
 {
     public function myname()
     {
@@ -47,7 +52,12 @@ class Eugene implements Appearance, Name, Age
 
     public function mylooks()
     {
-        echo "Eugene is ugly.<br><br>";
+        echo "Eugene is ugly.<br>";
+    }
+
+    public function myweight()
+    {
+        echo "Eugene is 60kg.<br><br>";
     }
 
     public function myweight()
@@ -55,6 +65,7 @@ class Eugene implements Appearance, Name, Age
         echo "I am 70 kg<br><br>";
     }
 }
+
 $richard1 = new Richard;
 $richard1->myname();
 $richard1->myage();
