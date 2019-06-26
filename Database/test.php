@@ -2,11 +2,16 @@
 
 echo phpinfo();
 
+    //setting the value for "serverName\instanceName"
+    $serverName = "127.0.0.1\\sqlexpress"; 
 
-    $serverName = "127.0.0.1\\sqlexpress"; //serverName\instanceName
+    //additional information for making connection to database
     $connectionInfo = array( "Database"=>"ModernNorthwind", "UID"=>"sa", "PWD"=>"password");
+
+    //using php function to connect to database using settings above
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
 
+    //check if connection is successful or not
     if( $conn ) {
         echo "Connection established.<br />";
     }else{

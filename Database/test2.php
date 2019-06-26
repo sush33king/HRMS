@@ -19,7 +19,7 @@ $stmt = sqlsrv_query( $conn, $tsql);
 if( $stmt === false )  
 {  
      echo "Error in query preparation/execution.\n";  
-     die( print_r( sqlsrv_errors(), true));  
+     die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
 }  
   
 /* Retrieve each row as a PHP object and display the results.*/ 
