@@ -10,14 +10,9 @@ interface Age
     public function myage();
 }
 
-interface Appearance 
+interface Appearance
 {
     public function mylooks();
-}
-
-interface Weight
-{
-    public function myweight();
 }
 
 class Richard implements Appearance, Name, Age
@@ -38,7 +33,7 @@ class Richard implements Appearance, Name, Age
     }
 }
 
-class Eugene implements Appearance, Weight
+class Eugene implements Appearance, Name, Age
 {
     public function myname()
     {
