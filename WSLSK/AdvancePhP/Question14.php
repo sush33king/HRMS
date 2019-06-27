@@ -1,12 +1,12 @@
 <?php
 
-echo phpinfo();
+//echo phpinfo();
 
     //setting the value for "serverName\instanceName"
-    $serverName = "127.0.0.1\\sqlexpress"; 
+    $serverName = "LSKPC\SQLEXPRESS"; 
 
     //additional information for making connection to database
-    $connectionInfo = array( "Database"=>"ModernNorthwind", "UID"=>"sa", "PWD"=>"password");
+    $connectionInfo = array( "Database"=>"3.1", "UID"=>"", "PWD"=>"");
 
     //using php function to connect to database using settings above
     $conn = sqlsrv_connect( $serverName, $connectionInfo);
@@ -19,10 +19,6 @@ echo phpinfo();
         die( print_r( sqlsrv_errors(), true));
     }
 
-
-
-
-?>
 
 
 

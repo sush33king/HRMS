@@ -1,10 +1,9 @@
 <?php
 
-class Calculator {
-    
+class Calculator 
+{
     private $_num1 , $_num2;
-
-    public function __construct($num1, $num2){
+    public function calculator ($num1, $num2){
         $this->_num1 = $num1;
         $this->_num2 = $num2;
     }
