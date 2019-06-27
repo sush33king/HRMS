@@ -1,0 +1,13 @@
+<?php
+
+class MyDatabase
+{
+    $mydb;
+    
+
+
+
+}
+
+
+?>
