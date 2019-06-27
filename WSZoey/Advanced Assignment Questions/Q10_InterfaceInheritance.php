@@ -59,6 +59,11 @@ class Eugene implements Appearance, Name, Age, Weight
     {
         echo "Eugene is 60kg.<br><br>";
     }
+
+    public function myweight()
+    {
+        echo "I am 70 kg<br><br>";
+    }
 }
 
 $richard1 = new Richard;

@@ -1,8 +1,8 @@
 <?php  
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
-$serverName = "(local)\sqlexpress";  
-$connectionInfo = array( "Database"=>"AMOS",
+$serverName = "LSKPC\SQLEXPRESS";  
+$connectionInfo = array( "Database"=>"Atmos",
                          "CharacterSet" => "UTF-8");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
 if( $conn === false )  
@@ -71,4 +71,3 @@ for($i = 0; $i < count($rs); $i++)
 sqlsrv_free_stmt( $stmt);  
 sqlsrv_close( $conn);  
 ?>  
-
