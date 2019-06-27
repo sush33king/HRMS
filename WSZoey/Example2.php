@@ -1,22 +1,29 @@
 <?php
 
-Class Calculator
+Class PlusOne 
 {
-    function add($a,$b)
+    public static $value = 0;
+
+    public function add()
     {
-        return $a + $b;
+        self::$value = self::$value + 1;
+        echo self::$value;
+        
     }
 
-    function subtract($a,$b)
-    {
-        return $a - $b;
-    }
 }
 
-$calc = new Calculator;
-$answer = $calc-> add(3,4);
+$calc = new PlusOne;
+$calc-> add();
 
-echo $answer;
+$calc2 = new PlusOne;
+$calc2-> add();
+
+$calc3 = new PlusOne;
+$calc3-> add();
+
+
+
 
 
 
