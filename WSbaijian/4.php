@@ -14,11 +14,11 @@ game::$count++;
 
 }
 
-$game1= new game("igame 6", 2014);
-$game2= new game("igame 7", 2016);
-$game3= new game("igame 8", 2017);
-$game4= new game("igame x", 2017);
-$game5= new game("igame xs", 2018);
+$game1= new game("gta_city", 2014);
+$game2= new game("gta_4", 2016);
+$game3= new game("gta_5", 2017);
+$game4= new game("gta_online", 2017);
+$game5= new game("gta_liberty_city", 2018);
 
 echo "The number of objects in the class is " .game::$count . ".";
 
