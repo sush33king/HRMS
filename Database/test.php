@@ -67,9 +67,8 @@
         {
             echo "Record successfully added!";
         }
-    }
-
-
+        
+    //NOT COMPLETED
     function db_update_data_in_table($array_data, $tbl_name, $where_statement)
     {
         //declare $conn as global so that addDB() can access it
