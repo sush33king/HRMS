@@ -1,9 +1,12 @@
 <?php
-class z implements x,y{
-
-    $x =
+interface X{
+        public function gameX ();
 }
-
-
+interface Y{
+        public function gameY ();
+}
+ class implements X,Y{
+     function 
+ }
 
 ?>
