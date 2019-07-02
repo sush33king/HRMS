@@ -50,7 +50,7 @@ class mod extends CALCULATOR
 
     public function modulus () 
     {
-        return $this->$x % $this->$y;
+        return $this->x % $this->y;
     }
 }
 
