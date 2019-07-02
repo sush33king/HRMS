@@ -1,9 +1,9 @@
 <?php
 
-echo phpinfo();
+
 
     //setting the value for "serverName\instanceName"
-    $serverName = "127.0.0.1\\sqlexpress"; 
+    $serverName = "S1PC5\\sqlexpress"; 
 
     //additional information for making connection to database
     $connectionInfo = array( "Database"=>"ModernNorthwind", "UID"=>"sa", "PWD"=>"password");
