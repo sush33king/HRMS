@@ -34,7 +34,10 @@ Class Diagram
         return $rs;
     }
 
-    public function updateDB()
+    public function addDB()
+    {
+
+    }
 }
 
 
