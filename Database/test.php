@@ -1,9 +1,13 @@
 <?php
 
+<<<<<<< HEAD
+
+=======
     //echo phpinfo();
+>>>>>>> daad0430a3b825ed9fc7f8d47c74e4284c04cac5
 
     //setting the value for "serverName\instanceName"
-    $serverName = "127.0.0.1\\sqlexpress"; 
+    $serverName = "S1PC5\\sqlexpress"; 
 
     //additional information for making connection to database
     $connectionInfo = array( "Database"=>"AMOS", "UID"=>"sa", "PWD"=>"password");
