@@ -13,7 +13,7 @@ abstract class Base
 } 
 
 
-class Derived extends base 
+class Derived extends Base 
 { 
     function __construct() 
     { 
@@ -30,17 +30,10 @@ class Derived extends base
         echo "say hello";
     }
 
-    function sayHello($hi)
-    {
-        echo "hi";
-    }
-
-    function sayHello($hi,$bye)
-    {
-        echo  $hi . strval($bye + 1);
-    }
+   
 } 
+
 $b1 = new Derived; 
-$b1->sayHello("me",5);
+$b1->sayHello();
 
 ?> 
