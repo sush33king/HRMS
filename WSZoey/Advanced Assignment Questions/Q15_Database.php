@@ -48,7 +48,50 @@ Class MyDatabase
     }
 
     //Update Method
-    public function updateDB
+    public function updateDB($data,$where,$tblname)
+    {
+        $fldNames = "";
+        $fldData = "";
+
+        foreach($data as $key => $val)
+        {
+            
+            if($fldNames == "")
+            {
+                $fldNames = $key; 
+                $fldData = "'".$val."'";  
+            }   
+            else
+            {                
+                $fldNames = $fldNames. ',' . $key;   
+                $fldData = $fldData. ',' . "'".$val."'";     
+            }                                 
+        }
+
+        $fldNameArr = explode(",",$fldNames);
+        $fldDataArr = explode(",",$fldData);
+
+        echo var_dump($fldNameArr);
+        echo var_dump($fldDataArr);
+        
+        for ($x = 0; $x < count($fldNameArr);$x++)
+        {
+            $sql = "UPDATE " . $tblname . " SET " . $fldNameArr[$x] . " = " . $fldDataArr[$x] . " WHERE " . 
+                   $where;
+
+            $stmt = sqlsrv_query( $this->conn, $sql);
+
+            if( $stmt === false )  
+            {  
+                echo "Error in query preparation/execution: <br><br>\n";  
+                die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+            }  
+            else //if successful the display msg below
+            {
+                echo "Record successfully updated!<br><br<br>";
+            }
+        }
+    }
 
     //Add Method
     public function addDB($data,$tblname)
@@ -111,14 +154,11 @@ $connectionInfo = array("Database"=>"db_hrms");
 $queryString = "SELECT * FROM tbl_employees";
 
 //Data
-$data = array("fld_employeeid"=>"E002", 
-                "fld_name"=> "Mason",
-                "fld_address"=>"D01",
-                "fld_age"=>"29",
-                "fld_position"=>"Manager",
-                "fld_salary"=>"2000",
-                "fld_departmentid"=>"DPHR2453");
+$data = array("fld_name"=> "Mydick",
+                "fld_address"=>"pp",
+                "fld_salary"=>"1000",);
 
+                $where = "fld_employeeid = 'E002'";
                 $tablename = "tbl_employees";
 
 
@@ -127,11 +167,14 @@ $connection = new MyDatabase($serverName, $connectionInfo);
 $connection1 = $connection->makeConnection();
 
 //Query
-$rs = $connection->queryDB($queryString);
-echo var_dump($rs);
+//$rs = $connection->queryDB($queryString);
+//echo var_dump($rs);
 
 //Add
-$add = $connection->addDB($data,$tablename);
+//$add = $connection->addDB($data,$tablename);
+
+//Update
+$update = $connection->updateDB($data,$where,$tablename);
 
 
 ?>
