@@ -48,6 +48,7 @@ Class MyDatabase
     }
 
     //Update Method
+    public function updateDB
 
     //Add Method
     public function addDB($data,$tblname)
