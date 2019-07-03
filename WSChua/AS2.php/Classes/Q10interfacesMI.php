@@ -61,6 +61,19 @@ $x->add();
 
 
 
+function add()
+    {   
+        echo  $this->x + $this->y ;  
+        echo  $this->x + $this->y + $this->z ;
+        echo  $this->x + $this->y + $this->z + $this->b ;
+        echo  $this->x + $this->y + $this->z + $this->b + $this->c ;        
+    }
+
+
+    $x->add(8,5,2,4);
+    $x->add(5,6,1);
+
+
 
 
 ?>
