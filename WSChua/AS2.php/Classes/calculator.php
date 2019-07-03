@@ -3,7 +3,7 @@
 //create a calculator that can perform the addition multiplication subtraction and division and 2 number.
 
 class Calculator {
-    protected $p_val1 , $p_val2;
+    function protected $p_val1 , $p_val2;
     
 
     

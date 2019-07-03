@@ -115,14 +115,70 @@ echo $ans
 
 $cls_enliten = new enlitenIT();
 $no_of_student = $cls_enlitengot>getnumberofstudent();
+
+
+
+
+class calculator 
+{
+  public static $count = 0;
+  public $count2 = 0;
+
+  public calculator ()
+  {
+    $count2++;
+    $count++;
+  }
+}
+$calc = new calculator();
+$calc2= new calculator();
+echo calculator::$count;
+echo $calc ->$count
+
+
+UPLOAD_ERR_EXTENSION (Value: 7)
+UPLOAD_ERR_EXTENSION ()
+
+
+//Polymorphism
+interface shap 
+{
+  public function draw()
+}
+
+$val[0] = new Circle();
+$val[1] = new Triangle();
+$val[2] = new Ellipse();
+
+for($i=0; $i<count($val);$i++)
+{
+  $val[$i]->draw();
+}
+
+
+
+// Defining constant
+define("SITE_URL", "https://www.tutorialrepublic.com/");
+ 
+// Using constant
+echo 'Thank you for visiting - ' . SITE_URL;
+
+
+// Abstract class example in PHP 
+abstract class base 
+{ 
+    // This is abstract function 
+    abstract function showdata(); 
+      
+    // This is not abstract function 
+    function pr() 
+    { 
+        echo "Base class"; 
+    } 
+} 
+
+
 ?>
-
-
-
-
-
-
-
 
 
 
