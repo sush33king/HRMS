@@ -79,6 +79,23 @@ class diagram
                 echo "Record successfully added!";
         }
     }    
+
+    public function deletedb($tblName, $where_condition) {
+
+        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+    
+        if ($stmt === false) 
+        {
+        echo "Error deleting record:";
+        }       
+        else 
+        {
+        echo "Record deleted successfully"
+        }
+
+    }
 }
 
 $conn = new diagram ;
@@ -88,6 +105,9 @@ $rs = $conn -> querydb('select * from tbl_project');
 //$tblName = "tbl_employee";
 //$conn->adddb($data, $tblName);
 echo var_dump($rs);
+//$where_condition = "fld_EMP_ID = 'S26055'" ;
+//$tblName = "tbl_employee";
+//$conn->deletedb($tblName, $where_condition);
 
 
 
