@@ -1,4 +1,5 @@
 <?php
+
 interface X{
         public function gameX ();
 }
