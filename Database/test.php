@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-
-=======
     //echo phpinfo();
->>>>>>> daad0430a3b825ed9fc7f8d47c74e4284c04cac5
-
     //setting the value for "serverName\instanceName"
     $serverName = "S1PC5\\sqlexpress"; 
 
