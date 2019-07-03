@@ -1,13 +1,61 @@
 <?php
+ 
+ interface add 
+{
+    function add ();
+}
 
-interface X{
-        public function gameX ();
+interface subtract
+{
+    function subtract();
 }
-interface Y{
-        public function gameY ();
+
+interface multiply 
+{
+  function mutiply();
 }
- class implements X,Y{
-     function 
- }
+
+interface divide  
+{
+    function divide();
+}
+
+class calculator implements add , subtract
+{
+    private $x, $y;    
+
+    function __construct($num1, $num2)
+    {
+        $this->x = $num1;
+        $this->y = $num2;
+
+    } 
+
+    function add()
+    {   
+        echo  $this->x + $this->y ;          
+    }
+
+    function subtract()
+    {   
+        echo  $this->x - $this->y ;          
+    }
+
+    function mutiply()
+    {
+        echo  $this->x * $this->y ;
+    }
+    
+    function divide()
+    {
+        echo  $this->x / $this->y ;
+    }
+}
+
+
+//test section
+
+$x = new calculator(100,7);
+$x->add();
 
 ?>

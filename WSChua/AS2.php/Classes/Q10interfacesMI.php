@@ -24,7 +24,7 @@ class calculator implements add , subtract
 {
     private $x, $y;    
 
-    function _constructor($a, $b)
+    function __construct($a, $b)
     {
         $this->x = $a;
         $this->y = $b;
@@ -55,13 +55,23 @@ class calculator implements add , subtract
 
 //test section
 
-$x = new calculator ;
-$x->init(9,7);
+$x = new calculator(100,7);
 $x->add();
 
 
 
 
+function add()
+    {   
+        echo  $this->x + $this->y ;  
+        echo  $this->x + $this->y + $this->z ;
+        echo  $this->x + $this->y + $this->z + $this->b ;
+        echo  $this->x + $this->y + $this->z + $this->b + $this->c ;        
+    }
+
+
+    $x->add(8,5,2,4);
+    $x->add(5,6,1);
 
 
 
