@@ -40,8 +40,9 @@ Class Diagram
         global $conn;
 
         //initialize variables to be used to store field names and field data
-        $fldNames = "S";
-        $fldData = "";
+        $fldNames = "fld_EMPID, fld_DeptID, fld_Name, fld_HourlyRate";
+        $fldData = "S21011, L023, S.Lee, 50.0000";
+        $tblName = "tbl_Employee"
 
         //loop through array and extract field names and field data from array
         foreach($data as $key => $val)
@@ -82,5 +83,6 @@ Class Diagram
 $conn = new Diagram;
 $conn->makeconnection();
 $rs = $conn->queryDB("Select * From tbl_Project");
+$data = 
 echo var_dump($rs);
 ?>
