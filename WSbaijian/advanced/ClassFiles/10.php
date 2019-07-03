@@ -58,4 +58,16 @@ class calculator implements add , subtract
 $x = new calculator(100,7);
 $x->add();
 
+function add()
+    {   
+        echo  $this->x + $this->y ;  
+        echo  $this->x + $this->y + $this->z ;
+        echo  $this->x + $this->y + $this->z + $this->num2 ;
+        echo  $this->x + $this->y + $this->z + $this->num2 + $this->num3 ;        
+    }
+
+
+    $x->add(8,5,2,4);
+    $x->add(5,6,1);
+
 ?>
