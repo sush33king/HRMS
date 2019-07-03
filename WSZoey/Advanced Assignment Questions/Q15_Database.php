@@ -37,24 +37,33 @@ Class MyDatabase
     //Update Method
 
     //Add Method
-    public function addDB($tblname)
+    public function addDB($data,$tblname)
     {
-        $sql = "SELECT * FROM $tblname";
+        $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='$tblname'";
         $stmt = sqlsrv_query($this->conn, $sql);
-        
+
         $i = 0;
-        while ($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_NUMERIC))
-        {
-            $table[$i++] = $obj; 
-        }
-        return $table;
+       while ($obj = sqlsrv_fetch_array($stmt,SQLSRV_FETCH_NUMERIC))  
+       {  
+           $columns[$i++] = $obj;  
+       }
+       return $columns;
 
-        $addquery = "INSERT INTO $table ($table[0][0],$table[1][0],
+        $addquery = "INSERT INTO $tblname ($columns) VALUES ($data)";
+        $addstmt = sqlsrv_query($this->conn, $addquery);
 
-
-
-
+          //if error then display error
+          if( $addstmt == false )  
+          {  
+              echo "Error in query preparation/execution.\n";  
+              die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+          }  
+          else  //if successful the display msg below
+          {
+              echo "Record successfully added!";
+          }
     }
+
     //Delete Method
 
     //Connection End Method
@@ -73,11 +82,15 @@ $queryString = "SELECT * FROM tbl_employees";
 $connection = new MyDatabase($serverName, $connectionInfo);
 $connection1 = $connection->makeConnection();
 $rs = $connection->queryDB($queryString);
-$table = $connection->addDB("tbl_employees");
-echo var_dump($table);
+echo var_dump($rs);
 
+$dataarray = array("Z1813","Mason","Bukit Jelutong","20","Manager","5000","DPHR2453");
 
+$add = $connection->addDB($dataarray,"tbl_employees");
+echo var_dump ($add);
 
+$rs2 = $connection->queryDB($queryString);
+echo var_dump($rs2);
 
 
 
