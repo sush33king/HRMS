@@ -3,7 +3,7 @@
 Class MyDatabase
 {
     //Temp Variables
-    public $var1,$var2,$conn,$tblname;
+    public $var1,$var2,$tblname;
 
     //Construct Method
     public function __construct($var1,$var2)
@@ -16,12 +16,25 @@ Class MyDatabase
     public function makeConnection()
     {
         //Constructing Resource Variable
-        $this->conn = sqlsrv_connect($this->var1, $this->var2);
+        $conn = sqlsrv_connect($this->var1, $this->var2);
+
+        if($conn) 
+        {
+            $this->conn = $conn;
+            echo "Connection established.<br />";
+        }
+        
+        else
+        {
+            echo "Connection could not be established.<br />";
+            die( print_r( sqlsrv_errors(), true));
+        }
     }
 
     //Query Method
     public function queryDB($str)
     {
+        global $conn;
         //Constructing Resource Variable
         $stmt = sqlsrv_query($this->conn, $str);
 
@@ -39,29 +52,43 @@ Class MyDatabase
     //Add Method
     public function addDB($data,$tblname)
     {
-        $sql = "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME='$tblname'";
-        $stmt = sqlsrv_query($this->conn, $sql);
+        
+        //initialize variables to be used to store field names and field data
+        $fldNames = "";
+        $fldData = "";
 
-        $i = 0;
-       while ($obj = sqlsrv_fetch_array($stmt,SQLSRV_FETCH_NUMERIC))  
-       {  
-           $columns[$i++] = $obj;  
-       }
-       return $columns;
+        //loop through array and extract field names and field data from array
+        foreach($data as $key => $val)
+        {
+            
+            if($fldNames == "")
+            {
+                $fldNames = $key; 
+                $fldData = "'" . $val . "'";  
+            }   
+            else
+            {                
+                $fldNames = $fldNames .  ',' . $key;   
+                $fldData = $fldData . ',' . "'" . $val . "'";     
+            }                                 
+        }
 
-        $addquery = "INSERT INTO $tblname ($columns) VALUES ($data)";
-        $addstmt = sqlsrv_query($this->conn, $addquery);
+        //combine field names and field data values into sql query
+        $sql = "INSERT INTO " . $tblname . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
 
-          //if error then display error
-          if( $addstmt == false )  
-          {  
-              echo "Error in query preparation/execution.\n";  
-              die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
-          }  
-          else  //if successful the display msg below
-          {
-              echo "Record successfully added!";
-          }
+        //execute prepared sql query
+        $stmt = sqlsrv_query( $this->conn, $sql);
+
+        //if error then display error
+        if( $stmt === false )  
+        {  
+            echo "Error in query preparation/execution: <br><br>\n";  
+            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        }  
+        else //if successful the display msg below
+        {
+            echo "Record successfully added!";
+        }
     }
 
     //Delete Method
@@ -74,24 +101,36 @@ Class MyDatabase
 }
 
 //Variables
+
+//ConnectionString
 $serverName = "ZOELLON\SQLEXPRESS";
 $connectionInfo = array("Database"=>"db_hrms");
+
+//QueryString
 $queryString = "SELECT * FROM tbl_employees";
 
-//Instantiation
+//Data
+$data = array("fld_employeeid"=>"E002", 
+                "fld_name"=> "Mason",
+                "fld_address"=>"D01",
+                "fld_age"=>"29",
+                "fld_position"=>"Manager",
+                "fld_salary"=>"2000",
+                "fld_departmentid"=>"DPHR2453");
+
+                $tablename = "tbl_employees";
+
+
+//Connection
 $connection = new MyDatabase($serverName, $connectionInfo);
 $connection1 = $connection->makeConnection();
+
+//Query
 $rs = $connection->queryDB($queryString);
 echo var_dump($rs);
 
-$dataarray = array("Z1813","Mason","Bukit Jelutong","20","Manager","5000","DPHR2453");
-
-$add = $connection->addDB($dataarray,"tbl_employees");
-echo var_dump ($add);
-
-$rs2 = $connection->queryDB($queryString);
-echo var_dump($rs2);
-
+//Add
+$add = $connection->addDB($data,$tablename);
 
 
 ?>
