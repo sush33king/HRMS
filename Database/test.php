@@ -1,11 +1,6 @@
 <?php
 
-<<<<<<< HEAD
-
-=======
     //echo phpinfo();
->>>>>>> daad0430a3b825ed9fc7f8d47c74e4284c04cac5
-
     //setting the value for "serverName\instanceName"
     $serverName = "S1PC5\\sqlexpress"; 
 
@@ -72,49 +67,8 @@
             echo "Record successfully added!";
         }
         
-    //NOT COMPLETED
-    function db_update_data_in_table($array_data, $tbl_name, $where_statement)
-    {
-        //declare $conn as global so that addDB() can access it
-        global $conn;
-
-        //initialize variables to be used to store field names and field data
-        $fldNames = "";
-        $fldData = "";
-
-        //loop through array and extract field names and field data from array
-        foreach($data as $key => $val)
-        {
-            
-            if($fldNames == "")
-            {
-                $fldNames = $key; 
-                $fldData = "'" . $val . "'";  
-            }   
-            else
-            {                
-                $fldNames = $fldNames .  ',' . $key;   
-                $fldData = $fldData . ',' . "'" . $val . "'";     
-            }                                 
-        }
-
-        //combine field names and field data values into sql query
-        $sql = "UPDATE " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
-
-        //execute prepared sql query
-        $stmt = sqlsrv_query( $conn, $sql);
-
-        //if error then display error
-        if( $stmt === false )  
-        {  
-            echo "Error in query preparation/execution.\n";  
-            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
-        }  
-        else //if successful the display msg below
-        {
-            echo "Record successfully added!";
-        }
     }
+    
 
 
 ?>
