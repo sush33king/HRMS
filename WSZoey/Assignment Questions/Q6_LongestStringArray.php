@@ -1,4 +1,5 @@
 <?php
+//String Array
 $string = array(
     "Kindergarten",
     "Elementary",
@@ -7,6 +8,7 @@ $string = array(
     "University"
 );
 
+//For loop
 $charactercount = 0;
 $max = 0;
 $longeststring = 0;
@@ -19,7 +21,7 @@ for ($x = 0; $x < count($string); $x++) {
     }    
 }
 
-
+//Echo
 echo "The longest string is ". $longeststring;
 
 

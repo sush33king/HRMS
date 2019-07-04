@@ -20,7 +20,7 @@ interface divide
     function divide();
 }
 
-class calculator implements add , subtract
+class calculator implements add , subtract, divide, mutiply
 {
     private $x, $y;    
 
@@ -61,13 +61,13 @@ $x->add();
 
 
 
-function add()
+/*function add()
     {   
         echo  $this->x + $this->y ;  
         echo  $this->x + $this->y + $this->z ;
         echo  $this->x + $this->y + $this->z + $this->b ;
         echo  $this->x + $this->y + $this->z + $this->b + $this->c ;        
-    }
+    }*/
 
 
     $x->add(8,5,2,4);
