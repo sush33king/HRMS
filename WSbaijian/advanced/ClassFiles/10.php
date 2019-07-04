@@ -1,23 +1,26 @@
 <?php
  
  interface games{
-     public function gta_5(){
-     }
+     public function gta_5();
  }
+
  interface watch{
-     public function video(){
-     }
+     public function video();
  }
- class x implements games,watch{
-     public function gta_5(){
-         echo "i play the gta_5";
+
+ class x implements games , watch {
+
+    function gta_5(){
+         echo " i play the gta_5";
+
      }
-     public function video(){
-         echo "i watch video";
+
+    function video(){
+         echo " i watch video";
      }
 }
 
  $y = new x();
- $y -> games();
+ $y->games();
 
 ?>
