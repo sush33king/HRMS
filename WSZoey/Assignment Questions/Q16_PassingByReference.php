@@ -1,30 +1,27 @@
 <?php
 
-function plusten(&$var1)
+//Passing By Reference
+function refplusten(&$var1)
 {
     $var1 = $var1 + 10;
 }
 
-function dividetwo(&$var1)
+//Pass by Value
+function valplusten($var1)
 {
-    $var1 = $var1 / 2;
+    $var1 = $var1 + 10;
 }
 
-function multiplybyseven(&$var1)
-{
-    $var1 = $var1 * 7;
-}
-
+//Execute
 $x = 1;
-plusten($x);
-dividetwo($x);
-multiplybyseven($x);
+refplusten($x);
 
-echo $x;
+$y = 1;
+valplusten($y);
 
-
-
-
+//Echo
+echo "Pass by Ref: " .$x . "<br><br>";
+echo "Pass by Val: " .$y;
 
 
 
