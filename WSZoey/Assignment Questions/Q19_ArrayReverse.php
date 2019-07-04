@@ -4,6 +4,8 @@
 $array = array(1 , 2 , 4 , 6 , 8 , 9 , 14 , 56 , 75 , 33);
 
 //For loop to echo out the initial array
+echo "Initial Array: <br>";
+
 for($x = 0; $x < count($array); $x++)
 {
     echo $array[$x];
@@ -28,6 +30,7 @@ for($x = 9; $x >= 0; $x--)
 }
 
 //For loop to echo out the reversed array
+echo "Reversed Array: <br>";
 for($x = 0; $x < count($reversearray); $x++)
 {
     echo $reversearray[$x];
