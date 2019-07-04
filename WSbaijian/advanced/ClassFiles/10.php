@@ -22,40 +22,52 @@ interface divide
 
 class calculator implements add , subtract
 {
-    private $x, $y;    
+    private $one, $two;    
 
     function __construct($num1, $num2)
     {
-        $this->x = $num1;
-        $this->y = $num2;
+        $this->one = $num1;
+        $this->two = $num2;
 
     } 
 
     function add()
     {   
-        echo  $this->x + $this->y ;          
+        echo  $this->one + $this->two ;          
     }
 
     function subtract()
     {   
-        echo  $this->x - $this->y ;          
+        echo  $this->one - $this->two ;          
     }
 
     function mutiply()
     {
-        echo  $this->x * $this->y ;
+        echo  $this->one * $this->two ;
     }
     
     function divide()
     {
-        echo  $this->x / $this->y ;
+        echo  $this->one / $this->two ;
     }
 }
 
 
 //test section
 
-$x = new calculator(100,7);
-$x->add();
+$one = new calculator(100,7);
+$one->add();
+
+function add()
+    {   
+        echo  $this->one + $this->two ;  
+        echo  $this->one + $this->two + $this->three ;
+        echo  $this->one + $this->two + $this->three + $this->num2 ;
+        echo  $this->one + $this->two + $this->three + $this->num2 + $this->num3 ;        
+    }
+
+
+    $one->add(8,5,2,4);
+    $one->add(5,6,1);
 
 ?>
