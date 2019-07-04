@@ -1,4 +1,7 @@
 <?php
+
+$site_path_var = $_SERVER["SITE_HTMLROOT"];
+
 $GlobalVar = 10;
 
 function Subtract5(&$var1)

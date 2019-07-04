@@ -1,6 +1,6 @@
 <?php
- 
- interface add 
+
+interface add 
 {
     function add ();
 }
@@ -20,14 +20,14 @@ interface divide
     function divide();
 }
 
-class calculator implements add , subtract
+class calculator implements add , subtract, divide, mutiply
 {
     private $x, $y;    
 
-    function __construct($num1, $num2)
+    function __construct($a, $b)
     {
-        $this->x = $num1;
-        $this->y = $num2;
+        $this->x = $a;
+        $this->y = $b;
 
     } 
 
@@ -57,5 +57,23 @@ class calculator implements add , subtract
 
 $x = new calculator(100,7);
 $x->add();
+
+
+
+
+/*function add()
+    {   
+        echo  $this->x + $this->y ;  
+        echo  $this->x + $this->y + $this->z ;
+        echo  $this->x + $this->y + $this->z + $this->b ;
+        echo  $this->x + $this->y + $this->z + $this->b + $this->c ;        
+    }*/
+
+
+    $x->add(8,5,2,4);
+    $x->add(5,6,1);
+
+
+
 
 ?>
