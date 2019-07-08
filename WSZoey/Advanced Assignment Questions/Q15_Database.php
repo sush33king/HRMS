@@ -136,11 +136,40 @@ Class MyDatabase
     }
 
     //Delete Method
+    public function deleteDB($tblname,$where)
+    {
+        $sql = "DELETE FROM " . $tblname . " WHERE " . $where;
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+
+        //if error then display error
+        if( $stmt === false )  
+        {  
+            echo "Error in query preparation/execution: <br><br>\n";  
+            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        }  
+        else //if successful the display msg below
+        {
+            echo "Record successfully removed!";
+        }
+    }
 
     //Connection End Method
     public function closeConnection()
     {
-        sqlsrv_close($this->var1, $this->var2);
+        $closeconn = sqlsrv_close($this->conn);
+
+        if($closeconn) 
+        {
+            $this->closeconn = $closeconn;
+            echo "Connection closed.<br />";
+        }
+        
+        else
+        {
+            echo "Connection could not be closed<br />";
+            die( print_r( sqlsrv_errors(), true));
+        }
     }
 }
 
@@ -167,14 +196,22 @@ $connection = new MyDatabase($serverName, $connectionInfo);
 $connection1 = $connection->makeConnection();
 
 //Query
-//$rs = $connection->queryDB($queryString);
-//echo var_dump($rs);
+$rs = $connection->queryDB($queryString);
+echo var_dump($rs);
 
 //Add
 //$add = $connection->addDB($data,$tablename);
 
 //Update
-$update = $connection->updateDB($data,$where,$tablename);
+//$update = $connection->updateDB($data,$where,$tablename);
 
+//Delete
+//$delete = $connection->deleteDB($tablename,$where);
 
+//Close Connection
+$connectionclose = $connection->closeConnection();
+
+//Closed Query
+$rs = $connection->queryDB($queryString);
+echo var_dump($rs);
 ?>

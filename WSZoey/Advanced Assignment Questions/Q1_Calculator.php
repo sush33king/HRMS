@@ -8,7 +8,7 @@ $this->_sval = $sval;
 public function add() {
 return $this->_fval + $this->_sval;
 }
-public function subtract() {
+public function subtract() 
 return $this->_fval - $this->_sval;
 }
 public function multiply() {
