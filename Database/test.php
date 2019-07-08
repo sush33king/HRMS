@@ -1,6 +1,6 @@
 <?php
 
-    //echo phpinfo();
+
     //setting the value for "serverName\instanceName"
     $serverName = "S1PC5\\sqlexpress"; 
 

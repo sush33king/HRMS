@@ -1,61 +1,26 @@
 <?php
  
- interface add 
-{
-    function add ();
-}
+ interface games{
+     public function gta_5();
+ }
 
-interface subtract
-{
-    function subtract();
-}
+ interface watch{
+     public function video();
+ }
 
-interface multiply 
-{
-  function mutiply();
-}
+ class x implements games , watch {
 
-interface divide  
-{
-    function divide();
-}
+    function gta_5(){
+         echo " i play the gta_5";
 
-class calculator implements add , subtract
-{
-    private $x, $y;    
-
-    function __construct($num1, $num2)
-    {
-        $this->x = $num1;
-        $this->y = $num2;
-
-    } 
-
-    function add()
-    {   
-        echo  $this->x + $this->y ;          
     }
 
-    function subtract()
-    {   
-        echo  $this->x - $this->y ;          
-    }
-
-    function mutiply()
-    {
-        echo  $this->x * $this->y ;
-    }
-    
-    function divide()
-    {
-        echo  $this->x / $this->y ;
+    function video(){
+         echo " i watch video";
     }
 }
 
+$y = new x();
 
-//test section
 
-$x = new calculator(100,7);
-$x->add();
-
-?>
+?> 
