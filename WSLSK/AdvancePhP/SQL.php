@@ -12,7 +12,7 @@ Class Diagram
         {  
             echo "Could not connect.\n";  
             die( print_r( sqlsrv_errors(), true));  
-        }  
+        }
     }
 
     public function queryDB($str)
@@ -74,21 +74,51 @@ Class Diagram
         }
     }
 
-    public function deleteDB()
+    public function update($tblName, $flddata, $where_condition) 
     {
-        $sql = 'DELETE FROM ';
+        
+        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
 
-        return $this->conn->exec($sql);
-
-        //if error then display error
-        if( $stmt === false )  
-        {  
-            echo "Error in query preparation/execution.\n";  
-            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
-        }  
-        else //if successful the display msg below
+        $stmt = sqlsrv_query( $this->conn, $sql);
+    
+        if ($stmt === false) 
         {
-            echo "Record successfully added!";
+        echo "Error updating record:";
+        }       
+        else 
+        {
+        echo "Record update successfully" ;
+        }
+    }
+
+    public function deleteDB($tblName, $where_condition)
+    {
+        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+    
+        if ($stmt === false) 
+        {
+            echo "Error deleting record:";
+        }       
+        else 
+        {
+            echo "Record deleted successfully" ;
+        }
+    }
+
+    public function closedb()
+    {
+        sqlsrv_close($this->conn); 
+
+        if($this->conn === false )
+        {
+            echo "Could not close.\n"; 
+            die( print_r( sqlsrv_errors(), true));
+        }
+        else 
+        {
+            echo "Connection close successfully!";
         }
     }
 }
@@ -96,10 +126,18 @@ Class Diagram
 
 $conn = new Diagram;
 $conn->makeconnection();
-$rs = $conn->queryDB("Select * From tbl_Project");
+//$rs = $conn->queryDB("Select * From tbl_Project");
 //$data = array("fld_EMPID"=>"S21011", "fld_DeptID"=>"L023" ,"fld_Name"=>"S.Lee" ,"fld_HourlyRate"=> "50.0000" ) ;
 //$tblName = "tbl_Employee";
 //$conn->adddb($data, $tblName);
-$conn->deleteDB();
-echo var_dump($rs);
+//$where_condition = "fld_EMPID = 'S21011'" ;
+//$tblName = "tbl_Employee";
+//$conn->deletedb($tblName, $where_condition);
+//$where_condition = "fld_EMPID = 'S10031'" ;
+//$flddata = "fld_HourlyRate = '60.0000'" ;
+//$tblName = "tbl_Employee";
+//$conn->update($tblName, $flddata, $where_condition) ;
+//echo var_dump($rs);
+$conn->closedb();
+
 ?>
