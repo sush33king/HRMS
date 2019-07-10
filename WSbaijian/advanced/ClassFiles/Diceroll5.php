@@ -1,6 +1,6 @@
 <?php
 
-Class RollDice
+Class Diceroll
 {
     
     public function Draw1()
