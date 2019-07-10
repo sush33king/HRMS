@@ -1,19 +1,19 @@
 <?php
-class MyClass
+class the_work
 {
-    public $work_name = "No any birds for now";
     
-    public function __construct($work_name)
+    
+    public function __construct()
     {
-        echo "I'm alive!";    
-        $this->work_name = $work_name;
+        echo "I'm alive! <br>";    
+        
     }
     
     public function __destruct()
     {
-        echo "I'm dead now :(";
+        echo "I'm dead now :( <br>";
     }
 }
-$not = new MyClass("Sparrow is work");
-echo "Name of the work: " . $not->work_name;
+$not = new the_work;
+
 ?>
