@@ -1,17 +1,17 @@
 <?php
 class game {
     public function work(){
-    echo "the work ";
+    echo "this is game ";
     }
 }
 
-class one {
+class one extends  game{
     public function work(){
-    echo "hi work";
+    echo "this is work";
     }
 }
 
-$x = new one ;
+$x = new one;
 $x->work();
 
 ?>
