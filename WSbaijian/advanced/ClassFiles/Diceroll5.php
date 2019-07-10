@@ -61,4 +61,7 @@ Class Diceroll
 
 }
 
+$x = new Diceroll();
+$x->RollTheDice();
+
 ?>
