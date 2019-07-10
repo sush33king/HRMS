@@ -24,5 +24,5 @@ $use = new games();
 $use = new new_games();
 
 // In games constructor
-$use = new hot_games_games();
+//$use = new hot_games_games();
 ?>
