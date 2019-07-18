@@ -22,14 +22,14 @@ Class Diagram
         if( $stmt === false )  
         {  
         echo "Error in query preparation/execution.\n";  
-        die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        die( print_r( sqlsrv_errors(), true));  //program close
         }  
         /* Retrieve each row as a PHP object and display the results.*/ 
             $i = 0;
              while( $obj = sqlsrv_fetch_object( $stmt))  
             {  
             $rs[$i++] = $obj;
-             /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+               
             }
         return $rs;
     }
@@ -74,7 +74,7 @@ Class Diagram
         }
     }
 
-    public function update($tblName, $flddata, $where_condition) 
+    public function updateDB($tblName, $flddata, $where_condition) 
     {
         
         $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
