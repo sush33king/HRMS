@@ -49,12 +49,14 @@ Class MyDatabase
     }
 
     //Update Method
-    public function updateDB($data,$where,$tblname)
+    public function updateDB($updatedata,$where,$tblname)
     {
+        //Declaring Variables
         $fldNames = "";
         $fldData = "";
 
-        foreach($data as $key => $val)
+        //Foreach Loop to extract field names and field data from array
+        foreach($updatedata as $key => $val)
         {
             
             if($fldNames == "")
@@ -69,25 +71,29 @@ Class MyDatabase
             }                                 
         }
 
+        //Explode keys and values
         $fldNameArr = explode(",",$fldNames);
         $fldDataArr = explode(",",$fldData);
 
+        //Display data array
         echo var_dump($fldNameArr);
         echo var_dump($fldDataArr);
         
+        //For Loop to execute SQL query
         for ($x = 0; $x < count($fldNameArr);$x++)
         {
-            $sql = "UPDATE " . $tblname . " SET " . $fldNameArr[$x] . " = " . $fldDataArr[$x] . " WHERE " . 
-                   $where;
+            $sql = "UPDATE " . $tblname .
+                   " SET " . $fldNameArr[$x] . " = " . $fldDataArr[$x] .
+                   " WHERE " . $where;
 
             $stmt = sqlsrv_query( $this->conn, $sql);
 
             if( $stmt === false )  
             {  
                 echo "Error in query preparation/execution: <br><br>\n";  
-                die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+                die( print_r( sqlsrv_errors(), true));  
             }  
-            else //if successful the display msg below
+            else
             {
                 echo "Record successfully updated!<br><br<br>";
             }
@@ -135,26 +141,27 @@ Class MyDatabase
         }  
         else
         {
-            echo "Record successfully added!";
+            echo "Record successfully added!<br>";
         }
     }
 
     //Delete Method
     public function deleteDB($tblname,$where)
     {
+        //SQL Query
         $sql = "DELETE FROM " . $tblname . " WHERE " . $where;
 
         $stmt = sqlsrv_query( $this->conn, $sql);
 
-        //if error then display error
+        //If error then display error
         if( $stmt === false )  
         {  
             echo "Error in query preparation/execution: <br><br>\n";  
-            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+            die( print_r( sqlsrv_errors(), true));
         }  
-        else //if successful the display msg below
+        else
         {
-            echo "Record successfully removed!";
+            echo "Record successfully removed!<br>";
         }
     }
 
@@ -196,6 +203,12 @@ $data = array(  "fld_employeeid"=>"E002",
                 "fld_departmentid"=>"DPIT4454"
             );
 
+//Update Data
+$updatedata = array( "fld_name"=> "Casey",
+                     "fld_age"=> "28",
+                     "fld_salary"=> "5000",
+                     "fld_position"=> "Manager");
+
 //Table
 $tablename = "tbl_employees";
 
@@ -212,10 +225,10 @@ $connection1 = $connection->makeConnection();
 //echo var_dump($rs);
 
 //Add
-$add = $connection->addDB($data,$tablename);
+//$add = $connection->addDB($data,$tablename);
 
 //Update
-//$update = $connection->updateDB($data,$where,$tablename);
+//$update = $connection->updateDB($updatedata,$where,$tablename);
 
 //Delete
 //$delete = $connection->deleteDB($tablename,$where);

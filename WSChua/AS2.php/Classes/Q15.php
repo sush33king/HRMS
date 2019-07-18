@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 
 class MyDatabase
 {   
@@ -21,10 +22,34 @@ class MyDatabase
         
         else{
             echo "Connection Failed.<br />";
+=======
+class diagram
+{   
+    private $conn;
+
+    public function  connection(){
+        //setting the value for "serverName\instanceName"
+        $serverName = "192.168.0.10"; 
+
+        //additional information for making connection to database
+        $connectionInfo = array( "Database"=>"task 3.1", "UID"=>"sa", "PWD"=>"1234");
+
+        //using php function to connect to database using settings above
+        $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
+
+        //check if connection is successful or not
+        if( $this->conn ) {
+            echo "Connection established.<br />";
+        }
+        
+        else{
+            echo "Connection could not be established.<br />";
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
             die( print_r( sqlsrv_errors(), true));
         }
     }
 
+<<<<<<< HEAD
     public function query_db($str) {
         $stmt = sqlsrv_query($this->conn, $str);  
         if( $stmt === false )  
@@ -32,14 +57,29 @@ class MyDatabase
             echo "Error in query preparation/execution.\n";  
             //end program
             die( print_r( sqlsrv_errors(), true));  
+=======
+    public function querydb($str) {
+        $stmt = sqlsrv_query($this->conn, $str);  
+        if( $stmt === false )  
+        {  
+        echo "Error in query preparation/execution.\n";  
+        die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
+<<<<<<< HEAD
             $data[$i++] = $obj;
               
         }
         return $data ;
+=======
+        $rs[$i++] = $obj;
+        /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+        }
+        return $rs ;
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
     }
 
     public function adddb($data, $tblName) {
@@ -48,12 +88,31 @@ class MyDatabase
         $fldNames = "";
         $fldData =  "";
     
+<<<<<<< HEAD
         $keyOnlyArray = array_keys($data);  
         $fldNames = implode(",",$keyOnlyArray);
     
         $dataOnlyArray = array_values($data);  
         $fldData = "'" . implode("','",$dataOnlyArray) . "'";  
 
+=======
+        //loop through array and extract field names and field data from array
+        foreach($data as $key => $val)
+        {
+                
+            if($fldNames == "")
+                {
+                    $fldNames = $key; 
+                    $fldData = "'" . $val . "'";  
+                }   
+                else
+                {                
+                    $fldNames = $fldNames .  ',' . $key;   
+                    $fldData = $fldData . ',' . "'" . $val . "'";     
+                }                                 
+            }
+    
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         //combine field names and field data values into sql query
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
@@ -91,18 +150,29 @@ class MyDatabase
 
     public function update($tblName, $flddata, $where_condition) {
         
+<<<<<<< HEAD
         //creating the query
+=======
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
+<<<<<<< HEAD
             echo "Error updating record:";
         }       
         else 
         {
             echo "Record update successfully" ;
+=======
+        echo "Error updating record:";
+        }       
+        else 
+        {
+        echo "Record update successfully" ;
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         }
     }
     public function closeconnection()
@@ -124,6 +194,7 @@ class MyDatabase
 }
 
 //TESTING SECTION
+<<<<<<< HEAD
 
 //Test make connection with db
 $db = new MyDatabase;
@@ -146,3 +217,25 @@ $db->adddb($data, $tblName);*/
 
 echo var_dump($db->query_db("select * from tbl_employee"));
 ?>
+=======
+$conn = new diagram ;
+$conn -> connection();
+//$rs = $conn -> querydb('select * from tbl_project');
+//$data = array("fld_EMP_ID"=>"S26055", "fld_name"=>"TAN" ,"fld_depID"=>"L004" ,"fld_hourrate"=> "30.0000" ) ;
+//$tblName = "tbl_employee";
+//$conn->adddb($data, $tblName);
+//echo var_dump($rs);
+//$where_condition = "fld_EMP_ID = 'S26055'" ;
+//$tblName = "tbl_employee";
+//$conn->deletedb($tblName, $where_condition);
+//$where_condition = "fld_EMP_ID = 'S20005'" ;
+//$flddata = "fld_hourrate = '30.0000'" ;
+//$tblName = "tbl_employee";
+//$conn->update($tblName, $flddata, $where_condition) ;
+$conn->closeconnection();
+
+
+
+
+?>
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
