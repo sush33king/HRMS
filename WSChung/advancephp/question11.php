@@ -1,28 +1,28 @@
 <?php
-class games {
+class movie {
    function __construct() {
-       print "In games constructor\n";
+       print "Movies constructor\n";
    }
 }
 
-class new_games extends games {
+class new_movie extends movie {
    function __construct() {
        parent::__construct();
-       print "In new_games constructor\n";
+       print "New_movie constructor\n";
    }
 }
 
-class hot_games_games extends games {
+class new_moviess extends movie {
     // inherits games's constructor
 }
 
 // In games constructor
-$use = new games();
+$use = new movie();
 
 // In games constructor
 // In new_games constructor
-$use = new new_games();
+$use = new new_movie ();
 
 // In games constructor
-//$use = new hot_games_games();
+$use = new new_moviess();
 ?>
