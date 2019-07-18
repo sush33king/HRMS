@@ -1,6 +1,6 @@
 <?php
 
-//Class Declaration and Implementation
+//Class Definition
 class SQLInsertIntoManager
 {
     private $data;
