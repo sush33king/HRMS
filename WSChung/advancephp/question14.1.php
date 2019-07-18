@@ -79,17 +79,72 @@ class diagram
                 echo "Record successfully added!";
         }
     }    
+
+    public function deletedb($tblName, $where_condition) {
+
+        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+    
+        if ($stmt === false) 
+        {
+        echo "Error deleting record:";
+        }       
+        else 
+        {
+        echo "Record deleted successfully" ;
+        }
+
+    }
+
+    public function update($tblName, $flddata, $where_condition) {
+        
+        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+    
+        if ($stmt === false) 
+        {
+        echo "Error updating record:";
+        }       
+        else 
+        {
+        echo "Record update successfully" ;
+        }
+    }
+    public function closeconnection()
+    {
+        sqlsrv_close($this->conn) ;
+        if($this->conn === false)  
+        {
+            echo "Could Not disconnect."; 
+            die( print_r( sqlsrv_errors(), true));
+        }
+        else
+        {
+            echo "Successfully disconnected."; 
+        }
+        
+    }
+    
+
 }
 
 $conn = new diagram ;
 $conn -> connection();
-$rs = $conn -> querydb('select * from tbl_project');
+//$rs = $conn -> querydb('select * from tbl_project');
 //$data = array("fld_EMP_ID"=>"S26055", "fld_name"=>"TAN" ,"fld_depID"=>"L004" ,"fld_hourrate"=> "30.0000" ) ;
 //$tblName = "tbl_employee";
 //$conn->adddb($data, $tblName);
-echo var_dump($rs);
-
-
+//echo var_dump($rs);
+//$where_condition = "fld_EMP_ID = 'S26055'" ;
+//$tblName = "tbl_employee";
+//$conn->deletedb($tblName, $where_condition);
+//$where_condition = "fld_EMP_ID = 'S20005'" ;
+//$flddata = "fld_hourrate = '30.0000'" ;
+//$tblName = "tbl_employee";
+//$conn->update($tblName, $flddata, $where_condition) ;
+$conn->closeconnection();
 
 
 

@@ -1,5 +1,6 @@
 <?php
 
+//Interfaces
 interface Name
 {
     public function myname();
@@ -20,24 +21,8 @@ interface Weight
     public function myweight();
 }
 
-class Richard implements Appearance, Name, Age
-{
-    public function myname()
-    {
-        echo "Name: Richard <br>";
-    }
 
-    public function myage()
-    {
-        echo "Richard is twenty-four.<br>";
-    }
-
-    public function mylooks()
-    {
-        echo "Richard is handsome.<br><br>";
-    }
-}
-
+//Class implements multiple interfaces
 class Eugene implements Appearance, Name, Age, Weight
 {
     public function myname()
@@ -66,11 +51,7 @@ class Eugene implements Appearance, Name, Age, Weight
     }
 }
 
-$richard1 = new Richard;
-$richard1->myname();
-$richard1->myage();
-$richard1->mylooks();
-
+//Class instantiation
 $eugene1 = new Eugene;
 $eugene1->myname();
 $eugene1->myage();

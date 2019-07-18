@@ -15,5 +15,7 @@ Here is an example of how the variable is used:
 
 Filename: environment.php
 
+<?php
+
 $site_path_var = $_SERVER["SITE_HTMLROOT"];
 

@@ -1,41 +1,55 @@
 <?php
-class MyCalculator {
-protected $_fval, $_sval;
-public function __construct( $fval, $sval ) {
-$this->_fval = $fval;
-$this->_sval = $sval;
-}
-public function add() {
-return $this->_fval + $this->_sval;
-}
-public function subtract() {
-return $this->_fval - $this->_sval;
-}
-public function multiply() {
-return $this->_fval * $this->_sval;
-}
-public function divide() {
-return $this->_fval / $this->_sval;
-}
+
+//Calculator Class
+class Calculate 
+{   
+    //Variables
+    protected $var1, $var2;
+
+    //Constructor Method
+    public function __construct( $var1, $var2 ) 
+    {
+        $this->var1 = $var1;
+        $this->var2 = $var2;
+    }
+    
+    //Add Method
+    public function add()
+    {
+        echo "$this->var1 + $this->var2 = ";
+        return $this->var1 + $this->var2;
+    }
+
+    //Subtract Method
+    public function subtract() 
+    {
+        echo "$this->var1 - $this->var2 = ";
+        return $this->var1 - $this->var2;
+    }
+    
+    //Multiply Method
+    public function multiply() 
+    {
+        echo "$this->var1 * $this->var2 = ";
+        return $this->var1 * $this->var2;
+    }
+    
+    //Divide Method
+    public function divide() 
+    {
+        echo "$this->var1 / $this->var2 = ";
+        return $this->var1 / $this->var2;
+    }
 }
 
-echo "mycalc1: <br>";
+//Instantiation
+echo "Calculations: <br>";
 
-$mycalc1 = new MyCalculator(12, 6); 
-echo $mycalc1-> add()."\n <br>"; // Displays 18 
-echo $mycalc1-> multiply()."\n <br>"; // Displays 72
-echo $mycalc1-> subtract()."\n <br>"; // Displays 6
-echo $mycalc1-> divide()."\n <br>"; // Displays 2
-
-echo "<br>";
-
-echo "mycalc2: <br>";
-
-$mycalc2 = new MyCalculator(20, 10); 
-echo $mycalc2-> add()."\n <br>"; // Displays 30 
-echo $mycalc2-> multiply()."\n <br>"; // Displays 200
-echo $mycalc2-> subtract()."\n <br>"; // Displays 10
-echo $mycalc2-> divide()."\n <br>"; // Displays 2
+$calc1 = new Calculate(8, 4); 
+echo $calc1->add()."<br>";
+echo $calc1->multiply()."<br>";
+echo $calc1->subtract()."<br>";
+echo $calc1->divide()."<br>";
 
 echo "<br>";
 ?>
