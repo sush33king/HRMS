@@ -1,36 +1,32 @@
 <?php
+//Parent Class
+class Calculator {
+protected $_fval, $_sval;
 
-Class PlusOne 
+//Construct Method
+public function __construct( $fval, $sval) 
 {
-    public static $value = 0;
-
-    public function add()
-    {
-        self::$value = self::$value + 1;
-        echo self::$value;
-        
-    }
-
+    $this->_fval = $fval;
+    $this->_sval = $sval;
 }
 
-$calc = new PlusOne;
-$calc-> add();
+//Method
+public function add() 
+{
+    return $this->_fval + $this->_sval;
+}
 
-$calc2 = new PlusOne;
-$calc2-> add();
+//Child Class inherits parent construct method and variables
+class Subtract extends Calculator
+{
+    public function subtract($_fval,$_sval) 
+    {
+        return $this->_fval - $this->_sval;
+    }
+}
 
-$calc3 = new PlusOne;
-$calc3-> add();
-
-
-
-
-
-
-
-
-
-
-
+//Instantiation
+$calcSubtract = new Subtract(10,5);
+$calcSubtract->subtract();
 
 ?>
