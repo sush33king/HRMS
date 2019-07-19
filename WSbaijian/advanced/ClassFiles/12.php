@@ -1,26 +1,39 @@
 <?php 
-class game { 
+// Creating Class
+class total { 
       
-      
-    public function __call($name, $arguments) { 
-          
-        echo "Calling object method '$name' "
-            . implode(', ', $arguments). "\n"; 
-    } 
-  
-      
-    public static function __callStatic($name, $arguments) { 
-          
-        echo "Calling static method '$name' "
-            . implode(', ', $arguments). "\n"; 
+    // __call is a magic function which accepts  
+    // function name and numbers
+    function __call($name_of_function, $numbers) { 
+              
+        // If function name is multiply
+        if($name_of_function == 'multiply') { 
+              
+            switch (count($numbers)) { 
+                      
+                // If only two numbers
+                case 2: 
+                    return $numbers[0] / $numbers[1]; 
+                          
+                // If three numbers
+                case 3: 
+                   $temp = $numbers[0] / $numbers[1]; 
+                   return $temp / $numbers[2];
+            } 
+        } 
     } 
 } 
-  
-// Create new object 
-$obj = new game; 
-  
-$obj->runTest('in object context'); 
-  
-game::runTest('in static context'); 
+      
+// Instantiate total
+$cal = new total; 
+      
+// except Two numbers
+echo "except Two numbers: ";
+echo($cal->multiply(9, 3)); //Should echo 3
+echo "<br><br>"; 
+      
+// except Three numbers
+echo "except Three numbers: "; 
+echo ($cal->multiply(9, 6, 3)); //Should echo 0.5
   
 ?> 
