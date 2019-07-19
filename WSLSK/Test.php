@@ -1,16 +1,20 @@
 <?php
-$serverName = "LSKPC\SQLEXPRESS";
-$connOptions = array("Database"=>"3.1","CharacterSet" => "UTF-8");
- $conn = sqlsrv_connect( $serverName, $connOptions );
-if( $conn === false )
+abstract class AbstractClass
 {
-    echo "Could not close.\n"; 
-    die( print_r( sqlsrv_errors(), true));
-}
-else 
-{
-    echo "Connection close successfully!";
+    // Force Extending class to define this method
+    abstract protected function Class1();
+    public function Students() 
+    {
+        print $this->Class1() . "\n";
+    }
 }
 
-sqlsrv_close( $conn );
+class Classes extends AbstractClass
+{
+    protected function Class1() 
+    {
+        return "Classes";
+    }  
+}
+
 ?>

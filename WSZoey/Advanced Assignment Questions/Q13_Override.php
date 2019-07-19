@@ -19,7 +19,7 @@ class ChildC extends ParentC {
     } 
 } 
   
-// Instatiation
+// Instantiation
 $p = new ParentC; 
 $c = new ChildC; 
   

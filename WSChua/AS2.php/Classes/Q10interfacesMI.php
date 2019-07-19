@@ -61,6 +61,8 @@ $x->add();
 
 
 
+<<<<<<< HEAD
+=======
 /*function add()
     {   
         echo  $this->x + $this->y ;  
@@ -73,6 +75,7 @@ $x->add();
     $x->add(8,5,2,4);
     $x->add(5,6,1);
 
+>>>>>>> b3de6762b5f5ab76eefdee0d5f86520e31e12ff8
 
 
 
