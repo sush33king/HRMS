@@ -1,9 +1,9 @@
 <?php
-class diagram
+class datab_
 {   
     private $conn;
 
-    public function  connection(){
+    public function connection(){
         //naming the value for "serverName"
         $serverName = "PHIS-NBK-PM1"; 
 
@@ -15,11 +15,11 @@ class diagram
 
         //verify if the connection is made
         if( $this->conn ) {
-            echo "Connection established.<br />";
+            echo "Successfully made connection.<br />";
         }
         
         else{
-            echo "Connection could not be established.<br />";
+            echo "Connection failed to connect.<br />";
             die( print_r( sqlsrv_errors(), true));
         }
     }
@@ -32,38 +32,38 @@ class diagram
         die( print_r( sqlsrv_errors(), true));  //the program is terminated by this code
         }     
         $i = 0;
-        while( $obj = sqlsrv_fetch_object( $stmt))  
+        while( $obj_ = sqlsrv_fetch_object( $stmt))  
         {  
-        $rs[$i++] = $obj;
-        /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+        $rs[$i++] = $obj_;
+        /*echo $obj_->LastName.", ".$obj_->FirstName."<br>"; */      
         }
         return $rs ;
     }
 
-    public function adddb($data, $tblName) {
+    public function adddb($data, $table_Name) {
 
         //variables initialized to store field names and field data
-        $fldNames = "";
-        $fldData =  "";
+        $field_Names = "";
+        $field_Data =  "";
     
         //extract field names and field data by looping through the array
-        foreach($data as $key => $val)
+        foreach($data as $key => $value_)
         {
                 
-            if($fldNames == "")
+            if($field_Names == "")
                 {
-                    $fldNames = $key; 
-                    $fldData = "'" . $val . "'";  
+                    $field_Names = $key; 
+                    $field_Data = "'" . $value_ . "'";  
                 }   
                 else
                 {                
-                    $fldNames = $fldNames .  ',' . $key;   
-                    $fldData = $fldData . ',' . "'" . $val . "'";     
+                    $field_Names = $field_Names .  ',' . $key;   
+                    $field_Data = $field_Data . ',' . "'" . $value_ . "'";     
                 }                                 
             }
     
         //the sql query is made up of the combination of both field names and data values
-        $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
+        $sql = "INSERT INTO " . $table_Name . "(" . $field_Names . ") " . "VALUES(" . $field_Data . ")";
     
         //executing sql query
         $stmt = sqlsrv_query( $this->conn, $sql);
@@ -71,45 +71,45 @@ class diagram
         //display error if detected one
         if( $stmt === false )  
         {  
-                echo "Error in query preparation/execution.\n";  
+                echo "Error.\n";  
                 die( print_r( sqlsrv_errors(), true));  //the program is terminated by this code
         }
             else //displays the following message if it worked
         {
-                echo "Record successfully added!";
+                echo "Added without error";
         }
     }    
 
-    public function deletedb($tblName, $where_condition) {
+    public function deletedb($table_Name, $where_condition) {
 
-        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+        $sql = "DELETE FROM ".$table_Name." WHERE ".$where_condition.""; 
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
-        echo "Error deleting record:";
+        echo "Failed to delete record:";
         }       
         else 
         {
-        echo "Record deleted successfully" ;
+        echo "Deleted record without error" ;
         }
 
     }
 
-    public function update($tblName, $flddata, $where_condition) {
+    public function update($table_Name, $field_data, $where_condition) {
         
-        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
+        $sql = "UPDATE ".$table_Name." SET ".$field_data." WHERE ".$where_condition."";  
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
-        echo "Error updating record:";
+        echo "Failed to update record:";
         }       
         else 
         {
-        echo "Record update successfully" ;
+        echo "Record updated without error" ;
         }
     }
     public function closeconnection()
@@ -117,12 +117,12 @@ class diagram
         sqlsrv_close($this->conn) ;
         if($this->conn === false)  
         {
-            echo "Could Not disconnect."; 
+            echo "Could Not terminate connection."; 
             die( print_r( sqlsrv_errors(), true));
         }
         else
         {
-            echo "Successfully disconnected."; 
+            echo "Successfully terminated connection."; 
         }
         
     }
@@ -130,23 +130,57 @@ class diagram
 
 }
 
-$conn = new diagram ;
-$conn -> connection();
-//$rs = $conn -> querydb('select * from tbl_project');
-//$data = array("fld_EMP_ID"=>"S26055", "fld_name"=>"TAN" ,"fld_depID"=>"L004" ,"fld_hourrate"=> "30.0000" ) ;
-//$tblName = "tbl_employee";
-//$conn->adddb($data, $tblName);
-//echo var_dump($rs);
-//$where_condition = "fld_EMP_ID = 'S26055'" ;
-//$tblName = "tbl_employee";
-//$conn->deletedb($tblName, $where_condition);
-//$where_condition = "fld_EMP_ID = 'S20005'" ;
-//$flddata = "fld_hourrate = '30.0000'" ;
-//$tblName = "tbl_employee";
-//$conn->update($tblName, $flddata, $where_condition) ;
-//$conn->closeconnection();
+
+//TESTING SECTION
+
+//1. Test make connection with db
+$db = new datab_;
+$db ->connection();
+
+//2. Test query database
+$data = $db->querydb("select * from tbl_Employees");
+echo var_dump($data);
+
+//3. Test adding data
+/*$data = array("fld_EmpId"=>"A10", 
+              "fld_Name"=>"Joyce" ,
+              "fld_DeptID"=>"B01" ,
+              "fld_Salary" => "5300",
+              "fld_Postion"=>"Sales Manager",
+              "fld_Age"=>"32",
+              "fld_Gender"=>"Female"
+            );
+
+$tblName = "dbo.tbl_Employees";
+
+$db->adddb($data, $tblName); */
+
+//4. Update
+
+//make connection
+/*$db = new datab_;
+$db->connection();
+
+//prepare data
+$tblName = "tbl_Employees";
+$data = "fld_Name = 'Joyce', fld_Salary = '5500'";
+$criteria = "fld_EmpId = 'A10'";
+
+//run updata function using prepared data
+$db->update($tblName, $data, $criteria);*/
 
 
+/*//5. Delete
+//make connection
+$db = new datab_;
+$db->connection();
+
+//prepare data
+$tblName = "tbl_Employees";
+$criteria = "fld_EmpId = 'A10'";
+
+//run update function using prepared data
+$db->deletedb($tblName, $criteria);*/
 
 
 ?>
