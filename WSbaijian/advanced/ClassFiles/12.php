@@ -1,17 +1,17 @@
 <?php
-class game {
-    public function work(){
-    echo "this is game ";
+class game
+{
+    public function _play($name,$date)
+    {
+        echo "fong play the game <br/>";
     }
+   public static function _wacth($name,$date)
+   {
+       echo "fong wacth the video <br/>";
+   }
 }
-
-class one extends  game{
-    public function work(){
-    echo "this is work";
-    }
-}
-
-$x = new one;
-$x->work();
+$addgame = new game;
+$addgame->gane();
+game::$date();
 
 ?>
