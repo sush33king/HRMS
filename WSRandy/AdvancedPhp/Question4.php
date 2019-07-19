@@ -19,6 +19,6 @@ $Gpu3= new Gpu("Msi",1900);
 $Gpu4= new Gpu("Asus",1800);
 $Gpu5= new Gpu("Nvidia",1800);
 
-echo "The amount of objects in the class is " .Gpu::$count . ".";
+echo "The number of objects in the class is " .Gpu::$count . ".";
 
 ?>
