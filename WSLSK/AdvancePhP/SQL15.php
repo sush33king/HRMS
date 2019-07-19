@@ -13,6 +13,10 @@ Class Diagram
             echo "Could not connect.\n";  
             die( print_r( sqlsrv_errors(), true));  
         }
+        else 
+        {
+            echo "Connection successful!";
+        }
     }
 
     public function queryDB($str)
@@ -24,7 +28,7 @@ Class Diagram
         echo "Error in query preparation/execution.\n";  
         die( print_r( sqlsrv_errors(), true));  //program close
         }  
-        /* Retrieve each row as a PHP object and display the results.*/ 
+        // display the results
             $i = 0;
              while( $obj = sqlsrv_fetch_object( $stmt))  
             {  
@@ -36,11 +40,11 @@ Class Diagram
 
     public function addDB($data, $tblName)
     {
-        //initialize variables to be used to store field names and field data
+        //this is to store name and data in sql
         $fldNames = "";
         $fldData = "";
 
-        //loop through array and extract field names and field data from array
+        //looping through an array and extracting  names and  data from array
         foreach($data as $key => $val)
         {
             
@@ -56,17 +60,17 @@ Class Diagram
             }                                 
         }
 
-        //combine field names and field data values into sql query
+        //combine  names and data values into sql query
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
 
-        //execute prepared sql query
+        //execute 
         $stmt = sqlsrv_query( $this->conn, $sql);
 
         //if error then display error
         if( $stmt === false )  
         {  
             echo "Error in query preparation/execution.\n";  
-            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+            die( print_r( sqlsrv_errors(), true));  //program close
         }  
         else //if successful the display msg below
         {
@@ -77,7 +81,7 @@ Class Diagram
     public function updateDB($tblName, $flddata, $where_condition) 
     {
         
-        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
+        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  //It update the data to the condition
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
@@ -93,7 +97,7 @@ Class Diagram
 
     public function deleteDB($tblName, $where_condition)
     {
-        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; // this will delete date from table in sql
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
@@ -109,7 +113,7 @@ Class Diagram
 
     public function closedb()
     {
-        sqlsrv_close($this->conn); 
+        sqlsrv_close($this->conn); //close the sql connection
 
         if($this->conn === false )
         {
@@ -124,20 +128,20 @@ Class Diagram
 }
 
 
-$conn = new Diagram;
-$conn->makeconnection();
+//$conn = new Diagram;
+//$conn->makeconnection();
 //$rs = $conn->queryDB("Select * From tbl_Project");
 //$data = array("fld_EMPID"=>"S21011", "fld_DeptID"=>"L023" ,"fld_Name"=>"S.Lee" ,"fld_HourlyRate"=> "50.0000" ) ;
 //$tblName = "tbl_Employee";
-//$conn->adddb($data, $tblName);
+//$conn->addDB($data, $tblName);
 //$where_condition = "fld_EMPID = 'S21011'" ;
 //$tblName = "tbl_Employee";
-//$conn->deletedb($tblName, $where_condition);
+//$conn->deleteDB($tblName, $where_condition);
 //$where_condition = "fld_EMPID = 'S10031'" ;
 //$flddata = "fld_HourlyRate = '60.0000'" ;
 //$tblName = "tbl_Employee";
-//$conn->update($tblName, $flddata, $where_condition) ;
+//$conn->updateDB($tblName, $flddata, $where_condition) ;
 //echo var_dump($rs);
-$conn->closedb();
+//$conn->closedb();
 
 ?>
