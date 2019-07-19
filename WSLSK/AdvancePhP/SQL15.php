@@ -13,6 +13,10 @@ Class Diagram
             echo "Could not connect.\n";  
             die( print_r( sqlsrv_errors(), true));  
         }
+        else 
+        {
+            echo "Connection successful!";
+        }
     }
 
     public function queryDB($str)
@@ -124,7 +128,7 @@ Class Diagram
 }
 
 
-$conn = new Diagram;
+//$conn = new Diagram;
 //$conn->makeconnection();
 //$rs = $conn->queryDB("Select * From tbl_Project");
 //$data = array("fld_EMPID"=>"S21011", "fld_DeptID"=>"L023" ,"fld_Name"=>"S.Lee" ,"fld_HourlyRate"=> "50.0000" ) ;

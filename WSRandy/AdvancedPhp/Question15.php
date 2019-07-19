@@ -4,16 +4,16 @@ class diagram
     private $conn;
 
     public function  connection(){
-        //setting the value for "serverName\instanceName"
+        //naming the value for "serverName"
         $serverName = "PHIS-NBK-PM1"; 
 
-        //additional information for making connection to database
+        //extra information for to connect to database
         $connectionInfo = array( "Database"=>"db_hrms", "UID"=>"sa", "PWD"=>"password123");
 
-        //using php function to connect to database using settings above
+        //using php function to connect to the database with settings used above
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
 
-        //check if connection is successful or not
+        //verifies if the connection is made
         if( $this->conn ) {
             echo "Connection established.<br />";
         }
@@ -29,7 +29,7 @@ class diagram
         if( $stmt === false )  
         {  
         echo "Error in query preparation/execution.\n";  
-        die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        die( print_r( sqlsrv_errors(), true));  //the program is terminated by this code
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
@@ -42,11 +42,11 @@ class diagram
 
     public function adddb($data, $tblName) {
 
-         //initialize variables to be used to store field names and field data
+        //initialize variables to store field names and field data
         $fldNames = "";
         $fldData =  "";
     
-        //loop through array and extract field names and field data from array
+        //extract field names and field data by looping through the array
         foreach($data as $key => $val)
         {
                 
@@ -62,19 +62,19 @@ class diagram
                 }                                 
             }
     
-        //combine field names and field data values into sql query
+        //the sql query is made up of the combinaton of both field names and data values
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
-        //execute prepared sql query
+        //executing sql query
         $stmt = sqlsrv_query( $this->conn, $sql);
     
-        //if error then display error
+        //display error if detected one
         if( $stmt === false )  
         {  
                 echo "Error in query preparation/execution.\n";  
-                die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
-        }  
-            else //if successful the display msg below
+                die( print_r( sqlsrv_errors(), true));  //the program is terminated by this code
+
+            else //displays the following message if it worked
         {
                 echo "Record successfully added!";
         }
