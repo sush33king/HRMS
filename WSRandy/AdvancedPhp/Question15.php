@@ -183,4 +183,9 @@ $criteria = "fld_EmpId = 'A10'";
 $db->deletedb($tblName, $criteria);*/
 
 
+//6. Close connection
+//ending connection
+$db = new datab_;
+$db->closeconnection();
+
 ?>
