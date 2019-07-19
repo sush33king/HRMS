@@ -129,9 +129,11 @@ $conn->makeconnection();
 //$rs = $conn->queryDB("Select * From tbl_Project");
 $data = array("fld_EMPID"=>"S21011", "fld_DeptID"=>"L023" ,"fld_Name"=>"L.Tan" ,"fld_HourlyRate"=> "50.0000" ) ;
 //$tblName = "tbl_Employee";
+$tblName = "tbl_Employee";
+
 $conn->addDB($data, $tblName);
 //$where_condition = "fld_EMPID = 'S21011'" ;
-$tblName = "tbl_Employee";
+
 //$conn->deleteDB($tblName, $where_condition);
 //$where_condition = "fld_EMPID = 'S10031'" ;
 //$flddata = "fld_HourlyRate = '60.0000'" ;
