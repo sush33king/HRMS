@@ -42,7 +42,7 @@ class diagram
 
     public function adddb($data, $tblName) {
 
-        //initialize variables to store field names and field data
+        //variables initialized to store field names and field data
         $fldNames = "";
         $fldData =  "";
     
