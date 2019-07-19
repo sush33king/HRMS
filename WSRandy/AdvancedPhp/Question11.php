@@ -9,7 +9,8 @@ class dog
     }
 }
 
-class cat extends dog {
+class cat extends dog 
+{
         function __construct() {
             //the child class is calling for the parent class
             parent::__construct();
@@ -17,5 +18,6 @@ class cat extends dog {
         }
      }
 
+$apply = new cat;   
 
 ?>
