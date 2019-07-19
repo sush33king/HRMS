@@ -43,14 +43,14 @@ class Remainder extends MyCalculator
 
 //Test 1 - Test MyCalculator
 $mycalc = new MyCalculator(12, 6); 
-$mycalc-> add()."\n";
-$mycalc-> subtract()."\n"; 
-$mycalc-> multiply()."\n"; 
-$mycalc-> divide()."\n"; 
+echo $mycalc-> add(). "<br>";
+echo $mycalc-> subtract(). "<br>"; 
+echo $mycalc-> multiply(). "<br>"; 
+echo $mycalc-> divide(). "<br>"; */
 
 //Test 2 - Test inheritence
 $myRcal = new Remainder (15, 7); 
-$myRcal-> modulus()."\n";
+echo $myRcal-> modulus(). "<br>";
 $myRcal->add();
 
 ?>
