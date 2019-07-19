@@ -13,7 +13,7 @@ class diagram
         //using php function to connect to the database with settings used above
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
 
-        //verifies if the connection is made
+        //verify if the connection is made
         if( $this->conn ) {
             echo "Connection established.<br />";
         }
@@ -62,7 +62,7 @@ class diagram
                 }                                 
             }
     
-        //the sql query is made up of the combinaton of both field names and data values
+        //the sql query is made up of the combination of both field names and data values
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
         //executing sql query
@@ -73,7 +73,7 @@ class diagram
         {  
                 echo "Error in query preparation/execution.\n";  
                 die( print_r( sqlsrv_errors(), true));  //the program is terminated by this code
-
+        }
             else //displays the following message if it worked
         {
                 echo "Record successfully added!";
