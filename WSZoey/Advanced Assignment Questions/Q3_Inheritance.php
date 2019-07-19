@@ -1,45 +1,72 @@
 <?php
-class MyCalculator {
-protected $_fval, $_sval;
-public function __construct( $fval, $sval) {
-$this->_fval = $fval;
-$this->_sval = $sval;
-static $count = 1;
-echo "Class 'MyCalculator' Instance " . $count . ":<br>";
-$count++;
-}
-public function add() {
-return $this->_fval + $this->_sval;
-}
-public function subtract() {
-return $this->_fval - $this->_sval;
-}
-public function multiply() {
-return $this->_fval * $this->_sval;
-}
-public function divide() {
-return $this->_fval / $this->_sval;
-}
-}
 
-class Remainder extends MyCalculator
-{
-    public function modulus($_fval,$_sval) {
-    return $this->_fval % $this->_sval;
+//Calculator Class
+class Calculate 
+{   
+    //Variables
+    protected $var1, $var2;
+
+    //Constructor Method
+    public function __construct( $var1, $var2 ) 
+    {
+        $this->var1 = $var1;
+        $this->var2 = $var2;
+    }
+    
+    //Add Method
+    public function add()
+    {
+        echo "$this->var1 + $this->var2 = ";
+        return $this->var1 + $this->var2;
+    }
+
+    //Subtract Method
+    public function subtract() 
+    {
+        echo "$this->var1 - $this->var2 = ";
+        return $this->var1 - $this->var2;
+    }
+    
+    //Multiply Method
+    public function multiply() 
+    {
+        echo "$this->var1 * $this->var2 = ";
+        return $this->var1 * $this->var2;
+    }
+    
+    //Divide Method
+    public function divide() 
+    {
+        echo "$this->var1 / $this->var2 = ";
+        return $this->var1 / $this->var2;
     }
 }
 
-$mycalc1 = new MyCalculator(30, 30);
-echo $mycalc1-> add()."\n <br>"; // Displays 18 
-echo $mycalc1-> multiply()."\n <br>"; // Displays 72
-echo $mycalc1-> subtract()."\n <br>"; // Displays 6
-echo $mycalc1-> divide()."\n <br>"; // Displays 2
+//Child Class
+class Remainder extends Calculate
+{
+    //Modulus Method
+    public function modulus() 
+    {
+        echo "$this->var1 % $this->var2 = ";
+        return $this->var1 % $this->var2;
+    }
+}
+
+//Calculate Instantiation
+echo "Calculations: <br>";
+
+$calc1 = new Calculate(8, 4); 
+echo $calc1->add()."<br>";
+echo $calc1->multiply()."<br>";
+echo $calc1->subtract()."<br>";
+echo $calc1->divide()."<br>";
+
+//Remainder Instantiation
+$calc2 = new Remainder(8, 4);
+echo $calc2->modulus()."<br>"; 
 
 echo "<br>";
 
-$mycalc3 = new Remainder();
-echo $mycalc3-> modulus(3,2)."\n"; //Displays 1
-echo "<br>";
-echo "<br>";
 
 ?>

@@ -1,14 +1,38 @@
 <?php
+<<<<<<< HEAD
+
+class MyDatabase
+{   
+    private $conn;
+
+    public function  makeconnection(){
+        //configure server instance name
+        $serverName = "127.0.0.1\sqlexpress"; 
+
+        //configure database connection information
+        $connectionInfo = array( "Database"=>"db_hrms", "UID"=>"sa", "PWD"=>"1234");
+
+        //connect to database using php built in function sqlsrv_connect
+        $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
+
+        //verify connection
+        if( $this->conn ) {
+            echo "Connection Successful.<br />";
+        }
+        
+        else{
+            echo "Connection Failed.<br />";
+=======
 class diagram
 {   
     private $conn;
 
     public function  connection(){
         //setting the value for "serverName\instanceName"
-        $serverName = "PHIS-NBK-PM1"; 
+        $serverName = "192.168.0.10"; 
 
         //additional information for making connection to database
-        $connectionInfo = array( "Database"=>"db_hrms", "UID"=>"sa", "PWD"=>"password123");
+        $connectionInfo = array( "Database"=>"task 3.1", "UID"=>"sa", "PWD"=>"1234");
 
         //using php function to connect to database using settings above
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
@@ -20,24 +44,42 @@ class diagram
         
         else{
             echo "Connection could not be established.<br />";
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
             die( print_r( sqlsrv_errors(), true));
         }
     }
 
+<<<<<<< HEAD
+    public function query_db($str) {
+        $stmt = sqlsrv_query($this->conn, $str);  
+        if( $stmt === false )  
+        {  
+            echo "Error in query preparation/execution.\n";  
+            //end program
+            die( print_r( sqlsrv_errors(), true));  
+=======
     public function querydb($str) {
         $stmt = sqlsrv_query($this->conn, $str);  
         if( $stmt === false )  
         {  
         echo "Error in query preparation/execution.\n";  
         die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
+<<<<<<< HEAD
+            $data[$i++] = $obj;
+              
+        }
+        return $data ;
+=======
         $rs[$i++] = $obj;
         /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
         }
         return $rs ;
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
     }
 
     public function adddb($data, $tblName) {
@@ -46,6 +88,14 @@ class diagram
         $fldNames = "";
         $fldData =  "";
     
+<<<<<<< HEAD
+        $keyOnlyArray = array_keys($data);  
+        $fldNames = implode(",",$keyOnlyArray);
+    
+        $dataOnlyArray = array_values($data);  
+        $fldData = "'" . implode("','",$dataOnlyArray) . "'";  
+
+=======
         //loop through array and extract field names and field data from array
         foreach($data as $key => $val)
         {
@@ -62,6 +112,7 @@ class diagram
                 }                                 
             }
     
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         //combine field names and field data values into sql query
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
@@ -99,17 +150,29 @@ class diagram
 
     public function update($tblName, $flddata, $where_condition) {
         
+<<<<<<< HEAD
+        //creating the query
+=======
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
 
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
+<<<<<<< HEAD
+            echo "Error updating record:";
+        }       
+        else 
+        {
+            echo "Record update successfully" ;
+=======
         echo "Error updating record:";
         }       
         else 
         {
         echo "Record update successfully" ;
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151
         }
     }
     public function closeconnection()
@@ -130,6 +193,31 @@ class diagram
 
 }
 
+//TESTING SECTION
+<<<<<<< HEAD
+
+//Test make connection with db
+$db = new MyDatabase;
+$db->makeconnection();
+
+//test enter data into table tbl_employee
+/*$data = array("emp_id"=>"S26055", 
+              "name"=>"TAN" ,
+              "department_id"=>"ST" ,
+              "salary"=> "30.0000" ,
+              "age"=> "20" ,
+              "last_name" => "hi"
+            );
+
+$tblName = "dbo.tbl_employee";
+
+$db->adddb($data, $tblName);*/ 
+
+//test query_db
+
+echo var_dump($db->query_db("select * from tbl_employee"));
+?>
+=======
 $conn = new diagram ;
 $conn -> connection();
 //$rs = $conn -> querydb('select * from tbl_project');
@@ -144,9 +232,10 @@ $conn -> connection();
 //$flddata = "fld_hourrate = '30.0000'" ;
 //$tblName = "tbl_employee";
 //$conn->update($tblName, $flddata, $where_condition) ;
-//$conn->closeconnection();
+$conn->closeconnection();
 
 
 
 
 ?>
+>>>>>>> e3e51725cbc7212c5258a29a4dfd739b4b1f8151

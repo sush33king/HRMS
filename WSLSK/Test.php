@@ -1,16 +1,28 @@
 <?php
-$serverName = "LSKPC\SQLEXPRESS";
-$connOptions = array("Database"=>"3.1","CharacterSet" => "UTF-8");
- $conn = sqlsrv_connect( $serverName, $connOptions );
-if( $conn === false )
-{
-    echo "Could not close.\n"; 
-    die( print_r( sqlsrv_errors(), true));
-}
-else 
-{
-    echo "Connection close successfully!";
+class Msi {
+   function __construct() {
+       print "In Msi constructor\n";
+   }
 }
 
-sqlsrv_close( $conn );
+class laptop extends Msi {
+   function __construct() {
+       parent::__construct();
+       print "In laptop constructor\n";
+   }
+}
+
+class Illegear extends Msi {
+    // inherits games's constructor
+}
+
+// In games constructor
+$use = new Msi();
+
+// In games constructor
+// In laptop constructor
+$use = new laptop();
+
+// In games constructor
+//$use = illegear();
 ?>
