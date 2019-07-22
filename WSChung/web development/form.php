@@ -28,7 +28,7 @@ input[type=submit] {
 </head>
 <body>
 <form action="/action_page.php">
-  First name:<br>
+  Name:<br>
   <input type="text" name="name" value="LSK"><br>
   Address:<br>
   <input type="text" name="address" value="SHAH ALAM"><br>
