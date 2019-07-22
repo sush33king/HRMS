@@ -30,7 +30,6 @@ input[type=password] {
     font-size: 30px
 }
 
-
 input[type=date] {
   color: black;
   font-family: 'Butterfly Kids', cursive;
