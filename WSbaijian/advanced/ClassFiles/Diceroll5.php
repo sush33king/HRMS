@@ -1,6 +1,6 @@
 <?php
 
-Class Diceroll
+Class game
 {
     
       public function Draw1()
@@ -61,7 +61,7 @@ Class Diceroll
 
 }
 
-$x = new Diceroll();
+$x = new game();
 $x->RollTheDice();
 
 ?>
