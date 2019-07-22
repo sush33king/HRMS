@@ -40,6 +40,8 @@ input[type=password] {
   <input type="text" name="username" value="LSK2018"><br>
   Password:<br>
   <input type="password" name="pwd" value="LSK" minlength="8"><br>
+  Repeat Password:<br>
+  <input type="password" name="pwd" value="LSK" minlength="8"><br>
   Address:<br>
   <input type="text" name="address" value="SHAH ALAM"><br>
   Age:<br>
@@ -50,7 +52,9 @@ input[type=password] {
   <input type="radio" name="gender" value="male" checked> Male
   <input type="radio" name="gender" value="female"> Female
   <input type="radio" name="gender" value="other"> Other<br>
-  <input type="submit" value="Submit">
+  Birthday: <br>
+  <input type="date" name="bday"><br>
+  <input type="submit" value="Sign Up">
 </form>    
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
