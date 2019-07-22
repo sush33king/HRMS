@@ -3,7 +3,7 @@
 Class Diceroll
 {
     
-    public function Draw1()
+      public function Draw1()
       { 
             echo "1" ; 
       }
@@ -24,7 +24,7 @@ Class Diceroll
       { 
             echo "5 " ;
       }
-            public function Draw6() 
+      public function Draw6() 
       {
             echo "6 " ;
             
