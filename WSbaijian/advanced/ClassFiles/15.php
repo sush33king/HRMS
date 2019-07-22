@@ -1,5 +1,5 @@
 <?php
-class diagram
+class mysql
 {   
     private $conn;
 
@@ -124,19 +124,15 @@ class diagram
 
 }
 
-$conn = new diagram ;
+$conn = new mysql ;
 $conn -> connection();
 $str = $conn -> querydb('select * from tbl_purchase_order');
 echo var_dump($str);
 
 
-
-
-
 //$data = array("Po_ID"=>"po0005", "Description"=>"good" ,"Po_Date"=>"2019-07-15 00:00:00" ,"customerID"=> "A0004","VendorID"=>"V0004" ) ;
 //$tblName = "tbl_purchase_order";
 //$conn->adddb($data, $tblName);
-//echo var_dump($rs);
 //$where_condition = "Po_ID = 'po0005'" ;
 //$tblName = "tbl_purchase_order";
 //$conn->deletedb($tblName, $where_condition);
