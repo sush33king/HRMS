@@ -27,7 +27,9 @@ input[type=submit] {
 input[type=password] {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
+    font-size: 30px
 }
+
 </style>
 </head>
 <body>
@@ -43,7 +45,11 @@ input[type=password] {
   Age:<br>
   <input type="text" name="age" value="18"><br>
   School:<br>
-  <input type="text" name="school" value="ENLITEN"><br><br>
+  <input type="text" name="school" value="ENLITEN"><br>
+  Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other<br>
   <input type="submit" value="Submit">
 </form>    
 
