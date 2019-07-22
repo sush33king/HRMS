@@ -12,6 +12,7 @@ class one extends  game{
 }
 
 $x = new one;
+$y = new game;
 $x->work();
-
+$y->work();
 ?>

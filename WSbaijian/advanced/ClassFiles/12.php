@@ -27,13 +27,13 @@ class total {
 // Instantiate total
 $cal = new total; 
       
-// except Two numbers
+// accept Two numbers
 echo "except Two numbers: ";
 echo($cal->multiply(9, 3)); //Should echo 3
 echo "<br><br>"; 
       
-// except Three numbers
-echo "except Three numbers: "; 
+// accept Three numbers
+echo "accept Three numbers: "; 
 echo ($cal->multiply(9, 6, 3)); //Should echo 0.5
   
 ?> 

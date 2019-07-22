@@ -34,7 +34,7 @@ class Calculator {
 
 class mod extends calculator { 
 
-    protected $_val1 , $_val2;
+    private $_val1 , $_val2;
 
     public function __construct($val1, $val2){
     parent::__construct($val1, $val2);  
@@ -52,7 +52,7 @@ echo "<p>3 + 4 = ".$calc->add(). "</p>";
 
 $calc = new Calculator (15,12);
 echo "<p>15 - 12 = ".$calc->subtract(). "</p>";
-$calc->subtract();
+//$calc->subtract();
 
 $calc = new Calculator (20,2);
 echo "<p> 20 * 2 = ".$calc->multiply(). "</p>";
@@ -60,4 +60,6 @@ echo "<p> 20 * 2 = ".$calc->multiply(). "</p>";
 $calc = new Calculator (20,2);
 echo "<p> 20 / 2 = ".$calc ->divide(). "</p>";
 
+$calc = new mod (20,3);
+echo "<p> 20 % 3 = ".$calc ->modulus(). "</p>";
 ?>
