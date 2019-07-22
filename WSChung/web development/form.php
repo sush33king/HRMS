@@ -24,12 +24,20 @@ input[type=submit] {
   font-size: 20px
 }
 
+input[type=password] {
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+}
 </style>
 </head>
 <body>
 <form action="/action_page.php">
   Name:<br>
   <input type="text" name="name" value="LSK"><br>
+  Username:<br>
+  <input type="text" name="username" value="LSK2018"><br>
+  Password:<br>
+  <input type="password" name="pwd" value="LSK" minlength="8"><br>
   Address:<br>
   <input type="text" name="address" value="SHAH ALAM"><br>
   Age:<br>
