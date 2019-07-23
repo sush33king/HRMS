@@ -1,9 +1,9 @@
 <?php
 
-Class Diceroll
+Class game
 {
     
-    public function Draw1()
+      public function Draw1()
       { 
             echo "1" ; 
       }
@@ -24,7 +24,7 @@ Class Diceroll
       { 
             echo "5 " ;
       }
-            public function Draw6() 
+      public function Draw6() 
       {
             echo "6 " ;
             
@@ -61,7 +61,7 @@ Class Diceroll
 
 }
 
-$x = new Diceroll();
+$x = new game();
 $x->RollTheDice();
 
 ?>

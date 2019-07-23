@@ -1,5 +1,5 @@
 <?php
-class diagram
+class mysql
 {   
     private $conn;
 
@@ -15,11 +15,11 @@ class diagram
 
         //check if connection is successful or not
         if( $this->conn ) {
-            echo "Connection established.<br />";
+            echo "Connection successfully.<br />";
         }
         
         else{
-            echo "Connection could not be established.<br />";
+            echo "Connection cannot use.<br />";
             die( print_r( sqlsrv_errors(), true));
         }
     }
@@ -28,26 +28,23 @@ class diagram
         $stmt = sqlsrv_query($this->conn, $str);  
         if( $stmt === false )  
         {  
-        echo "Error in query preparation/execution.\n";  
-        die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        echo "Error in query.\n";  
+        die( print_r( sqlsrv_errors(), true));  
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
-        $rs[$i++] = $obj;
-        /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+        $rs[$i++] = $obj;             
         }
         return $rs ;
     }
 
     public function adddb($data, $tblName) {
 
-         //initialize variables to be used to store field names and field data
-        $fldNames = "";
+                $fldNames = "";
         $fldData =  "";
     
-        //loop through array and extract field names and field data from array
-        foreach($data as $key => $val)
+                foreach($data as $key => $val)
         {
                 
             if($fldNames == "")
@@ -62,21 +59,18 @@ class diagram
                 }                                 
             }
     
-        //combine field names and field data values into sql query
-        $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
+                $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
-        //execute prepared sql query
-        $stmt = sqlsrv_query( $this->conn, $sql);
+                $stmt = sqlsrv_query( $this->conn, $sql);
     
-        //if error then display error
-        if( $stmt === false )  
+                if( $stmt === false )  
         {  
-                echo "Error in query preparation/execution.\n";  
-                die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+                echo "Error in query.\n";  
+                die( print_r( sqlsrv_errors(), true)); 
         }  
             else //if successful the display msg below
         {
-                echo "Record successfully added!";
+                echo "successfully added!";
         }
     }    
 
@@ -92,7 +86,7 @@ class diagram
         }       
         else 
         {
-        echo "Record deleted successfully" ;
+        echo "deleted successfully" ;
         }
 
     }
@@ -109,7 +103,7 @@ class diagram
         }       
         else 
         {
-        echo "Record update successfully" ;
+        echo "update successfully" ;
         }
     }
     public function closeconnection()
@@ -117,12 +111,12 @@ class diagram
         sqlsrv_close($this->conn) ;
         if($this->conn === false)  
         {
-            echo "Could Not disconnect."; 
+            echo "Cannot the disconnect."; 
             die( print_r( sqlsrv_errors(), true));
         }
         else
         {
-            echo "Successfully disconnected."; 
+            echo "can the disconnected."; 
         }
         
     }
@@ -130,18 +124,20 @@ class diagram
 
 }
 
-$conn = new diagram ;
+$conn = new mysql ;
 $conn -> connection();
-//$rs = $conn -> querydb('select * from tbl_purchase_order');
+$str = $conn -> querydb('select * from tbl_purchase_order');
+echo var_dump($str);
+
+
 //$data = array("Po_ID"=>"po0005", "Description"=>"good" ,"Po_Date"=>"2019-07-15 00:00:00" ,"customerID"=> "A0004","VendorID"=>"V0004" ) ;
 //$tblName = "tbl_purchase_order";
 //$conn->adddb($data, $tblName);
-//echo var_dump($rs);
 //$where_condition = "Po_ID = 'po0005'" ;
 //$tblName = "tbl_purchase_order";
 //$conn->deletedb($tblName, $where_condition);
 //$where_condition = "Po_ID = 'po0004' ";
-//$flddata = "Description = 'good' ";
+//$flddata = "Description = 'toys' ";
 //$tblName = "tbl_purchase_order";
 //$conn->update($tblName, $flddata, $where_condition) ;
 $conn->closeconnection();
