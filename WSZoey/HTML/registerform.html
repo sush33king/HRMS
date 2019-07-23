@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>  
+<link  rel=  "stylesheet"
+       href= "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+
+<link  rel=  "stylesheet"
+       href= "https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
+
+<head>
+<style>
+p 
+{
+  color: black;
+  font-family: 'Titillium Web';
+  font-size: 15px;
+}
+
+input[type=inputtext] 
+{
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: 15px
+}
+
+input[type=password] 
+{
+    display: block;
+    color: black;
+    font: .6rem 'Roboto Mono';
+    font-size: 15px
+}
+
+input[type=date] 
+{
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: 15px
+}
+
+input[type=submit] 
+{
+  color: black;
+  font-family: 'Titillium Web';
+  font-size: 15px
+}
+</style>
+</head>
+
+
+<body>
+<form action="/action_page.php">
+
+  First Name:<br>
+  <input type="inputtext" name="firstname" placeholder="John"><br><br>
+
+  Last Name:<br>
+  <input type="inputtext" name="lastname" placeholder="Smith"><br><br>
+
+  Email Address:<br>
+  <input type="inputtext" name="email" placeholder="example123@email.com"><br><br>
+
+  Password:<br>
+  <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
+
+  Confirm Password:<br>
+  <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
+
+  Address:<br>
+  <input type="inputtext" name="address" placeholder="Location"><br><br>
+
+  Birthday: <br>
+  <input type="date" name="birthday"><br><br>
+
+  Gender:<br>
+  <input type="radio" name="gender" value="male" checked> Male
+  <input type="radio" name="gender" value="female"> Female
+  <input type="radio" name="gender" value="other"> Other <br><br>
+
+  Current Occupation:<br>
+  <input type="radio" name="occupation" value="student" checked> Student
+  <input type="radio" name="occupation" value="working"> Working
+  <input type="radio" name="occupation" value="other"> Other <br><br>
+
+  <input type="submit" value="Sign Up">
+</form>    
+
+<p>If you click the "Sign Up" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>
