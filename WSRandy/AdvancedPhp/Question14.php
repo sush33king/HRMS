@@ -2,21 +2,21 @@
 
 class Song
 {
-    public $song_name = "No any good songs for now";
-    
-    public function __construct($song_name)
+
+    public function __construct()
     {
-        echo "I'm good!";    
-        $this--->song_name = $song_name;
+        echo "He's a good boi!<br>";
     }
-    
+
+    //destructor functions the same as construct but instantiates last
     public function __destruct()
     {
-        echo "I'm bad now D:";
+        echo "I'm the bad guy now D:<br>";
     }
+    
 }
 
-$song = new Song("A song is supposed to be good");
-echo "Name of the Song: " . $song->song_name;
+
+$song = new Song;
 
 ?>

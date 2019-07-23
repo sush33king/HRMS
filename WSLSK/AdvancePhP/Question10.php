@@ -1,22 +1,27 @@
 <?php 
   
-interface C { 
+interface C 
+{ 
    public function insideC(); 
 } 
   
-interface B { 
+interface B    
+{ 
    public function insideB(); 
 } 
   
-class Multiple implements B, C { 
+class Multiple implements B, C 
+{ 
   
     // Function of the interface B 
-    function insideB() { 
+    function insideB() 
+    { 
         echo "I am in interface B"; 
     } 
   
     // Function of the interface C 
-    function insideC() { 
+    function insideC() 
+    { 
         echo "I am in interface C"; 
     } 
   

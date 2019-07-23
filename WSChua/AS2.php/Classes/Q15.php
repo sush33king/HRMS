@@ -9,7 +9,7 @@ class MyDatabase
         $serverName = "127.0.0.1\sqlexpress"; 
 
         //configure database connection information
-        $connectionInfo = array( "Database"=>"task 3.1", "UID"=>"sa", "PWD"=>"password");
+        $connectionInfo = array( "Database"=>"db_hrms", "UID"=>"sa", "PWD"=>"1234");
 
         //connect to database using php built in function sqlsrv_connect
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
@@ -25,20 +25,21 @@ class MyDatabase
         }
     }
 
-    public function querydb($str) {
+    public function query_db($str) {
         $stmt = sqlsrv_query($this->conn, $str);  
         if( $stmt === false )  
         {  
-            echo "Error in query preparation/execution.\n";  
-            die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+            echo "Error.\n";  
+            //end program
+            die( print_r( sqlsrv_errors(), true));  
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
-            $rs[$i++] = $obj;
-            /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+            $data[$i++] = $obj;
+              
         }
-        return $rs ;
+        return $data ;
     }
 
     public function adddb($data, $tblName) {
@@ -47,23 +48,26 @@ class MyDatabase
         $fldNames = "";
         $fldData =  "";
     
+        //prepare field names section of sql query
         $keyOnlyArray = array_keys($data);  
         $fldNames = implode(",",$keyOnlyArray);
     
+        //prepare data section of sql query
         $dataOnlyArray = array_values($data);  
         $fldData = "'" . implode("','",$dataOnlyArray) . "'";  
 
         //combine field names and field data values into sql query
         $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
     
-        //execute prepared sql query
+        //execute query
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         //if error then display error
         if( $stmt === false )  
         {  
-                echo "Error in query preparation/execution.\n";  
-                die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+                echo "Error.\n";  
+                //end
+                die( print_r( sqlsrv_errors(), true));  
         }  
             else //if successful the display msg below
         {
@@ -73,47 +77,57 @@ class MyDatabase
 
     public function deletedb($tblName, $where_condition) {
 
-        $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+        //prepare the sql query using parameters supplied
+        $sql = "DELETE FROM " . $tblName . " WHERE " . $where_condition.""; 
 
+        //execute sql query
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
-        echo "Error deleting record:";
+            echo "Error";
         }       
         else 
         {
-        echo "Record deleted successfully" ;
+            echo "Successfully Deleted" ;
         }
 
     }
 
-    public function update($tblName, $flddata, $where_condition) {
+    public function update($tblName, $data, $where_condition) {
         
-        $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
+        
 
+        //creating the query
+        $sql = "UPDATE " . $tblName . " SET " . $data . " WHERE " . $where_condition . "";  
+
+        //execute query
         $stmt = sqlsrv_query( $this->conn, $sql);
     
         if ($stmt === false) 
         {
-        echo "Error updating record:";
+            echo "Error";
         }       
         else 
         {
-        echo "Record update successfully" ;
+            echo "Successfuly Updated" ;
         }
     }
+
     public function closeconnection()
     {
-        sqlsrv_close($this->conn) ;
+        //close connection
+        sqlsrv_close($this->conn);
+
+
         if($this->conn === false)  
         {
-            echo "Could Not disconnect."; 
+            echo "Failed to disconnect."; 
             die( print_r( sqlsrv_errors(), true));
         }
         else
         {
-            echo "Successfully disconnected."; 
+            echo "Disconnected."; 
         }
         
     }
@@ -121,15 +135,26 @@ class MyDatabase
 
 }
 
+//TESTING SECTION
+
+//Test make connection with db
 $db = new MyDatabase;
 $db->makeconnection();
 
-$data = array("fld_EMP_ID"=>"S26055", 
-              "fld_name"=>"TAN" ,
-              "fld_depID"=>"L004" ,
-              "fld_hourrate"=> "30.0000");
+//test enter data into table tbl_employee
+/*$data = array("emp_id"=>"S26055", 
+              "name"=>"TAN" ,
+              "department_id"=>"ST" ,
+              "salary"=> "30.0000" ,
+              "age"=> "20" ,
+              "last_name" => "hi"
+            );
 
-$tblName = "tbl_employee";
+$tblName = "dbo.tbl_employee";
 
-$db->adddb($data, $tblName);
+$db->adddb($data, $tblName);*/ 
+
+//test query_db
+
+echo var_dump($db->query_db("select * from tbl_employee"));
 ?>
