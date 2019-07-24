@@ -18,25 +18,56 @@ div {
     left: 50%;
     margin-top: -120px;
     margin-left: -120px;
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 120px;
+    border: 10px
+}
+
+html { 
+  background: url(https://wallpapersite.com/images/pages/pic_w/4778.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div border {
+    padding: 20px 15px;
+    border: 3px solid #666;
+    border-radius: 20px;
 }
 
 </style>
 </head>
-<body>
-        <div class="Table">
-        </div>
+<body background="https://wallpapersite.com/images/pages/pic_w/4778.jpg">
         <div>
+          <div class = border>
        <form>
                 Username:<br>
                 <input type="text" name="username"><br>
                 Password:<br>
-                <input type="password" name="password">
+                <input type="password" name="password" id="myInput"><br>
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <input type="checkbox" name="check" checked> Remember Me <br>
                 <input type="submit" value="Login">
+                <input type="submit" value="Sign Up"
+                onclick="window.location.href='form.php'"><br>
+                <a href="#">"Forget password?"</a>
                 <p>Don`t have account please sign up?</p>
-                <input type="submit" value="Sign Up">
-        </form>   
+        </form>  
+        </div> 
     </div> 
+    <script>
+    function myFunction() 
+    {
+    var x = document.getElementById("myInput");
+    if (x.type === "password") {
+    x.type = "text";
+    } 
+   else {
+    x.type = "password";
+   }
+ }
+    </script>
 </body>
 </html>

@@ -14,7 +14,7 @@ p {
 
 input[type=text] {
   color: grey;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'times new roman';
   font-size: 20px
 }
 
@@ -27,12 +27,13 @@ input[type=submit] {
 input[type=password] {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
-    font-size: 30px
+    font-size: 20px;
+    height: 25px 
 }
 
 select {
-  font-size: 25px;
-  width:300px }
+  font-size: 20px;
+  width:245px }
 
 
 

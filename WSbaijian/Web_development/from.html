@@ -2,20 +2,61 @@
 <body>
 
     <div style="position: absolute; left: 500px; top: 200px">
-        
+       
+
         <h2>Login</h2>
 
-        <form>
+        <form action="/action_page.php">
             First name:<br>
-            <input type="text" name="firstname">
+            <input type="text" 
+            name="firstname" 
+            placeholder="baijian" 
+            autofocus 
+            required>
             <br>
-            age:<br>
-            <input type="text" name="age">
-            <br>
-            password:<br>
-            <input type="text" name="password">
-            <input type="submit" value="Submit">
 
+            Last name:<br>
+            <input type="text" 
+            name="lastname" 
+            placeholder="tan" 
+            required>
+            <br>
+
+            age:<br>
+            <input type="text" 
+            name="age" 
+            min="1" max="200" 
+            required>
+            <br>
+
+            Birthday:<br>
+            <input type="date" 
+            name="bday" 
+            required>
+            <br>
+
+            E-mail:<br>
+            <input type="email" 
+            name="email" 
+            required>
+            <br>
+
+
+
+            password:<br>
+            <input type="password" 
+            name="password" 
+            placeholder="000000" 
+            required>
+
+
+
+            <input type="submit" 
+            value="Submit" 
+            formtarget="_blank">
+            
+            <button type="button" 
+            onclick="alert('Hello World!')">Click Me!</button>
         </form>
 
         
