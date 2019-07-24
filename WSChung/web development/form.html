@@ -4,50 +4,29 @@
         href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap">
 <link   rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap">
+<link rel="stylesheet" href="css.css">
 <head>
 <style>
-p {
-  color: blue;
-  font-family: 'Butterfly Kids', cursive;
-  font-size: 30px;
-}
-
-input[type=text] {
-  color: grey;
-  font-family: 'times new roman';
-  font-size: 20px
-}
-
-input[type=submit] {
-  color: black;
-  font-family: 'Butterfly Kids', cursive;
-  font-size: 20px
-}
-
-input[type=password] {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-    font-size: 20px;
-    height: 25px 
-}
-
-select {
-  font-size: 20px;
-  width:245px }
-
-
-
 </style>
 </head>
 <body>
+<h1 align="center">
+  Registration Form
+</h1>
+<h2>
+  Please fill out the form below.
+</h2>
 <form action="/action_page.php">
-  Name:<br>
-  <input type="text" name="name" value="LSK"><br>
-  Age:<br>
-  <input type="text" name="age" value="18"><br>
-  Country:<br>
-  <select id="country"  class="dropdown-btn">
-  <option value="Afghanistan">Afghanistan</option>
+  <div class = 'abc' ></div>
+    <label for="FirstName">First name</label>
+    <input type="text" class="form-control" id="#" placeholder="First name">
+    <label for="LastName">Last name</label>
+    <input type="text" class="form-control" id="#" placeholder="Last name"><br><br>
+    <label for="age">Age</label>
+    <input type="text" name="age" id="#" placeholder="Age"><br><br>
+    <label for="country">Country</label>
+    <select id="country"  class="dropdown-btn">
+    <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
                 <option value="Algeria">Algeria</option>
@@ -291,14 +270,16 @@ select {
                 <option value="Yemen">Yemen</option>
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
-            </select><br>
-  Username:<br>
-  <input type="text" name="username" value="LSK2018"><br>
-  Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
-  Repeat Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
-  <input type="submit" value="Submit">
+            </select><br><br>
+          
+    <label for="UserName">Username</label>
+    <input type="text" name="username" id="#" placeholder="Username"><br><br>
+    <label for="Password">Password</label>
+    <input type="password" name="pwd" id="#" minlength="8" placeholder="Password" align="right">
+    <label for="Repeat Password">Repeat Password</label>
+    <input type="password" name="pwd" id="#" minlength="8" placeholder="Repeat Password" class="form-control"><br><br>
+    <input type="submit" value="Submit" >
+</div>
 </form>    
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>

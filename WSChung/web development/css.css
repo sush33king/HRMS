@@ -1,0 +1,46 @@
+p {
+    color: blue;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 30px;
+  }
+  
+  input[type=text] {
+    color: grey;
+    font-family: 'times new roman';
+    font-size: 20px ;
+    padding-right: 80px ;
+    text-align : center ;
+  }
+  
+  input[type=submit] {
+    color: black;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 20px ;
+    position: absolute;
+    top: 50%;
+  }
+  
+  input[type=password] {
+      font: .9rem 'Fira Sans', 'times new roman';
+      font-size: 20px; 
+      padding-right: 80px ;  
+      text-align : center
+  }
+  
+  select {
+    font-size: 20px;
+    width:245px }
+  
+  h1{
+    font-size:30px;
+  }
+
+  
+html { 
+    background: url(https://specials-images.forbesimg.com/imageserve/5d348766090f4300070d2c5c/960x0.jpg?cropX1=0&cropX2=757&cropY1=0&cropY2=426) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
