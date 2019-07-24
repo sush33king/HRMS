@@ -1,5 +1,4 @@
 <?php 
-  
 // Create Class
 class Cal  
 { 
@@ -14,7 +13,7 @@ class Cal
                       
                 // If only two 
                 case 2: 
-                    return $Variable1[0] * $Variable1[1]; 
+                    return $Variable1[0] + $Variable1[1]; 
                           
                 // If three 
                 case 3: 
@@ -27,9 +26,9 @@ class Cal
       
 $cal = new Cal; 
       
-// Multiply 
-echo "Multiply: ";
-echo($cal->multiply(5, 5)); //Show 25
+// Add
+echo "Add: ";
+echo($cal->multiply(5, 5)); //Show 10
 echo "<br><br>"; 
       
 // Multiply 
