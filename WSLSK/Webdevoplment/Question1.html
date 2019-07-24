@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+input[type=text] 
+{
+  font-size: 15px
+}
+
+input[type=password] 
+{
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+    font-size: 15px
+}
+
+div 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -120px;
+    width: 100px;
+    height: 100px;
+}
+
+</style>
+</head>
+<body>
+        <div class="Table">
+        </div>
+        <div>
+       <form>
+                Username:<br>
+                <input type="text" name="username"><br>
+                Password:<br>
+                <input type="password" name="password" value="FakePSW" id="myInput">
+                <input type="checkbox" onclick="myFunction()">Show Password
+                <input type="submit" value="Login">
+                <p>Don`t have account please sign up?</p>
+                <input type="submit" value="Sign Up">
+        </form>   
+    </div> 
+    <script>
+    function myFunction() 
+    {
+        var x = document.getElementById("myInput");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    </script>
+
+</body>
+</html>

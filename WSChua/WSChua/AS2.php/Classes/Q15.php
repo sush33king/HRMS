@@ -6,10 +6,10 @@ class MyDatabase
 
     public function  makeconnection(){
         //configure server instance name
-        $serverName = "127.0.0.1\sqlexpress"; 
+        $serverName = "192.168.0.14\sqlexpress"; 
 
         //configure database connection information
-        $connectionInfo = array( "Database"=>"db_hrms", "UID"=>"sa", "PWD"=>"1234");
+        $connectionInfo = array( "Database"=>"task 3.1", "UID"=>"sa", "PWD"=>"password");
 
         //connect to database using php built in function sqlsrv_connect
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
@@ -93,7 +93,7 @@ class MyDatabase
     
         if ($stmt === false) 
         {
-            echo "Error";
+            die( print_r( sqlsrv_errors(), true));  
         }       
         else 
         {
@@ -114,7 +114,7 @@ class MyDatabase
     
         if ($stmt === false) 
         {
-            echo "Error";
+            die( print_r( sqlsrv_errors(), true));  
         }       
         else 
         {
@@ -145,24 +145,51 @@ class MyDatabase
 
 //TESTING SECTION
 
-//Test make connection with db
-$db = new MyDatabase;
-$db->makeconnection();
+//1. Test make connection with db
+//$db = new MyDatabase;
+//$db -> makeconnection();
 
-//test enter data into table tbl_employee
-/*$data = array("emp_id"=>"S26055", 
-              "name"=>"TAN" ,
-              "department_id"=>"ST" ,
-              "salary"=> "30.0000" ,
-              "age"=> "20" ,
-              "last_name" => "hi"
+//2. Test query database
+//$data = $db->query_db("select * from tbl_employee");
+//echo var_dump($data);
+
+//Test adding data
+/*$data = array("fld_EMP_ID"=>"S26066", 
+              "fld_name"=>"TAN" ,
+              "fld_depID"=>"L004" ,
+              "fld_hourrate" => "30.00"
             );
 
 $tblName = "dbo.tbl_employee";
 
-$db->adddb($data, $tblName);*/ 
+$db->adddb($data, $tblName); */
 
-//test query_db
+//4. Update
 
-echo var_dump($db->query_db("select * from tbl_employee"));
+//make connection
+/*$db = new MyDatabase;
+$db->makeconnection();
+
+//prepare data
+$tblName = "tbl_employee";
+$data = "fld_name = 'LEEMAN', fld_hourrate = '999'";
+$criteria = "fld_emp_id = 'S20005'";
+
+//run updata function using prepared data
+$db->update($tblName, $data, $criteria);*/
+
+
+//5. Delete
+//make connection
+$db = new MyDatabase;
+$db->makeconnection();
+
+//prepare data
+$tblName = "tbl_employee";
+$criteria = "fld_emp_id = 'S26066'";
+
+//run updata function using prepared data
+$db->deletedb($tblName, $criteria);
+
+
 ?>
