@@ -8,13 +8,13 @@
 <style>
 p {
   color: blue;
-  font-family: 'Butterfly Kids', cursive;
+  font-family: 'courier';
   font-size: 30px;
 }
 
 input[type=text] {
-  color: grey;
-  font-family: 'times new roman';
+  color: black;
+  font-family: 'Times New Roman';
   font-size: 20px
 }
 
@@ -27,13 +27,16 @@ input[type=submit] {
 input[type=password] {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
-    font-size: 20px;
-    height: 25px 
+    font-size: 30px;
+    height:20px;
+    width:250px
 }
 
+
 select {
-  font-size: 20px;
-  width:245px }
+  font-family: 'Times New Roman';
+  font-size: 25px;
+  width:250px }
 
 
 
