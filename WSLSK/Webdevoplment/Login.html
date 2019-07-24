@@ -2,22 +2,49 @@
 <html>
 <head>
 <style>
+h1
+{
+  color: white;
+ font-family:Helvetica ;
+ font-size: 30px
+}
+html { 
+  background: url(backgroundwebsite.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+
+div.b
+{
+    position:absolute;
+    width:350px;
+    height:400px;    
+    bottom:100px;
+    right:10%;
+    left:50%;
+    margin-left:-150px;
+    border:5px solid black;
+}
+
 input[type=text] 
 {
-  font-size: 15px
+  font-size: 15px;
+  width: 170px
 }
 
 input[type=password] 
 {
     display: block;
     font: .9rem 'Fira Sans', sans-serif;
-    font-size: 15px
+    font-size: 15px;
+    width:170px
 }
 
 div 
 {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     margin-top: -120px;
     margin-left: -120px;
@@ -28,21 +55,23 @@ div
 </style>
 </head>
 <body>
-        <div class="Table">
+        <div class="LSK">
         </div>
-        <div>
-       <form>
-          <div style="position: absolute; left: 50%; margin-left: 225px; width: 450px; height: 250px; background: blue; border: 8px solid black"> </div>
+        <h1 align="center">Welcome to Shaolin Soccer</h1>
+      <div class="b">
+        <form >
+         <div align="center">
                 Username:<br>
                 <input type="text" name="username"><br>
                 Password:<br>
                 <input type="password" name="password" value="FakePSW" id="myInput">
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <input type="submit" value="Login">
-                <p>Don`t have account please sign up?</p>
+                <p>Sign Up Now!</p>
                 <input type="submit" value="Sign Up">
-        </form>   
-    </div> 
+              </div>
+        </form> 
+      </div>
     <script>
     function myFunction() 
     {
@@ -54,6 +83,8 @@ div
         }
       }
     </script>
+
+<embed src="Shaolin Soccer Singing - Steven Chow.mp3" autostart="true" loop="true" hidden="true">>
 
 </body>
 </html>
