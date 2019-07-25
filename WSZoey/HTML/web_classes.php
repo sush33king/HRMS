@@ -2,7 +2,7 @@
 Class MyDatabase
 {
     //Temp Variables
-    public $var1,$var2,$tblname;
+    public $var1,$var2,$tblname,$conn;
 
     //Construct Method
     public function __construct($var1,$var2)
@@ -34,18 +34,38 @@ Class MyDatabase
     //Query Method
     public function queryDB($str)
     {
-        global $conn;
         //Constructing Resource Variable
         $stmt = sqlsrv_query($this->conn, $str);
 
-        //While loop to echo out content
-        $i = 0;
-        while($obj = sqlsrv_fetch_object($stmt))  
-       {  
-           $rs[$i++] = $obj;  
-       }
-       return $rs;
+        if( $stmt == false )  
+        {
+            echo "Error in query preparation/execution: <br><br>\n";  
+            die( print_r( sqlsrv_errors(), true));  
+        } 
+
+        elseif ( $stmt == true)
+        {
+            $i = 0;
+            while($obj = sqlsrv_fetch_object($stmt))
+            {
+                $userinfo[$i++] = $obj;
+            }
+            
+            if (isset($userinfo) == FALSE)
+            {
+                echo "<br> Login failed, please verify your email address and password. <br>";
+            }
+
+            else
+            {
+                echo "<br> Login Successful! <br>";
+
+                return $userinfo;
+            }
+        }
     }
+
+
 
     //Update Method
     public function updateDB($updatedata,$where,$tblname)
