@@ -15,7 +15,7 @@
   <div class="a">
     <h1>Welcome to the Register Page!</h1>
     <div class="b">
-      <form action="register_process.php">
+      <form action="register_process.php" method = "POST">
         <h2>First Name:</h2>
         <input type="inputtext" name="firstname" placeholder="John"><br><br>
         
@@ -29,10 +29,10 @@
         <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
         
         <h2>Confirm Password:</h2>
-        <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
+        <input type="password" name="cfmpassword" placeholder="Minimum 8 Characters" minlength="8"><br>
         
         <h2>Country:</h2>
-        <text><select>
+        <text><select name = country>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -279,15 +279,15 @@
         <input type="date" name="birthday"><br><br>
         
         <h2>Gender:</h2>
-        <input type="radio" name="gender" value="male" checked> <text>Male</text>
-        <input type="radio" name="gender" value="female"> <text>Female</text>
-        <input type="radio" name="gender" value="other"> <text>Other</text> 
+        <input type="radio" name="gender" value="Male" checked> <text>Male</text>
+        <input type="radio" name="gender" value="Female"> <text>Female</text>
+        <input type="radio" name="gender" value="Other"> <text>Other</text> 
         <br><br>
 
         <h2>Current Occupation:</h2>
-        <input type="radio" name="occupation" value="student" checked> <text>Student</text>
-        <input type="radio" name="occupation" value="working"> <text>Working</text>
-        <input type="radio" name="occupation" value="other"> <text>Other</text> 
+        <input type="radio" name="occupation" value="Student" checked> <text>Student</text>
+        <input type="radio" name="occupation" value="Working"> <text>Working</text>
+        <input type="radio" name="occupation" value="Other"> <text>Other</text> 
         <br><br>
         
         <input type="submit" value="Sign Up">

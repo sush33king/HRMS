@@ -155,12 +155,14 @@ Class MyDatabase
         // Display query status
         if( $stmt === false )  
         {  
-            echo "Error in query preparation/execution: <br><br>\n";  
-            die( print_r( sqlsrv_errors(), true));
+            echo "<br> An account with that email already exists. <br><br>\n";  
+            die();
         }  
         else
         {
-            echo "Record successfully added!<br>";
+            echo "<br> Your account has been made!<br>";
+            header('Refresh: 3;URL = login.html');
+            exit();
         }
     }
 
