@@ -7,116 +7,15 @@
        href= "https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
 
 <head>
-<style>
-p 
-{
-  color: black;
-  font-family: 'Titillium Web';
-  font-size: 15px;
-}
-
-h1
-{
-    text-align:center;
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 25px;
-}
-
-h2
-{
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 15px;
-    margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
-body
-{
-    background-color: aqua;
-}
-
-div.a
-{
-    padding: 10px 410px 100px 450px;
-}
-
-div.b
-{
-    padding: 30px;
-    background-color: white;
-    border-style:solid;
-    border-width: 5px;
-    border-color:black;
-}
-
-text
-{
-  color: black;
-  font-family: 'Roboto Mono';
-  font-size: 15px;
-}
-
-input[type=inputtext] 
-{
-  color: black;
-  font-family: 'Roboto Mono';
-  font-size: 15px;
-}
-
-input[type=password] 
-{
-  display: block;
-  color: black;
-  font: .6rem 'Roboto Mono';
-  font-size: 15px;
-}
-
-input[type=date] 
-{
-  color: black;
-  font-family: 'Roboto Mono';
-  font-size: 15px;
-}
-
-input [type=button]
-{
-  color:black;
-  font-family:'Titillium Web';
-  font-size: 15px;
-}
-
-input[type=submit] 
-{
-  color: black;
-  font-family: 'Titillium Web';
-  font-size: 15px;
-}
-
-select
-{
-  color:black;
-  font-family:'Roboto Mono';
-  font-size: 15px;
-  width: 250px;
-}
-
-option
-{
-  color:black;
-  font-family:'Roboto Mono';
-  font-size: 15px;
-}
-</style>
+  <script type="text/javascript" src="webpage.js"></script>
+  <link rel= "stylesheet" href="webpage.css">
 </head>
-
 
 <body>
   <div class="a">
     <h1>Welcome to the Register Page!</h1>
     <div class="b">
-      <form action="/action_page.php">
+      <form action="register_process.php" method = "POST">
         <h2>First Name:</h2>
         <input type="inputtext" name="firstname" placeholder="John"><br><br>
         
@@ -130,10 +29,10 @@ option
         <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
         
         <h2>Confirm Password:</h2>
-        <input type="password" name="password" placeholder="Minimum 8 Characters" minlength="8"><br>
+        <input type="password" name="cfmpassword" placeholder="Minimum 8 Characters" minlength="8"><br>
         
         <h2>Country:</h2>
-        <text><select>
+        <text><select name = country>
             <option value="Afghanistan">Afghanistan</option>
             <option value="Albania">Albania</option>
             <option value="Algeria">Algeria</option>
@@ -380,15 +279,15 @@ option
         <input type="date" name="birthday"><br><br>
         
         <h2>Gender:</h2>
-        <input type="radio" name="gender" value="male" checked> <text>Male</text>
-        <input type="radio" name="gender" value="female"> <text>Female</text>
-        <input type="radio" name="gender" value="other"> <text>Other</text> 
+        <input type="radio" name="gender" value="Male" checked> <text>Male</text>
+        <input type="radio" name="gender" value="Female"> <text>Female</text>
+        <input type="radio" name="gender" value="Other"> <text>Other</text> 
         <br><br>
 
         <h2>Current Occupation:</h2>
-        <input type="radio" name="occupation" value="student" checked> <text>Student</text>
-        <input type="radio" name="occupation" value="working"> <text>Working</text>
-        <input type="radio" name="occupation" value="other"> <text>Other</text> 
+        <input type="radio" name="occupation" value="Student" checked> <text>Student</text>
+        <input type="radio" name="occupation" value="Working"> <text>Working</text>
+        <input type="radio" name="occupation" value="Other"> <text>Other</text> 
         <br><br>
         
         <input type="submit" value="Sign Up">
@@ -398,20 +297,8 @@ option
       <input type="button" onclick="openlogin()" value="Login">
 
     </div>
-  </div>    
+  </div>
+  <embed src="Music/backgroundmusic.mp3" autostart="true" loop="true" hidden="true">>
 </body>
-
-<footer>
-  
-<script>
-  function openlogin()
-  {
-    window.location.href='login.html';
-  }
-</script>
-
-
-
-</footer>
 
 </html>
