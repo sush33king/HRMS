@@ -1,0 +1,50 @@
+h1
+{
+color: rgb(0, 253, 219);
+font-family:Helvetica ;
+font-size: 60px;
+position: relative; 
+	top: 23px;
+}
+html { 
+  background-image: url(https://media1.giphy.com/media/gcqrcPYSF2DBK/giphy.gif);
+    background-size:cover
+
+}
+
+input[type=text] 
+{
+  font-size: 15px;
+  width: 170px
+}
+
+input[type=password] 
+{
+    display: block;
+    font: .9rem 'Fira Sans', sans-serif;
+    font-size: 15px;
+    width:170px
+}
+
+div 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -120px;
+    margin-left: -120px;
+    width: 150px;
+    height: 100px;
+}
+
+form
+{
+ font-family: Arial;
+ font-weight:bold
+}
+
+a
+{
+font-size: 20px;
+color: rgb(0, 253, 219)
+}

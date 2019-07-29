@@ -1,10 +1,21 @@
+<!DOCTYPE html>
 <html>
+        <link rel="stylesheet" href="all.css">
 <body>
 
-    <div style="position: absolute; left: 500px; top: 200px">
+    <style>
+    html { 
+            background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;}
+    </style>
+
+    <div style="border:5px solid rgba(128, 148, 170, 0.185);position: absolute; left: 500px; top: 200px">
        
 
-        <h2>Login</h2>
+        <h1>Login</h1>
 
         <form action="/action_page.php">
             First name:<br>
@@ -25,7 +36,7 @@
             age:<br>
             <input type="text" 
             name="age" 
-            min="1" max="200" 
+            placeholder="20"  
             required>
             <br>
 
@@ -46,26 +57,46 @@
             password:<br>
             <input type="password" 
             name="password" 
-            placeholder="000000" 
+            placeholder="000000"
+            id="0" 
             required>
 
-
-
+            <input type="checkbox" 
+            onclick="myFunction()">Show Password
+            
+            <br>
             <input type="submit" 
-            value="Submit" 
+            value="Sign_in" 
             formtarget="_blank">
             
-            <button type="button" 
-            onclick="alert('Hello World!')">Click Me!</button>
+            <button type="submit" 
+            onclick="window.location.href='sign_up.html'"
+            >sign_up</button>
+            <br>
+            <a href="#">"Forget password?"</a>
+
         </form>
 
         
-                
-        
 
     </div>
+    <iframe width="420" height="315"
+    src="https://www.youtube.com/watch?v=Lhel0tzHE08&loop=1">
+    </iframe>
+    
 
-
+    <script>
+            function myFunction() 
+            {
+            var x = document.getElementById("0");
+            if (x.type === "password") {
+            x.type = "text";
+            } 
+           else {
+            x.type = "password";
+           }
+         }
+            </script>
 
 </body>
 </html>

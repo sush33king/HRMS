@@ -1,90 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-h1
-{
-  color: white;
- font-family:Helvetica ;
- font-size: 30px
-}
-html { 
-  background: url(backgroundwebsite.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;}
-
-div.b
-{
-    position:absolute;
-    width:350px;
-    height:400px;    
-    bottom:100px;
-    right:10%;
-    left:50%;
-    margin-left:-150px;
-    border:5px solid black;
-}
-
-input[type=text] 
-{
-  font-size: 15px;
-  width: 170px
-}
-
-input[type=password] 
-{
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-    font-size: 15px;
-    width:170px
-}
-
-div 
-{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-top: -120px;
-    margin-left: -120px;
-    width: 100px;
-    height: 100px;
-}
-
-</style>
+    <script type="text/javascript" src="Login.js"></script>
+    <link rel="stylesheet" href="Login.css">
 </head>
 <body>
+        <h1 align="center">
+        Retrowave<br>
+        </h1>
+
         <div class="LSK">
-        </div>
-        <h1 align="center">Pornhub</h1>
-      <div class="b">
         <form >
-         <div align="center">
-                Username:<br>
+                <br><b>Username:</b><br>
                 <input type="text" name="username"><br>
                 Password:<br>
                 <input type="password" name="password" value="FakePSW" id="myInput">
-                <input type="checkbox" onclick="myFunction()">Show Password
-                <input type="submit" value="Login">
-                <p>Sign Up Now!</p>
-                <input type="submit" value="Sign Up">
-              </div>
+                <input type="checkbox" onclick="myFunction()">
+                Show<br>
+                <input type="submit" value="Login"><br><br>
+                <a href="#">"Sign Up Now!"</a>
         </form> 
       </div>
-    <script>
-    function myFunction() 
-    {
-        var x = document.getElementById("myInput");
-        if (x.type === "password") {
-          x.type = "text";
-        } else {
-          x.type = "password";
-        }
-      }
-    </script>
 
-<embed src="Shaolin Soccer Singing - Steven Chow.mp3" autostart="true" loop="true" hidden="true">>
+
+<embed src="Retrowave.mp3" autostart="true" loop="true" hidden="true">>
 
 </body>
 </html>
