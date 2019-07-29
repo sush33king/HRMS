@@ -4,55 +4,23 @@
 <body>
 
     <style>
-    html { 
-            background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;}
+    
+
+
     </style>
 
-    <div style="border:5px solid rgba(128, 148, 170, 0.185);position: absolute; left: 500px; top: 200px">
+    <div class="BaijianDivMiddle"> 
        
 
         <h1>Login</h1>
 
         <form action="/action_page.php">
-            First name:<br>
-            <input type="text" 
-            name="firstname" 
-            placeholder="baijian" 
-            autofocus 
+            ID name / E-mail:<br>
+            <input type="text / E-mail"
+            name="idname / E-mail"
+            placeholder="king / baijian743@gmail.com"
             required>
             <br>
-
-            Last name:<br>
-            <input type="text" 
-            name="lastname" 
-            placeholder="tan" 
-            required>
-            <br>
-
-            age:<br>
-            <input type="text" 
-            name="age" 
-            placeholder="20"  
-            required>
-            <br>
-
-            Birthday:<br>
-            <input type="date" 
-            name="bday" 
-            required>
-            <br>
-
-            E-mail:<br>
-            <input type="email" 
-            name="email" 
-            required>
-            <br>
-
-
 
             password:<br>
             <input type="password" 
@@ -63,15 +31,14 @@
 
             <input type="checkbox" 
             onclick="myFunction()">Show Password
-            
             <br>
             <input type="submit" 
-            value="Sign_in" 
+            value="log_in" 
             formtarget="_blank">
             
             <button type="submit" 
-            onclick="window.location.href='sign_up.html'"
-            >sign_up</button>
+            onclick="window.location.href='sign_up.html'">sign_up
+            </button>
             <br>
             <a href="#">"Forget password?"</a>
 
@@ -80,23 +47,21 @@
         
 
     </div>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/watch?v=Lhel0tzHE08&loop=1">
-    </iframe>
     
 
     <script>
-            function myFunction() 
-            {
+        function myFunction() 
+        {
             var x = document.getElementById("0");
-            if (x.type === "password") {
+            if (x.type === "password") 
+            {
             x.type = "text";
             } 
            else {
             x.type = "password";
            }
-         }
-            </script>
+        }
+    </script>
 
 </body>
 </html>

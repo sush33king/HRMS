@@ -1,66 +1,14 @@
-<div style="border:5px solid rgba(128, 148, 170, 0.185);position: absolute; left: 500px; top: 200px">
-       
+html { 
+    background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
-        <h1>Login</h1>
-
-        <form action="/action_page.php">
-            First name:<br>
-            <input type="text" 
-            name="firstname" 
-            placeholder="baijian" 
-            autofocus 
-            required>
-            <br>
-
-            Last name:<br>
-            <input type="text" 
-            name="lastname" 
-            placeholder="tan" 
-            required>
-            <br>
-
-            age:<br>
-            <input type="text" 
-            name="age" 
-            min="1" max="200" 
-            required>
-            <br>
-
-            Birthday:<br>
-            <input type="date" 
-            name="bday" 
-            required>
-            <br>
-
-            E-mail:<br>
-            <input type="email" 
-            name="email" 
-            required>
-            <br>
-
-
-
-            password:<br>
-            <input type="password" 
-            name="password" 
-            placeholder="000000"
-            id="0" 
-            required>
-
-            <input type="checkbox" 
-            onclick="myFunction()">Show Password
-            
-            <br>
-            <input type="submit" 
-            value="Submit" 
-            formtarget="_blank">
-            
-            <button type="submit" 
-            onclick="window.location.href='sign_up.html'"
-            formtarget="_blank">Click Me!</button>
-            
-        </form>
-
-        
-
-    </div>
+.BaijianDivMiddle{
+border:5px solid rgba(128, 148, 170, 0.185);
+position: absolute; 
+left: 500px; 
+top: 200px;
+}
