@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap">
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap">
 <link rel="stylesheet" href="css.css">
 <head>
 <style>
+  input[type=submit] {
+  cursor: pointer;
+  font-size:20px;
+  width: 250px ;
+  margin:100px 220px;
+}
+
 </style>
 </head>
-<body>
 <h1 align="center">
-  Registration Form
-</h1>
+    Registration Form
+</h>
+<body>
 <h2>
   Please fill out the form below.
 </h2>
 <form action="/action_page.php">
-  <div class = 'abc' ></div>
     <label for="FirstName">First name</label>
-    <input type="text" class="form-control" id="#" placeholder="First name">
+    <input type="text" id="#" placeholder="First name">
     <label for="LastName">Last name</label>
-    <input type="text" class="form-control" id="#" placeholder="Last name"><br><br>
+    <input type="text" id="#" placeholder="Last name"><br><br>
     <label for="age">Age</label>
     <input type="text" name="age" id="#" placeholder="Age"><br><br>
     <label for="country">Country</label>
@@ -278,10 +280,8 @@
     <input type="password" name="pwd" id="#" minlength="8" placeholder="Password" align="right">
     <label for="Repeat Password">Repeat Password</label>
     <input type="password" name="pwd" id="#" minlength="8" placeholder="Repeat Password" class="form-control"><br><br>
-    <input type="submit" value="Submit" >
-</div>
-</form>    
+    <input type="submit"  value="Sign Up">    
+  </form> 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 </body>
 </html>                                                                                                          
