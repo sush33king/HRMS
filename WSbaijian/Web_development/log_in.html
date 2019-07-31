@@ -1,14 +1,67 @@
+<!DOCTYPE html>
 <html>
+        <link rel="stylesheet" href="all.css">
 <body>
-<style>
+
+    <style>
     
+
+
+    </style>
+
+    <div class="BaijianDivMiddle"> 
+       
+
+        <h1>Login</h1>
+
+        <form action="/action_page.php">
+            ID name / E-mail:<br>
+            <input type="text / E-mail"
+            name="idname / E-mail"
+            placeholder="king / baijian743@gmail.com"
+            required>
+            <br>
+
+            password:<br>
+            <input type="password" 
+            name="password" 
+            placeholder="000000"
+            id="0" 
+            required>
+
+            <input type="checkbox" 
+            onclick="myFunction()">Show Password
+            <br>
+            <input type="submit" 
+            value="log_in" 
+            formtarget="_blank">
+            
+            <button type="submit" 
+            onclick="window.location.href='sign_up.html'">sign_up
+            </button>
+            <br>
+            <a href="#">"Forget password?"</a>
+
+        </form>
+
+        
+
+    </div>
     
 
+    <script>
+        function myFunction() 
+        {
+            var x = document.getElementById("0");
+            if (x.type === "password") 
+            {
+            x.type = "text";
+            } 
+           else {
+            x.type = "password";
+           }
+        }
+    </script>
 
-
-
-
-    
-</style>
 </body>
 </html>

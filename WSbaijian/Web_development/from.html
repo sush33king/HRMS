@@ -1,102 +1,123 @@
-<!DOCTYPE html>
 <html>
-        <link rel="stylesheet" href="all.css">
 <body>
+<style>
 
-    <style>
-    html { 
+html { 
             background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
-            background-size: cover;}
-    </style>
+            background-size: cover;
+        }
 
-    <div style="border:5px solid rgba(128, 148, 170, 0.185);position: absolute; left: 500px; top: 200px">
+  .sign_up{
+        border:5px solid rgba(128, 148, 170, 0.185);
+        position: absolute; 
+        left: 500px; 
+        top: 200px;
+    }
+
+</style>
+<div class="sign_up"> 
        
 
-        <h1>Login</h1>
+       <h1>sign_up</h1>
 
-        <form action="/action_page.php">
-            First name:<br>
-            <input type="text" 
-            name="firstname" 
-            placeholder="baijian" 
-            autofocus 
+       <form action="/action_page.php">
+           First name:<br>
+           <input type="text" 
+           name="firstname" 
+           placeholder="baijian" 
+           autofocus 
+           required>
+           <br>
+          
+           Last name:<br>
+           <input type="text" 
+           name="lastname" 
+           placeholder="tan" 
+           required>
+           <br>
+
+            ID name:<br>
+            <input type="text"
+            name="idname"
+            placeholder="king"
             required>
             <br>
 
-            Last name:<br>
-            <input type="text" 
-            name="lastname" 
-            placeholder="tan" 
-            required>
-            <br>
+           age:<br>
+           <input type="text" 
+           name="age" 
+           placeholder="20"  
+           required>
+           <br>
 
-            age:<br>
-            <input type="text" 
-            name="age" 
-            placeholder="20"  
-            required>
-            <br>
+           Birthday:<br>
+           <input type="date" 
+           name="bday" 
+           required>
+           <br>
 
-            Birthday:<br>
-            <input type="date" 
-            name="bday" 
-            required>
-            <br>
-
-            E-mail:<br>
-            <input type="email" 
-            name="email" 
-            required>
-            <br>
+           E-mail:<br>
+           <input type="email" 
+           name="email" 
+           required>
+           <br>
 
 
 
-            password:<br>
-            <input type="password" 
-            name="password" 
-            placeholder="000000"
-            id="0" 
-            required>
+           password:<br>
+           <input type="password" 
+           name="password" 
+           placeholder="000000"
+           id="0" 
+           required>
 
-            <input type="checkbox" 
-            onclick="myFunction()">Show Password
-            
-            <br>
-            <input type="submit" 
-            value="Sign_in" 
-            formtarget="_blank">
-            
-            <button type="submit" 
-            onclick="window.location.href='sign_up.html'"
-            >sign_up</button>
-            <br>
-            <a href="#">"Forget password?"</a>
+           
 
-        </form>
+           <input type="checkbox" 
+           onclick="myFunction()">Show Password
+           
+           <br>
+           <input type="submit" 
+           value="Sign_in" 
+           formtarget="_blank">
+           
+           <button type="submit" 
+           onclick="window.location.href='sign_up.html'"
+           >sign_up</button>
+           <br>
+           <a href="#">"Forget password?"</a>
 
-        
+       </form>
 
-    </div>
-    <iframe width="420" height="315"
-    src="https://www.youtube.com/watch?v=Lhel0tzHE08&loop=1">
-    </iframe>
-    
+       
 
-    <script>
-            function myFunction() 
-            {
-            var x = document.getElementById("0");
-            if (x.type === "password") {
-            x.type = "text";
-            } 
-           else {
-            x.type = "password";
-           }
-         }
-            </script>
+   </div>
+   
+
+   <script>
+       function myFunction() 
+       {
+           var x = document.getElementById("0");
+           if (x.type === "password") 
+           {
+           x.type = "text";
+           } 
+          else {
+           x.type = "password";
+          }
+       }
+   </script>   
+
+    <audio autoplay loop>
+        <source src="music/SOLO M V.mp3">
+    </audio>
+
 
 </body>
+
+
+
 </html>
