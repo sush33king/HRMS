@@ -34,11 +34,12 @@ h2
 html
 {
     background-image:url(Images/cherryblossom.gif);
+    background-size: cover;
 }
 
 div.a
 {
-    padding: 10px 400px 100px 450px;
+    padding: 10px 430px 100px 420px;
 }
 
 div.b
