@@ -1,8 +1,9 @@
-div.centered 
+.centered 
 {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 45%;
     margin-top: -50px;
     margin-left: -100px;
+    border: 1px solid black;
 }
