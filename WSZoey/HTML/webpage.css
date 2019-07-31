@@ -14,14 +14,6 @@ h1
     font-size: 25px;
 }
 
-.myspecialheader
-{
-  text-align:center;
-    color:blueviolet;
-    font-family: 'Titillium Web';
-    font-size: 25px;
-}
-
 h2
 {
     color: rgb(160, 68, 84);
@@ -99,7 +91,7 @@ select
   color:black;
   font-family:'Roboto Mono';
   font-size: 15px;
-  width: 250px;
+  width: 200px;
 }
 
 option
