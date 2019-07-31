@@ -1,27 +1,47 @@
 <?PHP
-  // form handler
-  if($_POST && isset ($_POST['First name'], $lastname = $_POST['Last name'];)) {
-
+  include ('data.php');
+  
     $firstname = $_POST['First name'];
     $lastname = $_POST['Last name'];
-    $email = $_POST['Email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $Age = $_POST['Age'];
+    $Email = $_POST['Email'];
+    $address = $_POST['Address'];
+    $country = $_POST['Country'];
+    $gender = $_POST['Gender'];
+    $Username = $_POST['Username'];
+    $Password = $_POST['Password'];
 
-    if(!$name) {
-      $errorMsg = "Please enter your Name";
-    } elseif(!$email || !preg_match("/^\S+@\S+$/", $email)) {
-      $errorMsg = "Please enter a valid Email address";
-    } elseif(!$message) {
-      $errorMsg = "Please enter your comment in the Message box";
-    } else {
-      // send email and redirect
-      $to = "feedback@example.com";
-      if(!$subject) $subject = "Contact from website";
-      $headers = "From: webmaster@example.com" . "\r\n";
-      mail($to, $subject, $message, $headers);
-      header("Location: http://www.example.com/thankyou.html");
-      exit;
+    if($firstname === null) 
+    {
+      echo "Please enter your firstname.";
+    } 
+    elseif($lastname === null) 
+    {
+      echo "Please enter your lastname.";
+    } 
+    elseif($Age === null) 
+    {
+      echo "Please enter your age.";
+    } 
+    elseif($email === null) 
+    {
+      echo "Please enter a valid Email address.";
+    } 
+    elseif($country === null) 
+    {
+      echo "Please choose your country." 
+    } 
+    elseif($gender === null ) 
+    {
+      echo "Please choose your gender." 
+    } 
+    elseif($Password === null) 
+    {
+      echo "at least 8 character";
+    } 
+    else
+     {
+     
     }
 
   }
