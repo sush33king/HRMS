@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html>
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap">
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap">
 <head>
-<style>
-p {
-  color: blue;
-  font-family: 'courier';
-  font-size: 30px;
-}
-
-input[type=text] {
-  color: black;
-  font-family: 'Times New Roman';
-  font-size: 20px
-}
-
-input[type=submit] {
-  color: black;
-  font-family: 'Butterfly Kids', cursive;
-  font-size: 20px
-}
-
-input[type=password] {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-    font-size: 30px;
-    height:20px;
-    width:250px
-}
-
-
-select {
-  font-family: 'Times New Roman';
-  font-size: 25px;
-  width:250px }
-
-
-
-</style>
+  <link rel="stylesheet" href="Register.css">
 </head>
 <body>
 <form action="/action_page.php">
   Name:<br>
-  <input type="text" name="name" value="LSK"><br>
+  <input type="text" name="name" value=""><br>
   Age:<br>
-  <input type="text" name="age" value="18"><br>
+  <input type="text" name="age" value=""><br>
+  Gender:<br>
+  <select id="Gender"  class="dropdown-btn">
+  <option value="Female">Female</option>
+  <option value="Male">Male</option>
+  </select><br>
+  Address:<br>
+  <input type="text" name="Address" value=""><br>
+  Weight:<br>
+  <input type="text" name="Weight" value=""><br>
+  Height:<br>
+  <input type="text" name="Height" value=""><br>
   Country:<br>
   <select id="country"  class="dropdown-btn">
   <option value="Afghanistan">Afghanistan</option>
@@ -296,14 +268,14 @@ select {
                 <option value="Zimbabwe">Zimbabwe</option>
             </select><br>
   Username:<br>
-  <input type="text" name="username" value="LSK2018"><br>
+  <input type="text" name="username" value=""><br>
+  Email:<br>
+  <input type="text" name="Email" value=""><br>
   Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
+  <input type="password" name="pwd" value="" minlength="8"><br>
   Repeat Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
+  <input type="password" name="pwd" value="" minlength="8"><br>
   <input type="submit" value="Submit">
 </form>    
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 </body>
 </html>                                                                                                          
