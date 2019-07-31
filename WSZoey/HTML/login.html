@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>  
+<link  rel=  "stylesheet"
+       href= "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
+
+<link  rel=  "stylesheet"
+       href= "https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
+
+<head>
+    <script type="text/javascript" src="webpage.js"></script>
+    <link rel= "stylesheet" href="webpage.css?version=3">
+</head>
+
+<body>
+    <div class="a">
+        <h1>Welcome to the Login Page!</h1>
+        <div class="b">
+            <form action="login_process.php" method ="POST">
+                <h2>Email Address:</h2>
+                <input type="inputtext" name="email" placeholder="Example123@email.com">
+                <br><br>
+            
+                <h2>Password:</h2>
+                <input type="password" name="password" placeholder="Minimum 8 Characters" 
+                minlength="8">
+                <br>
+
+                <input type="submit" value="Login">
+            </form>
+
+            <p>Don't have an account? <br></p>
+            <input type="button" onclick="opensignup()"
+            value="Sign Up">
+        </div>
+    </div>
+    <audio autoplay loop>
+    <source src="Music/backgroundmusic.mp3">
+    </audio>
+</body>
+
+</html>

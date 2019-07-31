@@ -1,0 +1,110 @@
+p 
+{
+  color: rgb(253, 145, 163);
+  font-family: 'Titillium Web';
+  font-size: 15px;
+  font-weight: bold;
+}
+
+h1
+{
+    text-align:center;
+    color:rgb(160, 68, 84);
+    font-family: 'Titillium Web';
+    font-size: 25px;
+}
+
+.myspecialheader
+{
+  text-align:center;
+    color:blueviolet;
+    font-family: 'Titillium Web';
+    font-size: 25px;
+}
+
+h2
+{
+    color: rgb(160, 68, 84);
+    font-family: 'Titillium Web';
+    font-size: 15px;
+    margin-top: 0.1em;
+  margin-bottom: 0.1em;
+}
+
+html
+{
+    background-image:url(Images/cherryblossom.gif);
+    background-size: cover;
+}
+
+div.a
+{
+    padding: 10px 430px 100px 420px;
+}
+
+div.b
+{
+    padding: 30px;
+    background-color: white;
+    border-style:solid;
+    border-width: 5px;
+    border-color: rgb(253, 145, 163);
+}
+
+text
+{
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: 15px;
+}
+
+input[type=inputtext] 
+{
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: 15px;
+}
+
+input[type=password] 
+{
+  display: block;
+  color: black;
+  font: .6rem 'Roboto Mono';
+  font-size: 15px;
+}
+
+input[type=date] 
+{
+  color: black;
+  font-family: 'Roboto Mono';
+  font-size: 15px;
+}
+
+input [type=button]
+{
+  color:black;
+  font-family:'Titillium Web';
+  font-size: 15px;
+}
+
+input[type=submit] 
+{
+  color: black;
+  font-family: 'Titillium Web';
+  font-size: 15px;
+}
+
+select
+{
+  color:black;
+  font-family:'Roboto Mono';
+  font-size: 15px;
+  width: 250px;
+}
+
+option
+{
+  color:black;
+  font-family:'Roboto Mono';
+  font-size: 15px;
+}

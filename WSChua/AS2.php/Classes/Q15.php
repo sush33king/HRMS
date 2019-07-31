@@ -25,20 +25,28 @@ class MyDatabase
         }
     }
 
-    public function query_db($str) {
+    public function query_db($str) 
+    {
+        //execute query
         $stmt = sqlsrv_query($this->conn, $str);  
+
+        //check for error when executing
         if( $stmt === false )  
         {  
             echo "Error.\n";  
             //end program
             die( print_r( sqlsrv_errors(), true));  
         }     
+
+        //if no error then store data into array $data
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
             $data[$i++] = $obj;
               
         }
+
+        //return data to caller
         return $data ;
     }
 
