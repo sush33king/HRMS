@@ -1,0 +1,36 @@
+input[type=text] {
+    font-size: 15px
+  }
+  
+  input[type=password] {
+      display: block;
+      font: .9rem 'Fira Sans', sans-serif;
+      font-size: 15px
+  }
+  
+  html { 
+    background: url(https://store-images.s-microsoft.com/image/apps.61848.69017251449670068.15eeb29d-decb-49da-b571-0225a7adc899.948ebe75-3441-4a57-9fd3-d97f3429d07e?mode=scale&q=90&h=1080&w=1920&format=jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .border {
+      padding: 100px 60px;
+      border: 3px solid #666;
+      border-radius: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -200px;
+      margin-left: -200px;
+    }
+
+  h2{
+    font-size:50px;
+  }
+
+  P{
+      COLOR:BLUE ;
+      FONT-SIZE: 18PX  }
