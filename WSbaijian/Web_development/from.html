@@ -1,21 +1,9 @@
 <html>
+        <link rel="stylesheet" href="from.css">
 <body>
 <style>
 
-html { 
-            background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-        }
 
-  .sign_up{
-        border:5px solid rgba(128, 148, 170, 0.185);
-        position: absolute; 
-        left: 500px; 
-        top: 200px;
-    }
 
 </style>
 <div class="sign_up"> 
@@ -65,8 +53,6 @@ html {
            required>
            <br>
 
-
-
            password:<br>
            <input type="password" 
            name="password" 
@@ -74,8 +60,13 @@ html {
            id="0" 
            required>
 
-           
+           phone number:<br>
+           <input type="number"
+           name="phonenumber"
+           placeholder="0102802683">
 
+           country:<br>
+           <input type="text">
            <input type="checkbox" 
            onclick="myFunction()">Show Password
            
@@ -88,6 +79,7 @@ html {
            onclick="window.location.href='sign_up.html'"
            >sign_up</button>
            <br>
+
            <a href="#">"Forget password?"</a>
 
        </form>
