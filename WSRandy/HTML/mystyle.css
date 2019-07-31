@@ -1,3 +1,13 @@
+html
+{
+    background-image: url("Images/N.jpg");
+    background-size: cover;
+
+
+}
+
+
+
 .centered 
 {
     position: fixed;
@@ -6,13 +16,4 @@
     margin-top: -50px;
     margin-left: -100px;
     border: 1px solid black;
-}
-
-.background
-{
-    background-image: url("Images/N.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
