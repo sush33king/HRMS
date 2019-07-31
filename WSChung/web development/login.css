@@ -1,0 +1,43 @@
+input[type=text] {
+    font-size: 15px
+  }
+  
+  input[type=password] {
+      font: .9rem 'Fira Sans', sans-serif;
+      font-size: 15px
+  }
+  
+  html { 
+    background: url(https://www.biznews.com/wp-content/uploads/2019/05/Lamborghini-Huraca%CC%81n-Performante-1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+  .border {
+      padding: 100px 60px;
+      border: 3px solid #666;
+      border-radius: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -200px;
+      margin-left: -180px;
+    }
+
+  h2{
+    font-size:50px;
+  }
+
+  P{
+      COLOR:rgb(27, 2, 2) ;
+      FONT-SIZE: 18PX  }
+
+  label {
+      display: flex;
+      flex-direction: row;
+      text-align: right;
+      width: 200px;
+      float: left;
+           }

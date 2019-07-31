@@ -1,56 +1,25 @@
 <!DOCTYPE html>
 <html>
+    <link rel="stylesheet" href="login.css">
 <head>
 <style>
-input[type=text] {
-  font-size: 15px
-}
-
-input[type=password] {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-    font-size: 15px
-}
-
-div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -120px;
-    margin-left: -120px;
-    width: 300px;
-    height: 120px;
-    border: 10px
-}
-
-html { 
-  background: url(https://specials-images.forbesimg.com/imageserve/5d348766090f4300070d2c5c/960x0.jpg?cropX1=0&cropX2=757&cropY1=0&cropY2=426) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-.border {
-    padding: 90px 15px;
-    border: 3px solid #666;
-    border-radius: 20px;
-}
-
 </style>
 </head>
-<body background="https://wallpapersite.com/images/pages/pic_w/4778.jpg">
+<h2 align="center">
+   CARS
+</h2>
+<body>
   <div class = 'border'>
         <div>
-       <form>
-                Username:<br>
+       <form action="/register_response.php" method='POST'>
+                <label class="field" for="username">Username</label><br>
                 <input type="text" name="username"><br>
-                Password:<br>
+                <label class="field" for="password">Password</label><br>
                 <input type="password" name="password" id="myInput"><br>
                 <input type="checkbox" onclick="myFunction()">Show Password
-                <input type="checkbox" name="check" checked> Remember Me <br>
+                <input type="checkbox" name="check" > Remember Me <br>
                 <input type="submit" value="Login">
-                <input type="button" value="Sign Up" onclick="window.location.href='http://localhost:90/hrms/WSChung/web%20development/form.html'"><br>
+                <input type="button" value="Sign Up" onclick="window.location.href='http://localhost:90/hrms/WSChung/web%20development/form2.html'"><br>
                 <a href="#">"Forget password?"</a>
                 <p>Don`t have account please sign up?</p>
         </form>  
