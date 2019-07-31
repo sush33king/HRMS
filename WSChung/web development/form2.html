@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css22.css">
 <head>
 <style>
+      input[type=submit] {
+    float: center
+  }
+  
+
 </style>
 </head>
 <h1 align="center">
-    Registration Form
+    Register Your Account
 </h1>
 <body>
   <div class = 'border'>
@@ -15,10 +20,19 @@
             <form action="/action_page.php">
                 <label class="field" for="FirstName">First name</label>
                 <input type="text" id="#" placeholder="First name"><br><br>
+
                 <label class="field" for="LastName">Last name</label>
                 <input type="text" id="#" placeholder="Last name"><br><br>
+
                 <label class="field" for="age">Age</label>
                 <input type="text" name="age" id="#" placeholder="Age"><br><br>
+
+                <label class="field" for="email">Email</label>
+                <input type="text" name="email" id="#" placeholder="Email"><br><br>
+
+                <label class="field" for="address">Address</label>
+                <input type="text" name="address" id="#" placeholder="Address"><br><br>
+
                 <label class="field" for="country">Country</label>
                 <select id="country"  class="dropdown-btn">
                 <option value="Afghanistan">Afghanistan</option>
@@ -265,14 +279,24 @@
                             <option value="Yemen">Yemen</option>
                             <option value="Zambia">Zambia</option>
                             <option value="Zimbabwe">Zimbabwe</option>
-                        </select><br><br>
-                      
+                       </select><br><br>
+                       
+                <label class="field" for="gender">Gender</label>
+                <select id="gender"  class="dropdown-btn">
+                        <option value="Male">Male</option>
+                                    <option value="female">female</option>
+                                    <option value="Other">Other</option>  
+                                    </select><br><br>
+
                 <label class="field" for="UserName">Username</label>
                 <input type="text" name="username" id="#" placeholder="Username"><br><br>
+
                 <label class="field" for="Password">Password</label>
                 <input type="password" name="pwd" id="#" minlength="8" placeholder="Password" align="right"><br><br>
+
                 <label class="field" for="Repeat Password">Repeat Password</label>
                 <input type="password" name="pwd" id="#" minlength="8" placeholder="Repeat Password" class="form-control"><br><br>
+                
                 <input type="submit"  value="Sign Up">    
               
         </form>  
