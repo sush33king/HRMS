@@ -3,22 +3,49 @@
 include("web_classes.php");
 
 //User Details
-$firstName = $_POST['firstname'];
-$lastName = $_POST['lastname'];
+$name = $_POST['name'];
+$age = $_POST['age'];
+$height = $_POST['height'];
+$weight = $_POST['weight'];
+$address = $_POST['address'];
+$country = $_POST['country'];
+$gender = $_POST['gender'];
 $email = $_POST['email'];
 $password = $_POST['password'];
 $cfmPassword = $_POST['cfmpassword'];
-$country = $_POST['country'];
-$birthday = $_POST['birthday'];
-$gender = $_POST['gender'];
-$occupation = $_POST['occupation'];
+$hobby = $_POST['hobby'];
 
-if ($firstName == NULL)
+if ($name == NULL)
 {
     echo "Please fill in all the columns!";
 }
 
-elseif ($lastName == NULL)
+elseif ($age == NULL)
+{
+    echo "Please fill in all the columns!";
+}
+
+elseif ($height == NULL)
+{
+    echo "Please fill in all the columns!";
+}
+
+elseif ($weight == NULL)
+{
+    echo "Please fill in all the columns!";
+}
+
+elseif ($address == NULL)
+{
+    echo "Please fill in all the columns!";
+}
+
+elseif ($country == NULL)
+{
+    echo "Please fill in all the columns!";
+}
+
+elseif ($gender == NULL)
 {
     echo "Please fill in all the columns!";
 }
@@ -38,22 +65,7 @@ elseif ($cfmPassword == NULL)
     echo "Please fill in all the columns!";
 }
 
-elseif ($country == NULL)
-{
-    echo "Please fill in all the columns!";
-}
-
-elseif ($birthday == NULL)
-{
-    echo "Please fill in all the columns!";
-}
-
-elseif ($gender == NULL)
-{
-    echo "Please fill in all the columns!";
-}
-
-elseif ($occupation == NULL)
+elseif ($hobby == NULL)
 {
     echo "Please fill in all the columns!";
 }
@@ -70,14 +82,16 @@ else
     $connection1 = $connection->makeConnection();
 
     //Query Data
-    $data = array(  "fld_firstname"=>"$firstName",
-                    "fld_lastname"=>"$lastName",
+    $data = array(  "fld_name"=>"$name",
+                    "fld_age"=>"$age",
+                    "fld_height"=>"$height",
+                    "fld_weight"=>"$weight",
+                    "fld_address"=>"$address",
+                    "fld_country"=>"$country",
+                    "fld_gender"=>"$gender",
                     "fld_email"=>"$email",
                     "fld_password"=>"$password",
-                    "fld_country"=>"$country",
-                    "fld_birthday"=>"$birthday",
-                    "fld_gender"=>"$gender",
-                    "fld_occupation"=>"$occupation"
+                    "fld_hobby"=>"$hobby"
                  );
     
     $tblname = "tbl_users";
