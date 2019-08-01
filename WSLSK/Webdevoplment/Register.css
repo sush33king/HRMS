@@ -1,8 +1,14 @@
 html { 
   background-image: url(https://thumbs.gfycat.com/ClearCarelessBeagle-small.gif);
-    background-size: 100% 200%
+    background-size: cover
 }
   
+form{
+  color:white;
+  font-family: 'Times New Roman';
+  font-size: 20px
+}
+
   input[type=text] {
     color:black;
     font-family: 'Times New Roman';
