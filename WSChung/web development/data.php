@@ -39,10 +39,89 @@ class database
         }
         return $rs ;
     }
+
+    public function adddb($data, $tblName) {
+
+        $fldNames = "";
+        $fldData =  "";
+
+        foreach($data as $key => $val)
+    {
+        
+    if($fldNames == "")
+        {
+            $fldNames = $key; 
+            $fldData = "'" . $val . "'";  
+        }   
+        else
+        {                
+            $fldNames = $fldNames .  ',' . $key;   
+            $fldData = $fldData . ',' . "'" . $val . "'";     
+        }                                 
+    }
+
+        $sql = "INSERT INTO " . $tblName . "(" . $fldNames . ") " . "VALUES(" . $fldData . ")";
+
+        $stmt = sqlsrv_query( $this->conn, $sql);
+
+        if( $stmt === false )  
+     {  
+        echo "Error in query.\n";  
+        die( print_r( sqlsrv_errors(), true)); 
+     }  
+    else //if successful the display msg below
+     {
+        echo "successfully added!";  
+     }
+  }
+  
+  public function deletedb($tblName, $where_condition) {
+
+    $sql = "DELETE FROM ".$tblName." WHERE ".$where_condition.""; 
+
+    $stmt = sqlsrv_query( $this->conn, $sql);
+
+    if ($stmt === false) 
+    {
+    echo "Error deleting record:";
+    }       
+    else 
+    {
+    echo "Record deleted successfully" ;
+    }
+
 }
-$conn = new database ;
-$conn -> connection();
-$rs = $conn -> querydb('select * from tbl_menber');
-echo var_dump($rs);
+
+public function update($tblName, $flddata, $where_condition) {
+    
+    $sql = "UPDATE ".$tblName." SET ".$flddata." WHERE ".$where_condition."";  
+
+    $stmt = sqlsrv_query( $this->conn, $sql);
+
+    if ($stmt === false) 
+    {
+    echo "Error updating record:";
+    }       
+    else 
+    {
+    echo "Record update successfully" ;
+    }
+}
+public function closeconnection()
+ {
+    sqlsrv_close($this->conn) ;
+    if($this->conn === false)  
+    {
+        echo "Could Not disconnect."; 
+        die( print_r( sqlsrv_errors(), true));
+    }
+    else
+    {
+        echo "Successfully disconnected."; 
+    }
+    
+  }
+}
+
 
 ?>
