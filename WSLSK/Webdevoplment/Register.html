@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="Register.css">
+    <script type="text/javascript" src="Register.js?version=1"></script>
+  <link rel="stylesheet" href="Register.css?version=1">
 </head>
 <body>
 <form action="/action_page.php">
   Name:<br>
-  <input type="text" name="name" value=""><br>
+  <input type="text" name="name" value="" required><br>
   Age:<br>
-  <input type="text" name="age" value=""><br>
+  <input type="number" name="age" value="" required><br>
   Gender:<br>
   <select id="Gender"  class="dropdown-btn">
   <option value="Female">Female</option>
   <option value="Male">Male</option>
   </select><br>
   Address:<br>
-  <input type="text" name="Address" value=""><br>
+  <input type="text" name="Address" value="" required><br>
   Weight:<br>
-  <input type="text" name="Weight" value=""><br>
+  <input type="number" name="Weight" value="" required><br>
   Height:<br>
-  <input type="text" name="Height" value=""><br>
+  <input type="number" name="Height" value="" required><br>
   Country:<br>
   <select id="country"  class="dropdown-btn">
   <option value="Afghanistan">Afghanistan</option>
@@ -267,15 +268,17 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select><br>
+  Hobbies:<br>
+  <input type="text" name="Hobbies" value="" required><br>
   Username:<br>
-  <input type="text" name="username" value=""><br>
+  <input type="text" name="username" value="" required><br>
   Email:<br>
   <input type="text" name="Email" value=""><br>
   Password:<br>
-  <input type="password" name="pwd" value="" minlength="8"><br>
+  <input type="password" name="pwd" value="" minlength="6" required><br>
   Repeat Password:<br>
-  <input type="password" name="pwd" value="" minlength="8"><br>
-  <input type="submit" value="Submit">
+  <input type="password" name="pwd" value="" minlength="6"><br>
+  <input type="submit" value="Submit" >
 </form>    
 </body>
 </html>                                                                                                          
