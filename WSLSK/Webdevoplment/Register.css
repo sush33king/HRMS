@@ -9,6 +9,12 @@ form{
   font-size: 20px
 }
 
+input[type=number] {
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  width: 250px
+}
+
   input[type=text] {
     color:black;
     font-family: 'Times New Roman';
