@@ -2,12 +2,43 @@
 <html>
         <link rel="stylesheet" href="login.css">
 <body>
-
-    <style>
+<head>
+        <style>
     
+    html 
+    { 
+        background: url(https://scontent-iad3-1.cdninstagram.com/vp/0a4533c94abea9b6c6d3b0bcfd3c1772/5DECB06D/t51.2885-15/e15/26864499_140282016665211_6474523895750721536_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
 
+    .BaijianDivMiddle
+    {
+        border:5px solid rgba(128, 148, 170, 0.185);
+        position: absolute; 
+        left: 500px; 
+        top: 200px;
+    }
 
-    </style>
+     </style>
+</head>
+
+<script>
+        function myFunction() 
+        {
+            var x = document.getElementById("txtPassword");
+            if (x.type === "password") 
+           {
+            x.type = "text";
+           } 
+           else 
+           {
+            x.type = "password";
+           }
+        }
+</script>
 
     <div class="BaijianDivMiddle"> 
        
@@ -15,29 +46,20 @@
         <h1>Login</h1>
 
         <form action="/action_page.php">
-            ID name / E-mail:<br>
-            <input type="text / E-mail"
-            name="idname / E-mail"
-            placeholder="king / baijian743@gmail.com"
-            required>
+            ID name:<br>
+            <input type="text" name="txtEmail" required>
             <br>
 
             password:<br>
-            <input type="password" 
-            name="password" 
-            placeholder="000000"
-            id="0" 
-            required>
+            <input type="password" name="password" id="txtPassword" required>
 
             <input type="checkbox" 
             onclick="myFunction()">Show Password
             <br>
-            <input type="submit" 
-            value="log_in" 
-            formtarget="_blank">
+            <input type="submit" value="log_in">
             
             <button type="submit" 
-            onclick="window.location.href='sign_up.html'">sign_up
+            onclick="window.location.href='register.html'">sign_up
             </button>
             <br>
             <a href="#">"Forget password?"</a>
@@ -49,19 +71,7 @@
     </div>
     
 
-    <script>
-        function myFunction() 
-        {
-            var x = document.getElementById("0");
-            if (x.type === "password") 
-            {
-            x.type = "text";
-            } 
-           else {
-            x.type = "password";
-           }
-        }
-    </script>
+    
 
 </body>
 </html>
