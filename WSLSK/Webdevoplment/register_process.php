@@ -1,5 +1,5 @@
 <?PHP
-  include ('data.php');
+  include ('process.php');
 
   header("Location: Login.html");
   
@@ -65,7 +65,7 @@
       {
 
         //make connection
-        $conn = new database;
+        $conn = new process;
         $conn -> connection();
 
         //get ids for gender and country

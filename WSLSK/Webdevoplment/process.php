@@ -1,5 +1,5 @@
 <?php
-class database
+class process
 {   
     private $conn;
 
@@ -31,8 +31,7 @@ class database
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
-        $rs[$i++] = $obj;
-        /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
+        $rs[$i++] = $obj;   
         }
         return $rs ;
     }
@@ -66,7 +65,7 @@ class database
         echo "Error in query.\n";  
         die( print_r( sqlsrv_errors(), true)); 
      }  
-    else //if successful the display msg below
+    else 
      {
         echo "successfully added!";  
      }
