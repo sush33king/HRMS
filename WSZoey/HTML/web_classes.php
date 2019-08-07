@@ -156,7 +156,7 @@ Class MyDatabase
         if( $stmt === false )  
         {  
             echo "<br> An account with that email already exists. <br><br>\n";  
-            die();
+            die( print_r( sqlsrv_errors(), true));
         }  
         else
         {
