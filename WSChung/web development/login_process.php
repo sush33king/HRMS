@@ -1,17 +1,17 @@
 <?php
-include ('process.php');
+include ('data.php');
 
-if(isset($_POST['Login']))
+if(isset($_POST['Submit']))
 {
-        $username = $_POST['Username'];
-        $password = $_POST['Password'];   
+        $user = $_POST['username'];
+        $pass = $_POST['password'];   
 
-        if ($username === NULL)
+        if ($user === NULL)
         {
             echo "Please enter username";
         }
 
-        elseif ($password === NULL)
+        elseif ($pass === NULL)
         {
             echo "Please enter a password";
         }
@@ -19,12 +19,12 @@ if(isset($_POST['Login']))
         else
         {
             //Query
-            $query = ("select * FROM tbl_Member WHERE fld_Username = '". $username ."' 
-            AND fld_Password = '" . $password . "'");
+            $query = ("select * FROM tbl_menber WHERE fld_Username = '". $user ."' 
+            AND fld_Password = '" . $pass . "'");
 
         
             //make connection
-            $conn = new process;
+            $conn = new database;
             $conn -> connection();
 
             //Query

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <link rel="stylesheet" href="login.css">
+    <script type="text/javascript" src="java.js"></script>
 <head>
 <style>
 </style>
@@ -11,31 +12,20 @@
 <body>
   <div class = 'border'>
         <div>
-       <form action="/register_response.php" method='POST'>
+       <form action="login_process.php" method='POST'>
                 <label class="field" for="username">Username</label><br>
                 <input type="text" name="username"><br>
                 <label class="field" for="password">Password</label><br>
                 <input type="password" name="password" id="myInput"><br>
                 <input type="checkbox" onclick="myFunction()">Show Password
                 <input type="checkbox" name="check" > Remember Me <br>
-                <input type="submit" value="Login">
-                <input type="button" value="Sign Up" onclick="window.location.href='http://localhost:90/hrms/WSChung/web%20development/form2.html'"><br>
+                <input type="submit" name="Submit" value="Login">
+                <input type="button" value="Sign Up" onclick="window.location.href=
+                'http://localhost:90/hrms/WSChung/web%20development/form2.html'"><br>
                 <a href="#">"Forget password?"</a>
                 <p>Don`t have account please sign up?</p>
         </form>  
         </div> 
     </div> 
-    <script>
-    function myFunction() 
-    {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-    x.type = "text";
-    } 
-   else {
-    x.type = "password";
-   }
- }
-    </script>
 </body>
 </html>
