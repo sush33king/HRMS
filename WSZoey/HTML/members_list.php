@@ -11,7 +11,7 @@ echo '<link  rel=  "stylesheet"';
 
 echo "<head>";
    echo '<script type="text/javascript" src="webpage.js"></script>';
-   echo '<link rel= "stylesheet" href="webpage.css?version=5">';
+   echo '<link rel= "stylesheet" href="webpage.css?version=7">';
 echo "</head>";
 
 //Get All Users
@@ -24,8 +24,7 @@ echo "</head>";
     $connection1 = $connection->makeConnection();
 
     //Query
-    $query = $connection->queryDB($queryString);
-    echo var_dump($query);
+    $query = $connection->memberlistDB($queryString);
 
 //Body
 echo "<body>";

@@ -26,7 +26,7 @@ else
     $connection1 = $connection->makeConnection();
 
     //Query
-    $query = $connection->queryDB($queryString);
+    $query = $connection->loginDB($queryString);
     echo var_dump($query);
 
 }
