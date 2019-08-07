@@ -76,7 +76,7 @@
         //get ids for gender and country
         $contryid= $conn->querydb("select fld_ID from tbl_country where fld_description = '" . $country . "'"); 
         $contryid = $contryid[0]->fld_ID;
-        $genderid = $conn->querydb("select fld_ID from tbl_Gender where fld_Gender = '" . $gender . "'");
+        $genderid = $conn->querydb("select fld_ID from tbl_Gender where fld_Gender = '" . $gender . "'" );
         $genderid = $genderid[0]->fld_ID;
         $data = array(  "fld_Firstname"=>$firstname,
                       "fld_Lastname"=>$lastname,

@@ -84,8 +84,8 @@ else
     //Query Data
     $data = array(  "fld_name"=>"$name",
                     "fld_age"=>"$age",
-                    "fld_height"=>"$height",
-                    "fld_weight"=>"$weight",
+                    "fld_heightcm"=>"$height",
+                    "fld_weightkg"=>"$weight",
                     "fld_address"=>"$address",
                     "fld_country"=>"$country",
                     "fld_gender"=>"$gender",
