@@ -3,13 +3,12 @@ input[type=text] {
   }
   
   input[type=password] {
-      display: block;
       font: .9rem 'Fira Sans', sans-serif;
       font-size: 15px
   }
   
   html { 
-    background: url(https://store-images.s-microsoft.com/image/apps.61848.69017251449670068.15eeb29d-decb-49da-b571-0225a7adc899.948ebe75-3441-4a57-9fd3-d97f3429d07e?mode=scale&q=90&h=1080&w=1920&format=jpg) no-repeat center center fixed; 
+    background: url(https://www.biznews.com/wp-content/uploads/2019/05/Lamborghini-Huraca%CC%81n-Performante-1.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,7 +23,7 @@ input[type=text] {
       top: 50%;
       left: 50%;
       margin-top: -200px;
-      margin-left: -200px;
+      margin-left: -180px;
     }
 
   h2{
@@ -32,5 +31,13 @@ input[type=text] {
   }
 
   P{
-      COLOR:BLUE ;
+      COLOR:rgb(27, 2, 2) ;
       FONT-SIZE: 18PX  }
+
+  label {
+      display: flex;
+      flex-direction: row;
+      text-align: right;
+      width: 200px;
+      float: left;
+           }

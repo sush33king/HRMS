@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html>
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Butterfly+Kids&display=swap">
-<link   rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap">
 <head>
-<style>
-p {
-  color: blue;
-  font-family: 'courier';
-  font-size: 30px;
-}
-
-input[type=text] {
-  color: black;
-  font-family: 'Times New Roman';
-  font-size: 20px
-}
-
-input[type=submit] {
-  color: black;
-  font-family: 'Butterfly Kids', cursive;
-  font-size: 20px
-}
-
-input[type=password] {
-    display: block;
-    font: .9rem 'Fira Sans', sans-serif;
-    font-size: 30px;
-    height:20px;
-    width:250px
-}
-
-
-select {
-  font-family: 'Times New Roman';
-  font-size: 25px;
-  width:250px }
-
-
-
-</style>
+    <script type="text/javascript" src="Register.js?version=1"></script>
+  <link rel="stylesheet" href="Register.css?version=1">
 </head>
 <body>
 <form action="/action_page.php">
   Name:<br>
-  <input type="text" name="name" value="LSK"><br>
+  <input type="text" name="name" value="" required><br>
   Age:<br>
-  <input type="text" name="age" value="18"><br>
+  <input type="number" name="age" value="" required><br>
+  Gender:<br>
+  <select id="Gender"  class="dropdown-btn">
+  <option value="Female">Female</option>
+  <option value="Male">Male</option>
+  </select><br>
+  Address:<br>
+  <input type="text" name="Address" value="" required><br>
+  Weight:<br>
+  <input type="number" name="Weight" value="" required><br>
+  Height:<br>
+  <input type="number" name="Height" value="" required><br>
   Country:<br>
   <select id="country"  class="dropdown-btn">
   <option value="Afghanistan">Afghanistan</option>
@@ -295,15 +268,17 @@ select {
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select><br>
+  Hobbies:<br>
+  <input type="text" name="Hobbies" value="" required><br>
   Username:<br>
-  <input type="text" name="username" value="LSK2018"><br>
+  <input type="text" name="username" value="" required><br>
+  Email:<br>
+  <input type="text" name="Email" value=""><br>
   Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
+  <input type="password" name="pwd" value="" minlength="6" required><br>
   Repeat Password:<br>
-  <input type="password" name="pwd" value="LSK" minlength="8"><br>
-  <input type="submit" value="Submit">
+  <input type="password" name="pwd" value="" minlength="6"><br>
+  <input type="submit" value="Submit" >
 </form>    
-
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
 </body>
 </html>                                                                                                          
