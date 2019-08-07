@@ -1,0 +1,115 @@
+<html>
+        <link rel="stylesheet" href="from.css">
+<head>
+    <style>
+        html { 
+            background: url(https://www.obilisk.co/wp-content/uploads/2017/06/Final-Fantasy-wallpaper-by-artema2011-on-DeviantArt-888x500.jpg) no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            
+        }
+
+        .sign_up{
+        border:5px solid rgba(128, 148, 170, 0.185);
+        position: absolute; 
+        left: 500px; 
+        top: 200px;
+        }
+    </style>
+
+    <script>
+        function myFunction() 
+        {
+            var x = document.getElementById("txtpassword");
+            if (x.type === "password") 
+            {
+            x.type = "text";
+            } 
+           else {
+            x.type = "password";
+           }
+        }
+    </script>   
+ 
+<body>
+</head>
+<div class="sign_up"> 
+       
+
+       <h1>sign_up</h1>
+
+       <form action="/action_page.php">
+           First name:<br>
+           <input type="text" name="firstname" placeholder="baijian" autofocus required>
+           <br>
+          
+           Last name:<br>
+           <input type="text" name="lastname" placeholder="tan" required>
+           <br>
+
+            ID name:<br>
+            <input type="text" name="idname" placeholder="king" required>
+            <br>
+
+           age:<br>
+           <input type="text" name="age" placeholder="20" required>
+           <br>
+
+           address:<br>
+           <input type="text" name="address" required>
+           <br>
+
+           gender:<br>
+           <input type="checkbox" value="Male">male
+           <input type="checkbox" value="female">female
+           <input type="checkbox" value="Other">Other
+           <br>
+
+           height:<br>
+           <input type="text" name="height">
+           <br>
+
+           weight:<br>
+           <input type="text" name="weight">
+           <br>
+
+           E-mail:<br>
+           <input type="email" name="email" required>
+           <br>
+
+           Birthday:<br>
+           <input type="date" name="bday" required>
+           <br>
+
+            hobbies:<br>
+            <input type="text" name="hobbies">
+            <br>
+
+           Country:<br>
+           <input type="text" name="Country">
+           <br>
+
+           password:<br>
+           <input type="password" name="password" placeholder="000000" id="txtpassword" required>
+           <br>
+
+           <input type="checkbox" onclick="myFunction()">Show Password
+         
+           <br>
+           
+           <button type="submit" 
+           onclick="window.location.href='database.php'"
+           >save</button>
+           <br>
+
+           <a href="#">"Forget password?"</a>
+
+       </form>
+
+   </div>
+   
+
+</body>
+</html>
