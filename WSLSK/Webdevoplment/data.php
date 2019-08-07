@@ -4,16 +4,13 @@ class database
     private $conn;
 
     public function  connection(){
-        //setting the value for "serverName\instanceName"
-        $serverName = "127.0.0.1"; 
+        $serverName = "LSKPC\SQLEXPRESS"; 
 
-        //additional information for making connection to database
-        $connectionInfo = array( "Database"=>"menber", "UID"=>"student", "PWD"=>"1234");
+        $connectionInfo = array( "Database"=>"Membership", "UID"=>"", "PWD"=>"");
 
-        //using php function to connect to database using settings above
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
 
-        //check if connection is successful or not
+
         if( $this->conn ) {
             echo "Connection established.<br />";
         }
@@ -29,7 +26,7 @@ class database
         if( $stmt === false )  
         {  
         echo "Error in query preparation/execution.\n";  
-        die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
+        die( print_r( sqlsrv_errors(), true));  
         }     
         $i = 0;
         while( $obj = sqlsrv_fetch_object( $stmt))  

@@ -1,26 +1,31 @@
 <?PHP
   include ('data.php');
 
-  header("Location: Login.html");
+  header("Location: login.html");
   
-    if(isset($_POST['submit']))
+    if(isset($_POST['Submit']))
     {
-      $Name = $_POST['name'];
+      $firstname = $_POST['firstname'];
+      $lastname = $_POST['lastname'];
       $Age = $_POST['age'];
-      $email = $_POST['Email'];
-      $address = $_POST['Address'];
-      $country = $_POST['Country'];
-      $height = $_POST['Height'];
-      $weight = $_POST['Weight'];
-      $gender = $_POST['Gender'];
+      $email = $_POST['email'];
+      $address = $_POST['address'];
+      $country = $_POST['country'];
+      $height = $_POST['height'];
+      $weight = $_POST['weight'];
+      $gender = $_POST['gender'];
       $username = $_POST['username'];
       $Password = $_POST['pwd'];
       $repeatpassword = $_POST['pwd'];
 
-      if ($Name === null)
+      if ($firstname === null)
       {
-        echo "Please enter your name.";
-      }
+        echo "Please enter your firstname.";
+      } 
+      elseif($lastname === null) 
+      {
+        echo "Please enter your lastname.";
+      } 
       elseif($Age === null) 
       {
         echo "Please enter your age.";
@@ -69,11 +74,12 @@
         $conn -> connection();
 
         //get ids for gender and country
-        $contryid= $conn->querydb("select fld_ID from tbl_Country where fld_Country = '" . $country . "'"); 
+        $contryid= $conn->querydb("select fld_ID from tbl_country where fld_description = '" . $country . "'"); 
         $contryid = $contryid[0]->fld_ID;
-        $genderid = $conn->querydb("select fld_ID from tbl_Gender where fld_Gender = '" . $gender . "'");
+        $genderid = $conn->querydb("select fld_ID from tbl_Gender where fld_Gender = '" . $gender . "'" );
         $genderid = $genderid[0]->fld_ID;
-        $data = array(  "fld_Name"=>$Name,
+        $data = array(  "fld_Firstname"=>$firstname,
+                      "fld_Lastname"=>$lastname,
                       "fld_Age"=>$Age,
                       "fld_Email"=>$email,
                       "fld_Address"=>$address,
@@ -84,7 +90,7 @@
                       "fld_Username"=>"$username",
                       "fld_Password"=>"$Password"
                   );
-        $tblName = "tbl_Member";
+        $tblName = "tbl_menber";
         $conn->adddb($data, $tblName);
       } 
   }
