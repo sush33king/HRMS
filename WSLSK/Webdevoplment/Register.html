@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <script type="text/javascript" src="Register.js?version=1"></script>
   <link rel="stylesheet" href="Register.css?version=1">
 </head>
 <body>
-<form action="/action_page.php">
+<form action="register_process.php" method="POST">
   Name:<br>
   <input type="text" name="name" value="" required><br>
   Age:<br>
   <input type="number" name="age" value="" required><br>
   Gender:<br>
-  <select id="Gender"  class="dropdown-btn">
+  <select id="Gender" name="Gender" class="dropdown-btn">
   <option value="Female">Female</option>
   <option value="Male">Male</option>
   </select><br>
@@ -22,7 +21,7 @@
   Height:<br>
   <input type="number" name="Height" value="" required><br>
   Country:<br>
-  <select id="country"  class="dropdown-btn">
+  <select id="country" name="Country" class="dropdown-btn">
   <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
                 <option value="Albania">Albania</option>
@@ -268,8 +267,6 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select><br>
-  Hobbies:<br>
-  <input type="text" name="Hobbies" value="" required><br>
   Username:<br>
   <input type="text" name="username" value="" required><br>
   Email:<br>
@@ -278,7 +275,7 @@
   <input type="password" name="pwd" value="" minlength="6" required><br>
   Repeat Password:<br>
   <input type="password" name="pwd" value="" minlength="6"><br>
-  <input type="submit" value="Submit" >
+  <input type="submit" name="submit" value="Submit" >
 </form>    
 </body>
 </html>                                                                                                          
