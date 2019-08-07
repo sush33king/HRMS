@@ -10,20 +10,20 @@
         </h1>
 
         <div class="LSK">
-        <form >
+        <form action="login_process.php" method="POST">
                 <br><b>Username:</b><br>
-                <input type="text" name="username"><br>
+                <input type="text" name="Username"><br>
                 Password:<br>
-                <input type="password" name="password" value="FakePSW" id="myInput">
+                <input type="password" name="Password" value="" id="myInput">
                 <input type="checkbox" onclick="myFunction()">
                 Show<br>
-                <input type="submit" value="Login"><br><br>
+                <input type="submit" name="Login" value="Login"><br><br>
                 <a href="Register.html">"Sign Up Now!"</a>
         </form> 
       </div>
 
 
-      <audio controls loop>
+      <audio controls autoplay loop hidden>
         <source src="Retrowave.mp3" type="audio/mpeg">
       </audio>
 
