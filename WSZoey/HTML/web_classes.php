@@ -46,7 +46,7 @@ Class MyDatabase
         elseif ( $stmt == true)
         {
             $i = 0;
-            while($obj = sqlsrv_fetch_object($stmt))
+            while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_NUMERIC))
             {
                 $userinfo[$i++] = $obj;
             }
