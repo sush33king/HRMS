@@ -32,7 +32,7 @@ Class MyDatabase
     }
 
     //Query Method
-    public function queryDB($str)
+    public function loginDB($str)
     {
         //Constructing Resource Variable
         $stmt = sqlsrv_query($this->conn, $str);
@@ -46,7 +46,7 @@ Class MyDatabase
         elseif ( $stmt == true)
         {
             $i = 0;
-            while($obj = sqlsrv_fetch_object($stmt))
+            while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_NUMERIC))
             {
                 $userinfo[$i++] = $obj;
             }
@@ -59,11 +59,47 @@ Class MyDatabase
             else
             {
                 echo "<br> Login Successful! <br>";
+                header('Refresh: 2; URL = members_list.php');
 
-                return $userinfo;
+                exit();
+
             }
         }
     }
+
+       //Query Method
+       public function memberlistDB($str)
+       {
+           //Constructing Resource Variable
+           $stmt = sqlsrv_query($this->conn, $str);
+   
+           if( $stmt == false )  
+           {
+               echo "Error in query preparation/execution: <br><br>\n";  
+               die( print_r( sqlsrv_errors(), true));  
+           } 
+   
+           elseif ( $stmt == true)
+           {
+               $i = 0;
+               while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_NUMERIC))
+               {
+                   $userinfo[$i++] = $obj;
+               }
+               
+               if (isset($userinfo) == FALSE)
+               {
+                   echo "<br> Unexpected Error Occured <br>";
+               }
+   
+               else
+               {
+                   echo "<br> You've been redirected to the members list! <br>";
+   
+                   return $userinfo;
+               }
+           }
+       }
 
 
 
