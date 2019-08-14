@@ -103,18 +103,29 @@ option
 
 table, th, td
 {
-  border: 2px solid black;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgb(253, 145, 163);
   border-collapse: collapse;
+}
+
+table
+{
+  background-color: white;
 }
 
 th
 {
-  border: 2px solid black;
-  padding:5px;
+  padding:3px;
+  font-family: 'Titillium Web';
+  font-size: 16px;
+  color: rgb(160, 68, 84);
 }
 
 td
 {
-  border: 2px solid black;
   padding: 5px;
+  font-family: 'Roboto Mono';
+  font-size: 13px;
+  color: rgb(189, 64, 112);
 }
