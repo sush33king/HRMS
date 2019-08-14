@@ -32,11 +32,14 @@ class database
         die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
         }     
         $i = 0;
+        $rs=null;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
         $rs[$i++] = $obj;
         /*echo $obj->LastName.", ".$obj->FirstName."<br>"; */      
         }
+
+        
         return $rs ;
     }
 
