@@ -257,7 +257,7 @@ echo "<body>";
   if (isset($query))
   {
       echo "<div class='a3'>";
-        echo "<table>";e
+        echo "<table>";
           echo "<tr><th>Users</th> <th>Age (Years)</th> <th>Height (cm)</th> <th>Weight (kg)</th> <th>Address</th> <th>Country</th> <th>Gender</th> <th>Email Address</th> <th>Hobby</th> <th>Date Joined</th></tr>";
      
           for ($x = 0; $x < count($query); $x++)
