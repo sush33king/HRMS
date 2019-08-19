@@ -21,7 +21,6 @@ Class MyDatabase
         if($conn) 
         {
             $this->conn = $conn;
-            echo "Connection established.<br />";
         }
         
         else
@@ -89,7 +88,6 @@ Class MyDatabase
              
              if (isset($userinfo) == FALSE)
              {
-                 echo "<br> Login failed, please verify your email address and password. <br>";
              }
  
              else
