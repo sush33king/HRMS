@@ -26,3 +26,10 @@
 
 
 
+$where_filter = "";
+if (isset($_POST['txtSearch']))
+{
+   $where_filter = "WHERE " . $_POST['fldSearch'] . " like '" . $_POST['txtSearch'] . "%'" ;    
+}
+
+$queryid = ( $mainquery . $where_filter );
