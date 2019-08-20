@@ -16,25 +16,25 @@ html {
 
 th
 {
-  border-width: 2px;
+  border-width: 4px;
   padding: 8px;
   border-style: solid;
   border-color: #000000;
   background-color: rgb(245, 0, 253);
   display: table-cell;
-  font-size: 19px ;
+  font-size: 20px ;
   font-family:Lucida Console;
 }
 
 td
 {
-  border-width: 1px;
+  border-width: 3px;
   padding: 8px;
   border-style: solid;
   border-color: #000000;
   background-color: #0084ff;
   display: table-cell;
-  font-size: 19px ;
+  font-size: 20px ;
   font-family:Lucida Console;
 }
 

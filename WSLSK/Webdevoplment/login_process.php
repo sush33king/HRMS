@@ -1,4 +1,5 @@
 <?php
+
 include ('process.php');
 
 if(isset($_POST['Login']))
@@ -33,10 +34,14 @@ if(isset($_POST['Login']))
             if (is_null($userdata))
             {
                 echo "Login failed" ;
+               
             }
             else
             {
+                session_start();
+                $_SESSION["LoginStatus"] = 1;
                 echo "Login successfully" ;
+                header("Location: member_lists.php");
             }
             
             echo var_dump($userdata);
