@@ -1,7 +1,6 @@
 <?php
+
 include ('data.php');
-
-
 
 if(isset($_POST['Submit']))
 {
@@ -38,7 +37,10 @@ if(isset($_POST['Submit']))
             }
             else
             {
+                session_start();
+                $_SESSION["loginstatus"] = "0";
                 echo "Login successfully" ;
+                header("Location: member_list.php");
             }
             
             //echo var_dump($userdata);

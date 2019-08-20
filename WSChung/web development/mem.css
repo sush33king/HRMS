@@ -15,7 +15,7 @@ th
   border-color: #517994;
   background-color: #B2CFD8;
   display: table-cell;
-  font-size: 19px ;
+  font-size: 25px ;
   font-family:Lucida Console;
 }
 
@@ -27,7 +27,7 @@ td
   border-color: #517994;
   background-color: #ffffff;
   display: table-cell;
-  font-size: 19px ;
+  font-size: 25px ;
   font-family:Lucida Console;
 }
 
@@ -56,5 +56,6 @@ select {
 
 label {
   width: 200px;
-  font-size: 20px
+  font-size: 22px ;
+  color: wheat 
 }
