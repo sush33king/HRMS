@@ -21,7 +21,6 @@ Class MyDatabase
         if($conn) 
         {
             $this->conn = $conn;
-            echo "Connection established.<br />";
         }
         
         else
@@ -66,6 +65,38 @@ Class MyDatabase
             }
         }
     }
+
+     //Query Method
+     public function searchDB($str)
+     {
+         //Constructing Resource Variable
+         $stmt = sqlsrv_query($this->conn, $str);
+ 
+         if( $stmt == false )  
+         {
+             echo "Error in query preparation/execution: <br><br>\n";  
+             die( print_r( sqlsrv_errors(), true));  
+         } 
+ 
+         elseif ( $stmt == true)
+         {
+             $i = 0;
+             while($obj = sqlsrv_fetch_array($stmt, SQLSRV_FETCH_NUMERIC))
+             {
+                 $userinfo[$i++] = $obj;
+             }
+             
+             if (isset($userinfo) == FALSE)
+             {
+             }
+ 
+             else
+             {
+                 return $userinfo;
+ 
+             }
+         }
+     }
 
        //Query Method
        public function memberlistDB($str)

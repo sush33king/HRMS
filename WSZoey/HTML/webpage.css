@@ -34,6 +34,16 @@ div.a
     padding: 10px 430px 100px 420px;
 }
 
+div.a2
+{
+  padding: 3px 430px 0px 420px;
+}
+
+div.a3
+{
+  padding: 0px 50px 0px 50px;
+}
+
 div.b
 {
     padding: 30px;
@@ -43,10 +53,35 @@ div.b
     border-color: rgb(253, 145, 163);
 }
 
+div.c
+{
+  padding: 0px 10px 0px 165px;
+}
+
+div.d
+{
+  padding: 10px 30px 0px 1100px;
+}
+
 text
 {
   color: black;
   font-family: 'Roboto Mono';
+  font-size: 15px;
+}
+
+text.b
+{
+  color: rgb(160, 68, 84);
+  font-family: 'Titillium Web';
+  font-size: 17px;
+  font-weight: bold;
+}
+
+text.c
+{
+  color: rgb(160, 68, 84);
+  font-family: 'Titillium Web';
   font-size: 15px;
 }
 
@@ -79,9 +114,35 @@ input [type=button]
   font-size: 15px;
 }
 
+input[type=button].a
+{
+  background-color: white;
+  color: rgb(160, 68, 84);
+  font-family: 'Titillium Web';
+  font-size: 15px;
+  font-weight: bold;
+  border: solid rgb(253, 145, 163);
+}
+
 input[type=submit] 
 {
   color: black;
+  font-family: 'Titillium Web';
+  font-size: 15px;
+}
+
+input[type=submit].a
+{
+  background-color: white;
+  color: rgb(160, 68, 84);
+  font-family: 'Titillium Web';
+  font-size: 15px;
+  font-weight: bold;
+}
+
+input[type=radio]
+{
+  color: rgb(160, 68, 84);
   font-family: 'Titillium Web';
   font-size: 15px;
 }
@@ -120,6 +181,7 @@ th
   font-family: 'Titillium Web';
   font-size: 16px;
   color: rgb(160, 68, 84);
+  padding: 10px;
 }
 
 td
@@ -128,4 +190,7 @@ td
   font-family: 'Roboto Mono';
   font-size: 13px;
   color: rgb(189, 64, 112);
+  padding: 10px;
 }
+
+

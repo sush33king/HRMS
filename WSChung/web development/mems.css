@@ -1,0 +1,60 @@
+table, th, td
+{
+  color: #333333;
+  border-width: 1px;
+  border-color: #3A3A3A;
+  border-collapse: collapse;
+  font-family:Lucida Console;
+}
+
+th
+{
+  border-width: 2px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #517994;
+  background-color: #B2CFD8;
+  display: table-cell;
+  font-size: 19px ;
+  font-family:Lucida Console;
+}
+
+td
+{
+  border-width: 1px;
+  padding: 8px;
+  border-style: solid;
+  border-color: #517994;
+  background-color: #ffffff;
+  display: table-cell;
+  font-size: 19px ;
+  font-family:Lucida Console;
+}
+
+html { 
+  background : url(https://s2.paultan.org/image/2019/05/2020-Audi-TT-Quantum-Gray-Edition_1-e1559012377243-630x331.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color:whitesmoke ;
+}
+
+input {
+  font-size: 15px ;
+  width : 150px ;
+  float : center ;
+  background-image: url('/css/searchicon.png');.
+}
+
+select {
+  font-size :15px;
+}
+
+label {
+  width: 200px;
+  font-size: 20px
+}

@@ -1,6 +1,8 @@
 <?php
 include ('data.php');
 
+
+
 if(isset($_POST['Submit']))
 {
         $user = $_POST['username'];
@@ -39,7 +41,7 @@ if(isset($_POST['Submit']))
                 echo "Login successfully" ;
             }
             
-            echo var_dump($userdata);
+            //echo var_dump($userdata);
 
         }   
 
