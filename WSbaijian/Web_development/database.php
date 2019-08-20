@@ -1,5 +1,5 @@
 <?php
-class mysql
+class mssql
 {   
     private $conn;
 

@@ -1,9 +1,9 @@
 <?php
 include ('database.php');
 
-if(isset($_POST['Log_in']))
+if(isset($_POST['idname']))
 {
-        $IDname = $_POST['IDname'];
+        $IDname = $_POST['idname'];
         $password = $_POST['Password'];   
 
         if ($IDname === NULL)
@@ -19,12 +19,12 @@ if(isset($_POST['Log_in']))
         else
         {
             //Query
-            $query = ("select * FROM tbl_Member WHERE IDname = '". $IDname ."' 
+            $query = ("select * FROM tbl_Member WHERE idname = '". $IDname ."' 
             AND Password = '" . $password . "'");
 
         
             //make connection
-            $conn = new process;
+            $conn = new mssql;
             $conn -> connection();
 
             //Query
