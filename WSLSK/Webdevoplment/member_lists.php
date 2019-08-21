@@ -20,6 +20,7 @@
              }
             
              include ('process.php');
+             include ('Pagination.php');
 
             //make connection
             $conn = new process;
@@ -90,6 +91,9 @@ foreach($userdata as $item){
    echo "</tr>";
  }
 echo "</table>" ;
+$PG =new Pagination;
+$PG->drawPagination($userdata,2);
+
 echo "</body>";
 
 
