@@ -58,7 +58,7 @@ Class MyDatabase
             else
             {
                 echo "<br> Login Successful! <br>";
-                header('Refresh: 2; URL = members_list.php');
+                //header('Refresh: 2; URL = members_list.php');
 
                 exit();
 

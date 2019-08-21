@@ -1,4 +1,8 @@
 <?php
+session_start();
+
+//Session Data
+
 //Include Class
 include("web_classes.php");
 

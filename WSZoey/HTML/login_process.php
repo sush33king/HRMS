@@ -18,6 +18,18 @@ elseif ($password == NULL)
 
 else
 {
+    echo '<head>';
+    echo '<script type="text/javascript" src="webpage.js"></script>';
+    echo '</head>';
+
+
+
+    echo '<body onload="setTimeout(autosubmitform(), 5000)">';
+    echo '<form name="sessionuser" action="members_list.php" method ="POST">';
+    echo "<input type='hidden' name='user' value='$email'";
+    echo '</form>';
+    echo '</body>';
+
     //Query
     $queryString = "SELECT * FROM tbl_users WHERE fld_email = '$email' AND fld_password = '$password'";
 
