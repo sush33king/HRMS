@@ -1,6 +1,7 @@
 <?php
 
 include ('process.php');
+include ('Sanitization.php');
 
 if(isset($_POST['Login']))
 {
@@ -19,11 +20,17 @@ if(isset($_POST['Login']))
 
         else
         {
+            $sanitizer = new Sanitize;
+            $username = $sanitizer->clean($username);
+            $password = $sanitizer->clean($password);
+            
             //Query
             $query = ("select * FROM tbl_Member WHERE fld_Username = '". $username ."' 
             AND fld_Password = '" . $password . "'");
 
-        
+            
+
+
             //make connection
             $conn = new process;
             $conn -> connection();
