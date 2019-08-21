@@ -12,7 +12,7 @@
 
         <h1>Login</h1>
 
-        <form action="/action_page.php">
+        <form action="login_process.php" method='POST'>
             ID name:<br>
             <input type="text" name="txtEmail" required>
             <br>
@@ -23,7 +23,10 @@
             <input type="checkbox" 
             onclick="myFunction()">Show Password
             <br>
-            <input type="submit" value="log_in">
+
+            <button type="submit" formmethod="POST"
+            onclick="window.location.href='login_process.php'">log_in
+            </button>
             
             <button type="submit" formmethod="POST"
             onclick="window.location.href='register.html'">sign_up

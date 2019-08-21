@@ -1,15 +1,14 @@
 <?php
+include ('database.php');
 
-include ('process.php');
-
-if(isset($_POST['Login']))
+if(isset($_POST['idname']))
 {
-        $username = $_POST['Username'];
+        $IDname = $_POST['idname'];
         $password = $_POST['Password'];   
 
-        if ($username === NULL)
+        if ($IDname === NULL)
         {
-            echo "Please enter username";
+            echo "Please enter IDname";
         }
 
         elseif ($password === NULL)
@@ -20,12 +19,12 @@ if(isset($_POST['Login']))
         else
         {
             //Query
-            $query = ("select * FROM tbl_Member WHERE fld_Username = '". $username ."' 
-            AND fld_Password = '" . $password . "'");
+            $query = ("select * FROM tbl_Member WHERE idname = '". $IDname ."' 
+            AND Password = '" . $password . "'");
 
         
             //make connection
-            $conn = new process;
+            $conn = new mssql;
             $conn -> connection();
 
             //Query
@@ -34,14 +33,10 @@ if(isset($_POST['Login']))
             if (is_null($userdata))
             {
                 echo "Login failed" ;
-               
             }
             else
             {
-                session_start();
-                $_SESSION["LoginStatus"] = 1;
                 echo "Login successfully" ;
-                header("Location: member_lists.php");
             }
             
             echo var_dump($userdata);
@@ -49,4 +44,3 @@ if(isset($_POST['Login']))
         }   
 
 }
-?>

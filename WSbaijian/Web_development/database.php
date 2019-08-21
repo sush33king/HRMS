@@ -1,5 +1,5 @@
 <?php
-class mysql
+class mssql
 {   
     private $conn;
 
@@ -7,7 +7,7 @@ class mysql
 
         $serverName = "LAPTOP-8KDQAATO\SQLEXPRESS"; 
 
-        $connectionInfo = array( "Database"=>"", "UID"=>"sa", "PWD"=>"1234");
+        $connectionInfo = array( "Database"=>"member", "UID"=>"sa", "PWD"=>"1234");
 
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
 
