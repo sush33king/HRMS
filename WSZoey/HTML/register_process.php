@@ -78,7 +78,9 @@ elseif ($password != $cfmPassword)
 else
 {
     //Connection
-    $connection = new MyDatabase("ZOELLON\SQLEXPRESS", array("Database"=>"db_website"));
+    $connection = new MyDatabase("ZOELLON\SQLEXPRESS", 
+                                 array("Database"=>"db_website"));
+                                 
     $connection1 = $connection->makeConnection();
 
     //Query Data
