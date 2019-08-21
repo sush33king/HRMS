@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-   <link rel= "stylesheet" href="mems.css">
+   <link rel= "stylesheet" href="mem.css">
 <head>
 <style>
 </style>
@@ -8,6 +8,20 @@
 <body>
 
 <?php
+session_start();
+$_SESSION["loginstatus"] = 0 ;
+if (isset($_SESSION["loginstatus"]))
+{
+   if($_SESSION["loginstatus"] ! = 0)
+   {
+      die('not authorised');
+   }
+}
+else
+{
+   die('not authorised');
+}
+
 include ('data.php');
 
 //make connection
@@ -20,16 +34,15 @@ if (isset($_POST['search'], $_POST['fldsearch']))
 {
    $where_filter = " WHERE " . $_POST['fldsearch'] . " like '" . $_POST['search'] . "%'" ; 
    $mainquery = "SELECT fld_Firstname, fld_Lastname, fld_Age, fld_Email,  fld_Address, fld_Country, fld_Height,
-   fld_Weight, fld_Gender, fld_Username, fld_Password from tbl_menber " . $where_filter;
+   fld_Weight, fld_Gender from tbl_menber " . $where_filter;
    
 }
 else
 {
    $mainquery = "SELECT fld_Firstname, fld_Lastname, fld_Age, fld_Email,  fld_Address, fld_Country, fld_Height,
-   fld_Weight, fld_Gender, fld_Username, fld_Password from tbl_menber" ;
+   fld_Weight, fld_Gender from tbl_menber" ;
 
 }
-
 
 $userdata = $conn->querydb($mainquery);
 
@@ -37,12 +50,12 @@ $userdata = $conn->querydb($mainquery);
 
 <h1 align = center>
 Users
-</h><br>
+</h1><br>
 <form action="member_list.php" method="post">
-<label class="field" name=fldsearch for="filter">Search by</label>
-                <select id="country"  class="dropdown-btn" name="country">
-                            <option value="fld_First name">First name</option>
-                            <option value="fld_Last name">Last name</option>
+<label class="field" for="filter">Search by</label>
+                <select id="country"  class="dropdown-btn" name="fldsearch">
+                            <option value="fld_Firstname">First name</option>
+                            <option value="fld_Lastname">Last name</option>
                             <option value="fld_Age">Age</option>
                             <option value="fld_Email">Email</option>
                             <option value="fld_Address">Address</option>
