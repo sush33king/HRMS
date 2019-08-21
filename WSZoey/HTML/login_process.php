@@ -22,12 +22,11 @@ else
     echo '<script type="text/javascript" src="webpage.js"></script>';
     echo '</head>';
 
-
-
-    echo "<body onload='setTimeout(autosubmitform(), 5000)'>";
-    echo '<form name="sessionuser" action="members_list.php" method ="POST">';
+    echo '<body>';
+    echo '<form action="members_list.php" name="sessionuser" method ="POST">';
     echo "<input type='hidden' name='user' value='$email' </input>";
     echo '</form>';
+
     echo '</body>';
 
     //Query

@@ -8,7 +8,7 @@ function opensignup()
   window.location.href='registerform.html';
 }
 
-function autosubmitform()
+function submitform()
 {
-  document.forms["sessionuser"].submit();
+  document.sessionuser.submit();
 }
