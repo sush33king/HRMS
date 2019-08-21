@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 //Include Class
 include("web_classes.php");
 
@@ -18,16 +20,8 @@ elseif ($password == NULL)
 
 else
 {
-    echo '<head>';
-    echo '<script type="text/javascript" src="webpage.js"></script>';
-    echo '</head>';
 
-    echo '<body>';
-    echo '<form action="members_list.php" name="sessionuser" method ="POST">';
-    echo "<input type='hidden' name='user' value='$email' </input>";
-    echo '</form>';
-
-    echo '</body>';
+    $_SESSION['user'] = $email;
 
     //Query
     $queryString = "SELECT * FROM tbl_users WHERE fld_email = '$email' AND fld_password = '$password'";
@@ -38,8 +32,8 @@ else
 
     //Query
     $query = $connection->loginDB($queryString);
-    echo var_dump($query);
 
+    $_SESSION['user'] = $email;
 }
 
 
