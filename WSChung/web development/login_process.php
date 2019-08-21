@@ -38,7 +38,7 @@ if(isset($_POST['Submit']))
             else
             {
                 session_start();
-                $_SESSION["loginstatus"] = "0";
+                $_SESSION["loginstatus"] = 2;
                 echo "Login successfully" ;
                 header("Location: member_list.php");
             }
