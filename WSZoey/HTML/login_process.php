@@ -24,9 +24,9 @@ else
 
 
 
-    echo '<body onload="setTimeout(autosubmitform(), 5000)">';
+    echo "<body onload='setTimeout(autosubmitform(), 5000)'>";
     echo '<form name="sessionuser" action="members_list.php" method ="POST">';
-    echo "<input type='hidden' name='user' value='$email'";
+    echo "<input type='hidden' name='user' value='$email' </input>";
     echo '</form>';
     echo '</body>';
 

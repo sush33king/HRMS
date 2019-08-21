@@ -10,5 +10,5 @@ function opensignup()
 
 function autosubmitform()
 {
-  document.sessionuser.submit()
+  document.forms["sessionuser"].submit();
 }
