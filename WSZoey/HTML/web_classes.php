@@ -53,13 +53,14 @@ Class MyDatabase
             if (isset($userinfo) == FALSE)
             {
                 echo "<br> Login failed, please verify your email address and password. <br>";
+                exit();
             }
 
             else
             {
                 echo "<br> Login Successful! <br>";
-                header('Refresh: 2; URL = members_list.php');
 
+                header('Refresh: 2; URL = members_list.php');
                 exit();
 
             }
