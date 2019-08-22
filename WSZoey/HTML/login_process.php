@@ -55,10 +55,12 @@ else
 
     $connection1 = $connection->makeConnection();
 
+    $_SESSION['user'] = $email;
+
     //Query
     $query = $connection->loginDB($queryString);
 
-    $_SESSION['user'] = $email;
+
 }
 
 ?>
