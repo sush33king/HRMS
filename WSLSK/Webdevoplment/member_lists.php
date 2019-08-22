@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="memberlistss.css?version=1">
+<link rel="stylesheet" href="memberlists.css?version=1">
 </head>
 <body>
         <?php   
@@ -20,6 +20,7 @@
              }
             
              include ('process.php');
+             include ('Pagination.php');
 
             //make connection
             $conn = new process;
@@ -90,6 +91,9 @@ foreach($userdata as $item){
    echo "</tr>";
  }
 echo "</table>" ;
+$PG =new Pagination;
+$PG->drawPagination($userdata,2);
+
 echo "</body>";
 
 

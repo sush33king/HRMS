@@ -24,22 +24,21 @@ if(isset($_POST['idname']))
         $conn->connection();
 
         //get ids for gender and country
-        $CTYID = $conn->querydb("select ID from tbl_country where country = '" . $country . "'"); 
-        $CTYID = $contry[0]->ID;
-        $GDRID = $conn->querydb("select ID from tbl_Gender where Gender = '" . $gender . "'" );
-        $GDRID = $gender[0]->ID;
-        $data = array(  "Firstname"=>$firstname,
+       $data = $conn->querydb("select CTYID from tbl_country where country = '" . $country . "'"); 
+        $CTYID = $data[0]->CTYID;
+        
+        $data = array(  "Firestname"=>$firstname,
                       "Lastname"=>$lastname,
-                      "IDname"=>$IDname,
-                      "Age"=>$Age,
+                      "idname"=>$IDname,
+                      "age"=>$Age,
                       "Gender"=> $gender,
                       "Address"=>$address,
                       "Height"=>$height,
                       "Weight"=>$weight,
                       "Email"=>$email,
                       "Birthday"=>$Birthday,
-                      "hobbiees"=>$hobbies,
-                      "Country"=>$contry,
+                      "Hobbies"=>$hobbies,
+                      "Country"=>$CTYID,
                       "Password"=>"$Password"
                   );
         $tblName = "tbl_member";

@@ -5,7 +5,7 @@
 class Pagination
 {
     
-    function drawPagination($rs, $pageSize, $pageNo, $divCSSClass="", $activePageClass="", $eventType = "click")
+    function drawPagination($rs, $pageSize, $pageNo=1, $divCSSClass="", $activePageClass="", $eventType = "click")
     {
         $totalRecords = count($rs);
         $totalPages = ceil($totalRecords / $pageSize);  

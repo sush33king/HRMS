@@ -9,10 +9,10 @@
 
 <?php
 session_start();
-$_SESSION["loginstatus"] = 0 ;
+
 if (isset($_SESSION["loginstatus"]))
 {
-   if($_SESSION["loginstatus"] ! = 0)
+   if($_SESSION["loginstatus"] != 2)
    {
       die('not authorised');
    }
