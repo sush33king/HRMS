@@ -4,11 +4,10 @@ session_start();
 //Include Class
 include("web_classes.php");
 
-//Filter
-function ms_escape_string($data) 
+function sanitize($data) 
 {
-    if ( !isset($data) or empty($data) ) {return '';}
-    if ( is_numeric($data) ) {return $data;}
+    if (!isset($data)) {return '';}
+    if (is_numeric($data)) {return $data;}
 
     $non_displayables = array
     (
@@ -29,8 +28,8 @@ function ms_escape_string($data)
 }
 
 //User Details
-$email = ms_escape_string($_POST['email']);
-$password = ms_escape_string($_POST['password']);
+$email = sanitize($_POST['email']);
+$password = sanitize($_POST['password']);
 
 if ($email == NULL)
 {
@@ -45,13 +44,15 @@ elseif ($password == NULL)
 else
 {
 
-    $_SESSION['user'] = $email;
-
-    //Query
-    $queryString = "SELECT * FROM tbl_users WHERE fld_email = '$email' AND fld_password = '$password'";
+    //Query String
+    $queryString = "SELECT * FROM tbl_users 
+                    WHERE fld_email = '$email' 
+                    AND fld_password = '$password'";
 
     //Connection
-    $connection = new MyDatabase("ZOELLON\SQLEXPRESS", array("Database"=>"db_website"));
+    $connection = new MyDatabase("ZOELLON\SQLEXPRESS",
+                                 array("Database"=>"db_website"));
+
     $connection1 = $connection->makeConnection();
 
     //Query
@@ -59,6 +60,5 @@ else
 
     $_SESSION['user'] = $email;
 }
-
 
 ?>
