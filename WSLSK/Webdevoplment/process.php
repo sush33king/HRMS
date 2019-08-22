@@ -29,6 +29,7 @@ class process
         die( print_r( sqlsrv_errors(), true));  
         }     
         $i = 0;
+        $rs=null;
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
         $rs[$i++] = $obj;   

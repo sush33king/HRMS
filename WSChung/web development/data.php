@@ -15,7 +15,7 @@ class database
 
         //check if connection is successful or not
         if( $this->conn ) {
-            echo "Connection established.<br />";
+            echo "Connection established"."<br />";
         }
         
         else{

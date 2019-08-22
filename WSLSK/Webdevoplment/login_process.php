@@ -1,5 +1,7 @@
 <?php
+
 include ('process.php');
+include ('Sanitization.php');
 
 if(isset($_POST['Login']))
 {
@@ -18,11 +20,17 @@ if(isset($_POST['Login']))
 
         else
         {
+            $sanitizer = new Sanitize;
+            $username = $sanitizer->clean($username);
+            $password = $sanitizer->clean($password);
+            
             //Query
             $query = ("select * FROM tbl_Member WHERE fld_Username = '". $username ."' 
             AND fld_Password = '" . $password . "'");
 
-        
+            
+
+
             //make connection
             $conn = new process;
             $conn -> connection();
@@ -33,10 +41,14 @@ if(isset($_POST['Login']))
             if (is_null($userdata))
             {
                 echo "Login failed" ;
+               
             }
             else
             {
+                session_start();
+                $_SESSION["LoginStatus"] = 1;
                 echo "Login successfully" ;
+                header("Location: member_lists.php");
             }
             
             echo var_dump($userdata);

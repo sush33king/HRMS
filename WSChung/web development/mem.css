@@ -15,7 +15,7 @@ th
   border-color: #517994;
   background-color: #B2CFD8;
   display: table-cell;
-  font-size: 19px ;
+  font-size: 25px ;
   font-family:Lucida Console;
 }
 
@@ -27,7 +27,7 @@ td
   border-color: #517994;
   background-color: #ffffff;
   display: table-cell;
-  font-size: 19px ;
+  font-size: 25px ;
   font-family:Lucida Console;
 }
 
@@ -55,6 +55,12 @@ select {
 }
 
 label {
+<<<<<<< HEAD:WSChung/web development/mem.css
   width: 200px;
-  font-size: 20px
+  font-size: 22px ;
+  color: wheat 
+=======
+  width: 300px;
+  font-size: 30px
+>>>>>>> c23288bf22a0ccadcb484283f335f7ff223560e5:WSChung/web development/mems.css
 }

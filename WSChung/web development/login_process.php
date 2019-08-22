@@ -1,7 +1,7 @@
 <?php
+
 include ('data.php');
-
-
+include ('Sanitize.php');
 
 if(isset($_POST['Submit']))
 {
@@ -20,6 +20,11 @@ if(isset($_POST['Submit']))
 
         else
         {
+            //sanitization the input
+            $sanitize = new sanitization;
+            $user = $sanitize->clean($user);
+            $pass = $sanitize->clean($pass);
+
             //Query
             $query = ("select * FROM tbl_menber WHERE fld_Username = '". $user ."' 
             AND fld_Password = '" . $pass . "'");
@@ -38,7 +43,10 @@ if(isset($_POST['Submit']))
             }
             else
             {
+                session_start();
+                $_SESSION["loginstatus"] = 2;
                 echo "Login successfully" ;
+                header("Location: member_list.php");
             }
             
             //echo var_dump($userdata);
