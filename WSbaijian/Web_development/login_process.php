@@ -4,7 +4,7 @@ include ('database.php');
 if(isset($_POST['txtusername']))
 {
         $IDname = $_POST['txtusername'];
-        $password = $_POST['Password'];   
+        $password = $_POST['password'];   
 
         
         
