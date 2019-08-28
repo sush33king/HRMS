@@ -1,111 +1,52 @@
 <!DOCTYPE html>
-<html>  
+<html>
+
+<!--Font Styles-->
 <link  rel=  "stylesheet"
        href= "https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap">
 
 <link  rel=  "stylesheet"
        href= "https://fonts.googleapis.com/css?family=Titillium+Web&display=swap">
 
-
+<!--Refer Javascript and CSS files-->
 <head>
-<style>
-p 
-{
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 15px;
-}
-
-h1
-{
-    text-align:center;
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 25px;
-}
-
-h2
-{
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 15px;
-    margin-top: 0.1em;
-  margin-bottom: 0.1em;
-}
-
-body
-{
-    background-color: aqua;
-}
-
-div.a
-{
-    padding: 60px 450px 100px 450px;
-}
-
-div.b
-{
-    padding: 30px;
-    background-color: white;
-    border-style:solid;
-    border-width: 5px;
-    border-color:black;
-}
-
-input[type=inputtext] 
-{
-    color: black;
-    font-family: 'Roboto Mono';
-    font-size: 15px
-}
-
-input[type=password] 
-{
-    display: block;
-    color: black;
-    font: .6rem 'Roboto Mono';
-    font-size: 15px
-}
-
-input [type=button]
-{
-  color:black;
-  font-family:'Titillium Web';
-  font-size: 15px;
-}
-
-input[type=submit] 
-{
-    color: black;
-    font-family: 'Titillium Web';
-    font-size: 15px
-}
-</style>
+    <script type="text/javascript" src="webpage.js"></script>
+    <link rel= "stylesheet" href="webpage.css?version=4">
 </head>
 
-
+<!--Code-->
 <body>
     <div class="a">
         <h1>Welcome to the Login Page!</h1>
         <div class="b">
-            <form action="/action_page.php">
+            <form action="login_process.php" method ="POST">
                 <h2>Email Address:</h2>
-                <input type="inputtext" name="email" placeholder="Example123@email.com">
+                <input 
+                  type="inputtext" 
+                  name="email" 
+                  placeholder="Example123@email.com"
+                >
                 <br><br>
-            
                 <h2>Password:</h2>
-                <input type="password" name="password" placeholder="Minimum 8 Characters" 
-                minlength="8">
+                <input 
+                  type="password" 
+                  name="password" 
+                  placeholder="Minimum 8 Characters" 
+                >
                 <br>
-
                 <input type="submit" value="Login">
             </form>
 
             <p>Don't have an account? <br></p>
-            <input type="button" onclick="window.location.href='registerform.html'"
+            <input type="button" onclick="opensignup()"
             value="Sign Up">
         </div>
     </div>
+
+    <!--Background Music-->
+    <audio autoplay loop>
+    <source src="Music/backgroundmusic.mp3">
+    </audio>
 </body>
 
 </html>

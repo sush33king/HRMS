@@ -221,8 +221,8 @@ $connection = new MyDatabase($serverName, $connectionInfo);
 $connection1 = $connection->makeConnection();
 
 //Query
-//$rs = $connection->queryDB($queryString);
-//echo var_dump($rs);
+$rs = $connection->queryDB($queryString);
+echo var_dump($rs);
 
 //Add
 //$add = $connection->addDB($data,$tablename);
@@ -234,7 +234,7 @@ $connection1 = $connection->makeConnection();
 //$delete = $connection->deleteDB($tablename,$where);
 
 //Close Connection
-$connectionclose = $connection->closeConnection();
+//$connectionclose = $connection->closeConnection();
 
 //Closed Query
 //$rs = $connection->queryDB($queryString);

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <style>
+    input[type=submit] {
+    background-color: #0693cd;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    font-size:16px;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 100px;
+    width: 180px
+  }
+                </style>
+                </head>
+                <body>
+                    
+                    <input type="submit" > 
+
+                </body>
+</html>
+
+
+
+
+$where_filter = "";
+if (isset($_POST['txtSearch']))
+{
+   $where_filter = "WHERE " . $_POST['fldSearch'] . " like '" . $_POST['txtSearch'] . "%'" ;    
+}
+
+$queryid = ( $mainquery . $where_filter );

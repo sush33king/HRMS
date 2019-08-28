@@ -1,0 +1,66 @@
+input[type=text] {
+  font-size: 15px ;
+  width : 300px ;
+}
+
+input[type=password] {
+    font: .9rem 'Fira Sans', sans-serif;
+    font-size: 15px ;
+    width : 300px
+}
+
+html { 
+  background : url(https://mondrian.mashable.com/wp-content%252Fgallery%252Flamborghini-centenario%252Fcentenario_01_high-2.jpg%252Ffit-in__850x850.jpg?signature=tXevL1UhWOQ-oWTSV6MnNgROMbo=&source=https%3A%2F%2Fmashable.com) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.border {
+    padding: 100px 80px;
+    border: 3px solid #666;
+    border-radius: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -330px;
+  }
+
+  label {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    width: 200px;
+    float: left;
+    color: wheat
+
+  }
+
+  input {
+    height: 20px;
+    flex: 0 0 200px;
+    float: center ;
+  }
+
+  select {
+    font-size: 20px ;
+    width : 305px
+  }
+
+  input[type=submit] {
+  float: right;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px ;
+  background-color: #4CAF50;
+  }
+  
+  h1{
+    font-family: Lucida Console
+  }
+
+
+  

@@ -1,0 +1,44 @@
+html { 
+  background-image: url(https://thumbs.gfycat.com/ClearCarelessBeagle-small.gif);
+    background-size: cover
+}
+  
+form{
+  color:white;
+  font-family: 'Times New Roman';
+  font-size: 20px
+}
+
+input[type=number] {
+  font-family: 'Times New Roman';
+  font-size: 20px;
+  width: 250px
+}
+
+  input[type=text] {
+    color:black;
+    font-family: 'Times New Roman';
+    font-size: 20px
+  }
+  
+  input[type=submit] {
+    color: black;
+    font-family: 'Butterfly Kids', cursive;
+    font-size: 20px
+  }
+  
+  input[type=password] {
+      display: block;
+      font: .9rem 'Fira Sans', sans-serif;
+      font-size: 30px;
+      height:20px;
+      width:250px
+  }
+  
+  select {
+    font-family: 'Times New Roman';
+    font-size: 25px;
+    width:250px }
+  
+  
+  

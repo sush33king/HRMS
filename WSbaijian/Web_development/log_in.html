@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+        <link rel="stylesheet" href="login.css">
+        <script type="text/javascript" src="java.js"></script>
+<head>
+<style>
+</style>
+<body>
+</head>
+    <div class="BaijianDivMiddle"> 
+       
+
+        <h1>Login</h1>
+
+        <form action="login_process.php" method='POST'>
+            ID name:<br>
+            <input type="text" name="txtusername" required>
+            <br>
+
+            password:<br>
+            <input type="password" name="password" id="txtPassword" required>
+
+            <input type="checkbox" 
+            onclick="myFunction()">Show Password
+            <br>
+
+            <button type="submit" formmethod="POST"
+            onclick="window.location.href='login_process.php'">log_in
+            </button>
+            
+            <button type="submit" formmethod="POST"
+            onclick="window.location.href='register.html'">sign_up
+            </button>
+            <br>
+            <a href="#">"Forget password?"</a>
+
+        </form>
+
+        
+
+    </div>
+    
+
+    
+
+</body>
+</html>
