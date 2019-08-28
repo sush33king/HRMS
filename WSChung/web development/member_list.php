@@ -67,7 +67,7 @@ Users
 
 <label class="field" for="filter">Search Key</label>
 <input type="text" name=search action="member_list.php" placeholder="Search ..." title="Type in a name">
-
+ 
 <input type="submit" name="Submit" value="Search">
 </form>
 <?php
