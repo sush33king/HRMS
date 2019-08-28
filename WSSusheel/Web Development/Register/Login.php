@@ -25,25 +25,27 @@
 
 
 <div class="DivCentered">
-<h2 align="center">Login Screen</h2>
+  
+  <h2 align="center">Login Screen</h2>
 
-<form action="/register_response.php">
+  <form action="login_response.php" method="post">
 
-  <div align="center">
+    <div align="center">
 
-    Username: 
-    <input type="text" name="firstname" value="">
-    <br><br>
-    Password:&nbsp 
-    <input type="text" name="lastname" value="">
-    <br><br>
-    <input type="submit" value="Submit">
-
-  </div>
+      Username: 
+      <input type="text" name="txtFirstname" value="">
+      <br><br>
+      Password:&nbsp 
+      <input type="text" name="txtLastname" value="">
+      <br><br>
+      <input type="submit" value="Submit">
+      <br>
+      <a href="register.php">Register a new account</a>
+    </div>
 
 </form> 
 
-<!--p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p-->
+<!--p>If you click the "Submit" button, the form-data will be sent to a page called "/login_response.php".</p-->
 </div>
 </body>
 </html>

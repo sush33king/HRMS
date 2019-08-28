@@ -6,17 +6,17 @@ class MyDatabase
 
     public function  makeconnection(){
         //configure server instance name
-        $serverName = "127.0.0.1\sqlexpress"; 
+        $serverName = "MSI\sqlexpress"; 
 
         //configure database connection information
-        $connectionInfo = array( "Database"=>"task 3.1", "UID"=>"sa", "PWD"=>"password");
+        $connectionInfo = array( "Database"=>"membership", "UID"=>"sa", "PWD"=>"password");
 
         //connect to database using php built in function sqlsrv_connect
         $this->conn = sqlsrv_connect( $serverName, $connectionInfo);
 
         //verify connection
         if( $this->conn ) {
-            echo "Connection Successful.<br />";
+            //echo "Connection Successful.<br />";
         }
         
         else{
@@ -32,7 +32,10 @@ class MyDatabase
             echo "Error in query preparation/execution.\n";  
             die( print_r( sqlsrv_errors(), true));  //this line of code terminates or ends the program completely
         }     
+
         $i = 0;
+        $rs = null;
+        
         while( $obj = sqlsrv_fetch_object( $stmt))  
         {  
             $rs[$i++] = $obj;
@@ -67,7 +70,7 @@ class MyDatabase
         }  
             else //if successful the display msg below
         {
-                echo "Record successfully added!";
+                //echo "Record successfully added!";
         }
     }    
 
@@ -113,14 +116,14 @@ class MyDatabase
         }
         else
         {
-            echo "Successfully disconnected."; 
+            //echo "Successfully disconnected."; 
         }
         
     }
     
 
 }
-
+/*
 $db = new MyDatabase;
 $db->makeconnection();
 
@@ -131,5 +134,5 @@ $data = array("fld_EMP_ID"=>"S26055",
 
 $tblName = "tbl_employee";
 
-$db->adddb($data, $tblName);
+$db->adddb($data, $tblName);*/
 ?>
