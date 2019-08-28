@@ -2,7 +2,7 @@
 /* Connect to the local server using Windows Authentication and  
 specify the AdventureWorks database as the database in use. */  
 $serverName = "(local)\sqlexpress";  
-$connectionInfo = array( "Database"=>"AMOS",
+$connectionInfo = array( "Database"=>"membership",
                          "CharacterSet" => "UTF-8");  
 $conn = sqlsrv_connect( $serverName, $connectionInfo);  
 if( $conn === false )  
@@ -12,8 +12,7 @@ if( $conn === false )
 }  
 
 /* Set up and execute the query. */  
-$tsql = "SELECT *  
-         FROM department left join [location] on department.locationid = [location].[locationid]";
+$tsql = "select * from tbl_members";
 
 $stmt = sqlsrv_query( $conn, $tsql);  
 if( $stmt === false )  
