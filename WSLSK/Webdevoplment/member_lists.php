@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="memberlistss.css?version=1">
+<link rel="stylesheet" href="memberlists.css?version=1">
 </head>
 <body>
         <?php   
