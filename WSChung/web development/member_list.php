@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-   <link rel= "stylesheet" href="mem.css">
+   <link rel= "stylesheet" href="mems.css?version=1">
+   <link rel= "stylesheet" href="pagination.css" type="text/css">
 <head>
 <style>
 </style>
@@ -23,6 +24,7 @@ else
 }
 
 include ('data.php');
+include ('Page.php');
 
 //make connection
 $conn = new database;
@@ -100,6 +102,10 @@ foreach($userdata as $item){
    echo "</tr>";
  }
 echo "</table>" ;
+
+$page =new Page;
+$page->drawPagination($userdata,3,4,"pagination");
+
 echo "</body>";
 
 
